@@ -1,7 +1,7 @@
 import React from "react"
 
 const DriverAdvantage = () => {
-  return <div>DriverAdvantage</div>
+  return <div></div>
 }
 
 export default DriverAdvantage

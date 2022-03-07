@@ -19,6 +19,7 @@
 //   // devServerPort: 8002
 // }
 //netlify
+
 module.exports = {
   serverBuildTarget: "netlify",
   server: "./server.js",

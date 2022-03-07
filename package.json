@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "name": "remix-app-template",
+  "description": "",
+  "license": "",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "postinstall": "remix setup node",
+    "start": "remix-serve build"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "@remix-run/express": "^1.2.2",
+    "@remix-run/netlify": "^1.2.3",
+    "@remix-run/react": "^1.1.3",
+    "@remix-run/serve": "^1.1.3",
+    "@types/styled-components": "^5.1.21",
+    "axios": "^0.25.0",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.3",
+    "formik": "^2.2.9",
+    "morgan": "^1.10.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-spinner-material": "^1.3.1",
+    "react-toastify": "^8.1.0",
+    "remix": "^1.1.3",
+    "styled-components": "^5.3.3",
+    "tiny-invariant": "^1.2.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^1.1.3",
+    "@types/react": "^17.0.24",
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "sideEffects": false
+}

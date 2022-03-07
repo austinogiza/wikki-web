@@ -1,0 +1,108 @@
+{
+  "version": "09328b74",
+  "entry": {
+    "module": "/build/entry.client-N7VBJLIE.js",
+    "imports": [
+      "/build/_shared/chunk-DGNGNE3C.js",
+      "/build/_shared/chunk-DB5QPE2Y.js",
+      "/build/_shared/chunk-AKSB5QXU.js"
+    ]
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "module": "/build/root-CEXA6PZ2.js",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/about": {
+      "id": "routes/about",
+      "parentId": "root",
+      "path": "about",
+      "module": "/build/routes/about-F77NIHOF.js",
+      "imports": [
+        "/build/_shared/chunk-YQJ3CBIU.js",
+        "/build/_shared/chunk-SBIQOCID.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/contact": {
+      "id": "routes/contact",
+      "parentId": "root",
+      "path": "contact",
+      "module": "/build/routes/contact-KRH6VIBZ.js",
+      "imports": [
+        "/build/_shared/chunk-6A6PK7PX.js",
+        "/build/_shared/chunk-SBIQOCID.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/driver-requirements": {
+      "id": "routes/driver-requirements",
+      "parentId": "root",
+      "path": "driver-requirements",
+      "module": "/build/routes/driver-requirements-L22GOIFS.js",
+      "imports": [
+        "/build/_shared/chunk-SBIQOCID.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/how-it-works/driver": {
+      "id": "routes/how-it-works/driver",
+      "parentId": "root",
+      "path": "how-it-works/driver",
+      "module": "/build/routes/how-it-works/driver-6FAUTH34.js",
+      "imports": [
+        "/build/_shared/chunk-4OVK6KDP.js",
+        "/build/_shared/chunk-SBIQOCID.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/how-it-works/index": {
+      "id": "routes/how-it-works/index",
+      "parentId": "root",
+      "path": "how-it-works",
+      "index": true,
+      "module": "/build/routes/how-it-works/index-Y4TYIVDV.js",
+      "imports": [
+        "/build/_shared/chunk-4OVK6KDP.js",
+        "/build/_shared/chunk-SBIQOCID.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    },
+    "routes/index": {
+      "id": "routes/index",
+      "parentId": "root",
+      "index": true,
+      "module": "/build/routes/index-2K3LQMDN.js",
+      "imports": [
+        "/build/_shared/chunk-6A6PK7PX.js",
+        "/build/_shared/chunk-YQJ3CBIU.js",
+        "/build/_shared/chunk-SBIQOCID.js"
+      ],
+      "hasAction": false,
+      "hasLoader": false,
+      "hasCatchBoundary": false,
+      "hasErrorBoundary": false
+    }
+  },
+  "url": "/build/manifest-09328B74.js"
+}

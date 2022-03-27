@@ -10,7 +10,7 @@ export const MainButton = styled.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -32,7 +32,7 @@ export const PrimaryButton = styled.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -55,7 +55,7 @@ export const SecondaryButton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -77,7 +77,7 @@ export const TertiaryButton = styled.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -99,7 +99,7 @@ export const FormButton = styled.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -119,7 +119,7 @@ export const CaseButton = styled(Link)`
   border-radius: 16px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -145,7 +145,7 @@ export const NavbarButton = styled.button`
   border: 2px solid ${WikkiTheme.primary};
 
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

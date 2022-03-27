@@ -96,6 +96,7 @@ const CoverImage = styled.div`
 const AboutImage = styled.img`
   width: 100%;
   min-height: 350px;
+  object-fit: cover;
   @media only screen and (max-width: 650px) {
     min-height: 250px;
   }

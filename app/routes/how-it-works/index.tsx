@@ -7,7 +7,13 @@ import pay from "~/images/pay.png"
 import app from "~/images/app.png"
 import bave from "~/images/bave.svg"
 import mask from "~/images/mask.svg"
-import { Link } from "remix"
+import { Link, MetaFunction } from "remix"
+export const meta: MetaFunction = () => {
+  return {
+    title: "How it works users - Use Wikki",
+    description: "Real time deliveries",
+  }
+}
 const index = () => {
   return (
     <Body>
@@ -118,7 +124,7 @@ const Cover = styled.div`
   color: ${WikkiTheme.black};
   max-width: 1100px;
   width: 100%;
-  margin: 16px auto;
+  margin: 96px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

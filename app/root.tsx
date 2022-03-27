@@ -6,13 +6,20 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useTransition,
 } from "remix"
+
+import NProgress from "nprogress"
+import nProgressStyles from "~/styles/nprogress.css"
 import type { MetaFunction } from "remix"
 import toast from "react-toastify/dist/ReactToastify.css"
 import styles from "./index.css"
 import { ToastContainer } from "react-toastify"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import Navbar from "~/components/navbar/Navbar"
+import Footer from "~/components/Footer"
+import { useEffect } from "react"
+import NavCover from "./components/navbar/NavCover"
+import BackToTop from "./components/BackToTop"
 export const meta: MetaFunction = () => {
   return {
     title: "Wikki",
@@ -23,6 +30,7 @@ export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: styles },
     { rel: "stylesheet", href: toast },
+    { rel: "stylesheet", href: nProgressStyles },
     {
       rel: "icon",
       href: "/favicon.png",
@@ -32,6 +40,14 @@ export const links: LinksFunction = () => {
 }
 
 export default function App() {
+  const transition = useTransition()
+  useEffect(() => {
+    // when the state is idle then we can to complete the progress bar
+    if (transition.state === "idle") NProgress.done()
+    // and when it's something else it means it's either submitting a form or
+    // waiting for the loaders of the next location so we start it
+    else NProgress.start()
+  }, [transition.state])
   return (
     <html lang="en">
       <head>
@@ -53,7 +69,8 @@ export default function App() {
           draggable
           pauseOnHover
         />
-        <Navbar />
+        <NavCover />
+        <BackToTop />
         <Outlet />
         <Footer />
         <ScrollRestoration />

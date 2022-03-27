@@ -3,6 +3,7 @@ import styled from "styled-components"
 import main from "~/images/main.png"
 import { WikkiTheme } from "~/styles/ColorStyles"
 import { Body2, Header1 } from "~/styles/TextStyles"
+import NavCover from "../navbar/NavCover"
 
 const AboutHero = () => {
   return (
@@ -63,14 +64,14 @@ const Cover = styled.div`
   color: ${WikkiTheme.white};
   max-width: 1232px;
   width: 100%;
-  margin: 80px auto;
+  margin: 120px auto 80px auto;
   padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   @media only screen and (max-width: 650px) {
-    margin: 56px auto;
+    margin: 92px auto 56 auto;
   }
 `
 
@@ -107,6 +108,9 @@ const CoverDets = styled.div`
   max-width: 800px;
   width: 100%;
   margin: 24px auto;
+  @media only screen and (max-width: 650px) {
+    max-width: 500px;
+  }
 `
 const CoverTitle = styled(Header1)`
   text-align: center;

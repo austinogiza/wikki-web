@@ -1,7 +1,8 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import { Header2, Body3 } from "~/styles/TextStyles"
-import user from "~/images/user.png"
+import purpose from "~/images/purpose01.png"
+import purpose02 from "~/images/purpose02.png"
 const AboutDetails = () => {
   return (
     <Body>
@@ -17,12 +18,12 @@ const AboutDetails = () => {
             </RideText>
           </GridLeft>
           <GridRight>
-            <GridImage src={user} alt="use wikki" />
+            <GridImage src={purpose02} alt="use wikki" />
           </GridRight>{" "}
         </DetailsGrid>{" "}
         <DetailsGrid>
           <GridRight>
-            <GridImage src={user} alt="use wikki" />
+            <GridImage src={purpose} alt="use wikki" />
           </GridRight>
           <GridLeft>
             <RideTitle>Our Mission</RideTitle>
@@ -101,10 +102,11 @@ const GridRight = styled.div`
 
 const GridImage = styled.img`
   max-width: 550px;
-
+  border-radius: 20px;
   max-height: 630px;
   min-height: 300px;
   height: 100%;
+  outline: none;
   width: 100%;
 `
 const RideText = styled(Body3)`

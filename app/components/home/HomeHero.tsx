@@ -1,7 +1,10 @@
 import React from "react"
+import styled from "styled-components"
 
 const HomeHero = () => {
-  return <div>HomeHero</div>
+  return <Body></Body>
 }
-
+const Body = styled.section`
+  position: relative;
+`
 export default HomeHero

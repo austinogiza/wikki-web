@@ -28,7 +28,7 @@ const Body = styled.section`
   min-height: 450px;
   color: ${WikkiTheme.black};
   width: 100%;
-  padding: 16px;
+  padding: 32px 16px 16px 16px;
   background: ${WikkiTheme.white};
   @media only screen and (max-width: 650px) {
     min-height: 350px;
@@ -39,7 +39,7 @@ const Cover = styled.div`
   max-width: 500px;
   width: 100%;
   height: 100%;
-  margin: 24px auto;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

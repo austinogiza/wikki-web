@@ -6,7 +6,7 @@ import ContactHero from "~/components/contact/ContactHero"
 
 export const meta: MetaFunction = () => {
   return {
-    title: "Contact - Use Wikki",
+    title: "Contact Us - Use Wikki",
     description: "Real time deliveries",
   }
 }

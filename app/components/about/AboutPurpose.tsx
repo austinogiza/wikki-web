@@ -13,7 +13,7 @@ const AboutPurpose = () => {
 
         <DetailsGrid>
           {purposeData.map((data, index) => (
-            <PurposeRow>
+            <PurposeRow key={index}>
               {" "}
               <PurposeIcon>{data.icon}</PurposeIcon>
               <MoreSub>{data.title}</MoreSub>
@@ -32,7 +32,7 @@ const Body = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 600px;
+  min-height: 700px;
   color: ${WikkiTheme.white};
   width: 100%;
   padding: 16px;

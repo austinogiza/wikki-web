@@ -34,7 +34,6 @@ html {
 body {
   overflow-x: hidden;
   position: relative;
-  overflow-y: scroll;
   background: #ffffff;
   font-family: "Inter", sans-serif;
 }

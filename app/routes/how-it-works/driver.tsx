@@ -7,7 +7,13 @@ import pay from "~/images/pay.png"
 import app from "~/images/app.png"
 import bave from "~/images/bave.svg"
 import icon from "~/images/icon.png"
-import { Link } from "remix"
+import { Link, MetaFunction } from "remix"
+export const meta: MetaFunction = () => {
+  return {
+    title: "How it works driver - Use Wikki",
+    description: "Real time deliveries",
+  }
+}
 
 const WorksDriver = () => {
   return (
@@ -116,7 +122,7 @@ const Cover = styled.div`
   color: ${WikkiTheme.black};
   max-width: 1100px;
   width: 100%;
-  margin: 16px auto;
+  margin: 96px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

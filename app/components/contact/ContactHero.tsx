@@ -24,12 +24,14 @@ const Body = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `
 const Cover = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 72px 0 0 0;
 `
 const ContactHeader = styled.div`
   display: flex;

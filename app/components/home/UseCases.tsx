@@ -90,21 +90,21 @@ const MoreTitle = styled(Header1)`
 const CaseGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 72px;
-  gap: 72px;
+  grid-gap: 40px;
+  gap: 40px;
   width: 100%;
   @media only screen and (max-width: 950px) {
-    grid-gap: 36px;
+    grid-gap: 24px;
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
-    gap: 36px;
+    gap: 24px;
   }
 `
 const CaseRowUsers = styled.div`
   max-height: 700px;
   min-height: 680px;
   height: 100%;
-  max-width: 580px;
+  max-width: 630px;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -145,7 +145,7 @@ const CaseRowDrivers = styled.div`
   max-height: 700px;
   min-height: 680px;
   height: 100%;
-  max-width: 580px;
+  max-width: 630px;
   width: 100%;
 
   border-radius: 32px;

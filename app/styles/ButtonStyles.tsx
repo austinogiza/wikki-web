@@ -134,3 +134,49 @@ export const CaseButton = styled(Link)`
     height: 48px;
   }
 `
+export const NavbarButton = styled.button`
+  height: 56px;
+  max-width: 200px;
+  width: 100%;
+  background: ${WikkiTheme.white};
+  cursor: pointer;
+  color: ${WikkiTheme.primary};
+  border-radius: 32px;
+  border: 2px solid ${WikkiTheme.primary};
+
+  outline: none;
+  font-family: "Cabinet Grotesk Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+  :after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    outline: none;
+    transition: all 0.4s ease-in-out;
+    transform: rotate(10deg);
+    height: 56px;
+    max-width: 200px;
+    width: 100%;
+    background: ${WikkiTheme.white};
+    cursor: pointer;
+    color: ${WikkiTheme.primary};
+    border: 2px solid ${WikkiTheme.primary};
+
+    border-radius: 32px;
+  }
+
+  :hover {
+    ::after {
+      transform: rotate(0deg);
+    }
+  }
+`

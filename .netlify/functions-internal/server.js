@@ -405,7 +405,7 @@ var import_styled_components4 = __toESM(require("styled-components"));
 var import_remix3 = __toESM(require_remix());
 
 // app/images/logo.svg
-var logo_default = "/build/_assets/logo-SPAM6P6X.svg";
+var logo_default = "/build/_assets/logo-ER6L2UUP.svg";
 
 // app/styles/TextStyles.tsx
 init_react();
@@ -564,7 +564,7 @@ var MainButton = import_styled_components3.default.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -585,7 +585,7 @@ var PrimaryButton = import_styled_components3.default.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -607,7 +607,7 @@ var SecondaryButton = import_styled_components3.default.button`
   border: none;
   outline: none;
   cursor: pointer;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -628,7 +628,7 @@ var TertiaryButton = import_styled_components3.default.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -649,7 +649,7 @@ var FormButton = import_styled_components3.default.button`
   border-radius: 32px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -669,7 +669,7 @@ var CaseButton = (0, import_styled_components3.default)(import_remix2.Link)`
   border-radius: 16px;
   border: none;
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -695,7 +695,7 @@ var NavbarButton = import_styled_components3.default.button`
   border: 2px solid ${WikkiTheme.primary};
 
   outline: none;
-  font-family: "Cabinet Grotesk Medium";
+  font-family: "Clash Display Medium";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1071,8 +1071,8 @@ var driverData = [
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
     }, /* @__PURE__ */ React.createElement("path", {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
+      fillRule: "evenodd",
+      clipRule: "evenodd",
       d: "M12 4.5C11.4696 4.5 10.9609 4.71071 10.5858 5.08579C10.2107 5.46086 10 5.96957 10 6.5V8.5H8C6.93913 8.5 5.92172 8.92143 5.17157 9.67157C4.42143 10.4217 4 11.4391 4 12.5V32.5C4 33.5609 4.42143 34.5783 5.17157 35.3284C5.92172 36.0786 6.93913 36.5 8 36.5H32C33.0609 36.5 34.0783 36.0786 34.8284 35.3284C35.5786 34.5783 36 33.5609 36 32.5V12.5C36 11.4391 35.5786 10.4217 34.8284 9.67157C34.0783 8.92143 33.0609 8.5 32 8.5H30V6.5C30 5.96957 29.7893 5.46086 29.4142 5.08579C29.0391 4.71071 28.5304 4.5 28 4.5C27.4696 4.5 26.9609 4.71071 26.5858 5.08579C26.2107 5.46086 26 5.96957 26 6.5V8.5H14V6.5C14 5.96957 13.7893 5.46086 13.4142 5.08579C13.0391 4.71071 12.5304 4.5 12 4.5ZM12 14.5C11.4696 14.5 10.9609 14.7107 10.5858 15.0858C10.2107 15.4609 10 15.9696 10 16.5C10 17.0304 10.2107 17.5391 10.5858 17.9142C10.9609 18.2893 11.4696 18.5 12 18.5H28C28.5304 18.5 29.0391 18.2893 29.4142 17.9142C29.7893 17.5391 30 17.0304 30 16.5C30 15.9696 29.7893 15.4609 29.4142 15.0858C29.0391 14.7107 28.5304 14.5 28 14.5H12Z",
       fill: "black"
     })),
@@ -1087,8 +1087,8 @@ var driverData = [
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg"
     }, /* @__PURE__ */ React.createElement("path", {
-      "fill-rule": "evenodd",
-      "clip-rule": "evenodd",
+      fillRule: "evenodd",
+      clipRule: "evenodd",
       d: "M12 4.5C11.4696 4.5 10.9609 4.71071 10.5858 5.08579C10.2107 5.46086 10 5.96957 10 6.5V8.5H8C6.93913 8.5 5.92172 8.92143 5.17157 9.67157C4.42143 10.4217 4 11.4391 4 12.5V32.5C4 33.5609 4.42143 34.5783 5.17157 35.3284C5.92172 36.0786 6.93913 36.5 8 36.5H32C33.0609 36.5 34.0783 36.0786 34.8284 35.3284C35.5786 34.5783 36 33.5609 36 32.5V12.5C36 11.4391 35.5786 10.4217 34.8284 9.67157C34.0783 8.92143 33.0609 8.5 32 8.5H30V6.5C30 5.96957 29.7893 5.46086 29.4142 5.08579C29.0391 4.71071 28.5304 4.5 28 4.5C27.4696 4.5 26.9609 4.71071 26.5858 5.08579C26.2107 5.46086 26 5.96957 26 6.5V8.5H14V6.5C14 5.96957 13.7893 5.46086 13.4142 5.08579C13.0391 4.71071 12.5304 4.5 12 4.5ZM12 14.5C11.4696 14.5 10.9609 14.7107 10.5858 15.0858C10.2107 15.4609 10 15.9696 10 16.5C10 17.0304 10.2107 17.5391 10.5858 17.9142C10.9609 18.2893 11.4696 18.5 12 18.5H28C28.5304 18.5 29.0391 18.2893 29.4142 17.9142C29.7893 17.5391 30 17.0304 30 16.5C30 15.9696 29.7893 15.4609 29.4142 15.0858C29.0391 14.7107 28.5304 14.5 28 14.5H12Z",
       fill: "black"
     })),
@@ -3028,6 +3028,7 @@ var CoverImage = import_styled_components22.default.div`
 var AboutImage = import_styled_components22.default.img`
   width: 100%;
   min-height: 350px;
+  object-fit: cover;
   @media only screen and (max-width: 650px) {
     min-height: 250px;
   }
@@ -3531,7 +3532,7 @@ var routes_default = index2;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
 init_react();
-var assets_manifest_default = { "version": "d63d9a43", "entry": { "module": "/build/entry.client-53N2RJWB.js", "imports": ["/build/_shared/chunk-PZ2Z7HGX.js", "/build/_shared/chunk-6K6B2XQG.js", "/build/_shared/chunk-2ADOHOB6.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-WY5QOA3S.js", "imports": ["/build/_shared/chunk-D7HEMV6S.js", "/build/_shared/chunk-NTQSPRWT.js", "/build/_shared/chunk-KP2GOCWB.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-5VUJ5DGU.js", "imports": ["/build/_shared/chunk-2LU3WT75.js", "/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/business": { "id": "routes/business", "parentId": "root", "path": "business", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/business-HY6AHSQV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contact": { "id": "routes/contact", "parentId": "root", "path": "contact", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contact-6YPCHEDV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/driver-requirements": { "id": "routes/driver-requirements", "parentId": "root", "path": "driver-requirements", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/driver-requirements-FAR7YI5M.js", "imports": ["/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/driver": { "id": "routes/how-it-works/driver", "parentId": "root", "path": "how-it-works/driver", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/how-it-works/driver-SLYJVCJB.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/index": { "id": "routes/how-it-works/index", "parentId": "root", "path": "how-it-works", "index": true, "caseSensitive": void 0, "module": "/build/routes/how-it-works/index-E2VRYGOC.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-B7R3ZEUS.js", "imports": ["/build/_shared/chunk-2LU3WT75.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-D63D9A43.js" };
+var assets_manifest_default = { "version": "ee7e055e", "entry": { "module": "/build/entry.client-53N2RJWB.js", "imports": ["/build/_shared/chunk-PZ2Z7HGX.js", "/build/_shared/chunk-6K6B2XQG.js", "/build/_shared/chunk-2ADOHOB6.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-UVYNSKH5.js", "imports": ["/build/_shared/chunk-D7HEMV6S.js", "/build/_shared/chunk-JYQS64WU.js", "/build/_shared/chunk-ERECZCGM.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-PT5NXCDW.js", "imports": ["/build/_shared/chunk-2LU3WT75.js", "/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/business": { "id": "routes/business", "parentId": "root", "path": "business", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/business-HY6AHSQV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contact": { "id": "routes/contact", "parentId": "root", "path": "contact", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contact-JFGXR2BM.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/driver-requirements": { "id": "routes/driver-requirements", "parentId": "root", "path": "driver-requirements", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/driver-requirements-JV3XHLLY.js", "imports": ["/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/driver": { "id": "routes/how-it-works/driver", "parentId": "root", "path": "how-it-works/driver", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/how-it-works/driver-PBMHYIL4.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/index": { "id": "routes/how-it-works/index", "parentId": "root", "path": "how-it-works", "index": true, "caseSensitive": void 0, "module": "/build/routes/how-it-works/index-UBACWV3I.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-ZBY6OQD6.js", "imports": ["/build/_shared/chunk-2LU3WT75.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-EE7E055E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

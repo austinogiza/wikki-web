@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import business from "~/images/business.png"
-import heart from "~/images/heart.png"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Header2, Body2 } from "~/styles/TextStyles"
+
+import { WikkiTheme } from "styles/ColorStyles"
+import { Header2, Body2 } from "styles/TextStyles"
 import { AiOutlinePlusCircle } from "react-icons/ai"
-import { BusinessButton } from "~/styles/ButtonStyles"
+import { BusinessButton } from "styles/ButtonStyles"
+import Link from "next/link"
 
 const HomeBusiness = () => {
   return (
@@ -15,8 +15,8 @@ const HomeBusiness = () => {
             <MoreOverlay />
             <RowContent>
               <CaseTitle>
-                Wikki <Lovesvg src={heart} alt="wikki heart" /> businesses &
-                companies.{" "}
+                Wikki <Lovesvg src="/heart.png" alt="wikki heart" /> businesses
+                & companies.{" "}
               </CaseTitle>{" "}
               <CaseText>
                 Wikki feels just like the Apple devices employees know and love
@@ -24,9 +24,11 @@ const HomeBusiness = () => {
                 devices. Use Handoff to start an email on one device and finish
                 on another. And pick up calls anywhere.
               </CaseText>
-              <CaseButtonLink to="/business">
-                Learn what we have ready for businessess <BusinessIcon />
-              </CaseButtonLink>
+              <Link href="/business" passHref>
+                <CaseButtonLink>
+                  Learn what we have ready for businessess <BusinessIcon />
+                </CaseButtonLink>
+              </Link>
             </RowContent>
           </CaseRowUsers>
         </CaseGrid>
@@ -91,7 +93,7 @@ const CaseRowUsers = styled.div`
   z-index: 2;
   border-radius: 20px;
   padding: 16px;
-  background: url(${business}) no-repeat center center/cover;
+  background: url("/business.png") no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
     height: 500px;
   }

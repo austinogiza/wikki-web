@@ -1,11 +1,10 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { Body2, Header3 } from "~/styles/TextStyles"
+import { Body2, Header3 } from "styles/TextStyles"
 import { motion } from "framer-motion"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { DownloadButton } from "~/styles/ButtonStyles"
-import appstore from "~/images/appstore.svg"
-import playstore from "~/images/playstore.svg"
+import { WikkiTheme } from "styles/ColorStyles"
+import { DownloadButton } from "styles/ButtonStyles"
+
 interface InfoProps {
   text: string
   title: string
@@ -33,7 +32,7 @@ const WikkiInfo: FC<TrueProps & InfoProps> = (props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <StoreIcon src={appstore} alt="wikki download" /> App Store
+              <StoreIcon src="/appstore.svg" alt="wikki download" /> App Store
             </CommunityMainButton>
 
             <CommunityOutlineButton
@@ -41,7 +40,8 @@ const WikkiInfo: FC<TrueProps & InfoProps> = (props) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <StoreIcon src={playstore} alt="wikki download" /> Google Play
+              <StoreIcon src="/playstore.svg" alt="wikki download" /> Google
+              Play
             </CommunityOutlineButton>
           </GingerRow>
         </InfoLeft>

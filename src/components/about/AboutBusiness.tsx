@@ -1,9 +1,8 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
-import { Header3, Body3, Header2 } from "~/styles/TextStyles"
-import delivery02 from "~/images/delivery02.png"
-import delivery01 from "~/images/delivery01.png"
-import { WikkiTheme } from "~/styles/ColorStyles"
+import { Header3, Body3, Header2 } from "styles/TextStyles"
+
+import { WikkiTheme } from "styles/ColorStyles"
 const AboutBusiness = () => {
   return (
     <Body>
@@ -89,7 +88,7 @@ const GridLeft = styled.div`
   align-items: flex-start;
   border-radius: 0px;
   position: relative;
-  background: url(${delivery01}) no-repeat center center/cover;
+  background: url("/delivery01.png") no-repeat center center/cover;
   :after {
     position: absolute;
     content: "";
@@ -128,7 +127,7 @@ const GridRight = styled.div`
   align-items: flex-start;
   border-radius: 0px;
   position: relative;
-  background: url(${delivery02}) no-repeat center center/cover;
+  background: url("/delivery02.png") no-repeat center center/cover;
   :after {
     position: absolute;
     content: "";

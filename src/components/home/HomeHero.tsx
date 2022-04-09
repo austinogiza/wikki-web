@@ -1,12 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import herobg from "~/images/herobg.png"
-import { Body2, Header1 } from "~/styles/TextStyles"
 
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { DownloadButton } from "~/styles/ButtonStyles"
-import appstore from "~/images/appstore.svg"
-import playstore from "~/images/playstore.svg"
+import { Body2, Header1 } from "styles/TextStyles"
+
+import { WikkiTheme } from "styles/ColorStyles"
+import { DownloadButton } from "styles/ButtonStyles"
 
 const HomeHero = () => {
   return (
@@ -23,7 +21,7 @@ const HomeHero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <StoreIcon src={appstore} alt="wikki download" /> App Store
+              <StoreIcon src="/appstore.svg" alt="wikki download" /> App Store
             </CommunityMainButton>
 
             <CommunityOutlineButton
@@ -31,7 +29,8 @@ const HomeHero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <StoreIcon src={playstore} alt="wikki download" /> Google Play
+              <StoreIcon src="/playstore.svg" alt="wikki download" /> Google
+              Play
             </CommunityOutlineButton>
           </GingerRow>
         </InfoLeft>
@@ -44,7 +43,7 @@ const Body = styled.div`
 
   width: 100%;
   text-align: center;
-  background: url(${herobg}) no-repeat center center/cover;
+  background: url("/herobg.png") no-repeat center center/cover;
   position: relative;
   display: flex;
   flex-direction: column;

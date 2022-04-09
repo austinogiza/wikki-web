@@ -1,8 +1,8 @@
 import React, { FC } from "react"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body4, Header5 } from "~/styles/TextStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body4, Header5 } from "styles/TextStyles"
 import { motion, AnimatePresence } from "framer-motion"
 interface OpenProps {
   active?: boolean

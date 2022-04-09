@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Body1, Header1 } from "~/styles/TextStyles"
+import { Body1, Header1 } from "styles/TextStyles"
 
 const ContactHero = () => {
   return (

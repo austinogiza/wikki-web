@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Header2, Body3 } from "~/styles/TextStyles"
-import purpose from "~/images/purpose01.png"
-import purpose02 from "~/images/purpose02.png"
+import { Header2, Body3 } from "styles/TextStyles"
+
 const AboutDetails = () => {
   return (
     <Body>
@@ -18,12 +17,12 @@ const AboutDetails = () => {
             </RideText>
           </GridLeft>
           <GridRight>
-            <GridImage src={purpose02} alt="use wikki" />
+            <GridImage src="/purpose02.png" alt="use wikki" />
           </GridRight>{" "}
         </DetailsGrid>{" "}
         <DetailsGrid>
           <GridRight>
-            <GridImage src={purpose} alt="use wikki" />
+            <GridImage src="/purpose01.png" alt="use wikki" />
           </GridRight>
           <GridLeft>
             <RideTitle>Our Mission</RideTitle>

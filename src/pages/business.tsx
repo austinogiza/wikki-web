@@ -1,14 +1,15 @@
+import LayoutHead from "container/LayoutHead"
 import React from "react"
-import { MetaFunction } from "remix"
-export const meta: MetaFunction = () => {
-  return {
-    title: "Business Using wikki - Use Wikki",
-    description: "Real time deliveries",
-  }
-}
+import styled from "styled-components"
 
 const business = () => {
-  return <div>business</div>
+  return (
+    <Body>
+      {" "}
+      <LayoutHead title="Business Using wikki" />
+    </Body>
+  )
 }
 
+const Body = styled.div``
 export default business

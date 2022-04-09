@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body3, Header2 } from "~/styles/TextStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body3, Header2 } from "styles/TextStyles"
 
 const DriverHero = () => {
   return (

@@ -1,32 +1,28 @@
 import React from "react"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body3, Header3, Header5, SubTitle } from "~/styles/TextStyles"
-import route from "~/images/route.png"
-import pay from "~/images/pay.png"
-import app from "~/images/app.png"
-import bave from "~/images/bave.svg"
-import icon from "~/images/icon.png"
-import { Link, MetaFunction } from "remix"
-export const meta: MetaFunction = () => {
-  return {
-    title: "How it works driver - Use Wikki",
-    description: "Real time deliveries",
-  }
-}
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body3, Header3, Header5, SubTitle } from "styles/TextStyles"
+
+import Link from "next/link"
+import LayoutHead from "container/LayoutHead"
 
 const WorksDriver = () => {
   return (
     <Body>
+      <LayoutHead title="How it works driver" />
       <Cover>
         <WorksSelector>
           <Selector>
-            <Driver to="/how-it-works">
-              <SelectorText>Rider </SelectorText>
-            </Driver>
-            <User to="/how-it-works/driver">
-              <SelectorText>Driver</SelectorText>
-            </User>
+            <Link href="/how-it-works" passHref>
+              <Driver>
+                <SelectorText>Rider </SelectorText>
+              </Driver>
+            </Link>
+            <Link href="/how-it-works/driver" passHref>
+              <User>
+                <SelectorText>Driver</SelectorText>
+              </User>
+            </Link>
           </Selector>
         </WorksSelector>
 
@@ -48,14 +44,14 @@ const WorksDriver = () => {
                   </DownloadText>
                 </DownloadContent>
                 <DownloadApp>
-                  <AppImage src={app} alt="use wikki my wikki" />
+                  <img src="/app.png" alt="use wikki my wikki" />
                 </DownloadApp>
               </DownloadCover>
             </DownloadSection>
           </TopRow>
           <BottomRow>
             <SecondRow>
-              <SecondMask src={icon} alt="use wikki my wikki" />
+              <SecondMask src="/icon.png" alt="use wikki my wikki" />
               <BottomCover>
                 <SecondContent>
                   <SecondNumber>
@@ -71,12 +67,12 @@ const WorksDriver = () => {
                   </SecondDownload>
                 </SecondContent>
                 <SecondImage>
-                  <SecondLustration src={route} alt="mywikki use wikki" />
+                  <img src="/route.png" alt="mywikki use wikki" />
                 </SecondImage>
               </BottomCover>
             </SecondRow>{" "}
             <ThirdRow>
-              <ThirdMask src={bave} alt="use wikki my wikki" />
+              <ThirdMask src="/bave.svg" alt="use wikki my wikki" />
               <ThirdBottomCover>
                 <ThirdContent>
                   <ThirdNumber>
@@ -92,7 +88,7 @@ const WorksDriver = () => {
                   </ThirdDownload>
                 </ThirdContent>
                 <ThirdImage>
-                  <ThirdLustration src={pay} alt="mywikki use wikki" />
+                  <img src="/pay.png" alt="mywikki use wikki" />
                 </ThirdImage>
               </ThirdBottomCover>
             </ThirdRow>
@@ -147,7 +143,7 @@ const Selector = styled.div`
   flex-direction: row;
   align-items: center;
 `
-const User = styled(Link)`
+const User = styled.a`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -160,7 +156,7 @@ const User = styled(Link)`
   justify-content: center;
   align-items: center;
 `
-const Driver = styled(Link)`
+const Driver = styled.a`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -272,11 +268,13 @@ const DownloadApp = styled.div`
   max-width: 361px;
   width: 100%;
   margin: 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `
-const AppImage = styled.img`
-  width: 100%;
-  height: 100%;
-`
+
 const SecondRow = styled.div`
   max-height: 600px;
   height: 100%;
@@ -290,6 +288,11 @@ const SecondRow = styled.div`
   background: ${WikkiTheme.lightYelllow};
   @media only screen and (max-width: 650px) {
     min-height: 400px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
   }
 `
 
@@ -374,13 +377,14 @@ const SecondImage = styled.div`
     margin-bottom: 0px;
     max-height: 400px;
   }
-`
-const SecondLustration = styled.img`
-  height: 100%;
-  width: 100%;
-  min-height: 250px;
-  max-height: 441px;
-  max-width: 441px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    min-height: 250px;
+    max-height: 441px;
+    max-width: 441px;
+  }
 `
 
 const ThirdRow = styled.div`
@@ -457,14 +461,16 @@ const ThirdImage = styled.div`
   max-width: 441px;
   margin-bottom: 40px;
   margin-top: -60px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
   @media only screen and (max-width: 650px) {
     margin-bottom: 0px;
 
     max-height: 400px;
   }
 `
-const ThirdLustration = styled.img`
-  height: 100%;
-  width: 100%;
-`
+
 export default WorksDriver

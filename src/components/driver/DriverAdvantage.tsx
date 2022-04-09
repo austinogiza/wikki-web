@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { MainButton } from "~/styles/ButtonStyles"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body3, Header2, Header5 } from "~/styles/TextStyles"
+import { MainButton } from "styles/ButtonStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body3, Header2, Header5 } from "styles/TextStyles"
 import { driverData } from "./PurposeData"
-import main from "~/images/main.png"
 
 const DriverAdvantage = () => {
   return (
@@ -25,7 +24,7 @@ const DriverAdvantage = () => {
           </DriverLeft>
           <DriverRight>
             <RightSection>
-              <DriverImage src={main} alt="wikki driver requirement" />
+              <DriverImage src="/main.png" alt="wikki driver requirement" />
             </RightSection>
             {driverData.map((data, index) => (
               <RightSection key={index}>

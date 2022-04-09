@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body3, Header2 } from "~/styles/TextStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body3, Header2 } from "styles/TextStyles"
 import DriverAccordion from "./DriverAccordion"
 import { requirementData } from "./RequirementData"
-import driver from "~/images/driver2.png"
+
 const DriverRequirements = () => {
   const [selected, setSelected] = useState<number | null>(1)
 
@@ -38,7 +38,7 @@ const DriverRequirements = () => {
             ))}
           </DriverNeeds>
           <DriverImage>
-            <DriverPhoto src={driver} alt="wikki" />
+            <DriverPhoto src="/driver2.png" alt="wikki" />
           </DriverImage>
         </DriverGrid>
       </Cover>

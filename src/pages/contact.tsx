@@ -1,18 +1,14 @@
 import React from "react"
-import { MetaFunction } from "remix"
+
 import styled from "styled-components"
 import ContactForm from "components/contact/ContactForm"
 import ContactHero from "components/contact/ContactHero"
+import LayoutHead from "container/LayoutHead"
 
-export const meta: MetaFunction = () => {
-  return {
-    title: "Contact Us - Use Wikki",
-    description: "Real time deliveries",
-  }
-}
 const contact = () => {
   return (
     <Body>
+      <LayoutHead title="Contact Us" />
       <ContactHero />
       <ContactForm />
     </Body>

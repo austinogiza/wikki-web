@@ -1,9 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Header2, Body3, Header1, Body1, SubTitle } from "~/styles/TextStyles"
-import purpose from "~/images/purpose01.png"
-import purpose02 from "~/images/purpose02.png"
-import { WikkiTheme } from "~/styles/ColorStyles"
+import { Header2, Body3, Header1, Body1, SubTitle } from "styles/TextStyles"
+
+import { WikkiTheme } from "styles/ColorStyles"
 const HomeWaiting = () => {
   return (
     <Body>
@@ -18,7 +17,7 @@ const HomeWaiting = () => {
         </WaitingRow>
         <DetailsGrid>
           <GridRight>
-            <GridImage src={purpose02} alt="use wikki" />
+            <GridImage src="/purpose01.png" alt="use wikki" />
           </GridRight>{" "}
           <GridLeft>
             <RideTitle>Robust delivery and pickup</RideTitle>
@@ -30,7 +29,7 @@ const HomeWaiting = () => {
             </RideText>
           </GridLeft>
           <GridRight>
-            <GridImage src={purpose02} alt="use wikki" />
+            <GridImage src="/purpose01.png" alt="use wikki" />
           </GridRight>{" "}
           <GridLeft>
             <RideTitle>Robust delivery and pickup</RideTitle>
@@ -44,7 +43,7 @@ const HomeWaiting = () => {
         </DetailsGrid>{" "}
         <DetailsGrid>
           <GridRight>
-            <GridImage src={purpose} alt="use wikki" />
+            <GridImage src="/purpose01.png" alt="use wikki" />
           </GridRight>
           <GridLeft>
             <RideTitle>Our Mission</RideTitle>

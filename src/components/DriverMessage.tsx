@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { downloadData } from "~/data/downloadData"
+import { downloadData } from "data/downloadData"
 
-import { WikkiTheme } from "~/styles/ColorStyles"
+import { WikkiTheme } from "styles/ColorStyles"
 import WikkiInfo from "./WikkiInfo"
 import WikkiTabNav from "./WikkiTabNav"
 

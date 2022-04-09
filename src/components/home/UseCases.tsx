@@ -1,10 +1,10 @@
 import styled from "styled-components"
-import user from "~/images/user.png"
-import driver from "~/images/driver.png"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Header2, Header1 } from "~/styles/TextStyles"
 
-import { CaseButton } from "~/styles/ButtonStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { Header2, Header1 } from "styles/TextStyles"
+
+import { CaseButton } from "styles/ButtonStyles"
+import Link from "next/link"
 
 const UseCases = () => {
   return (
@@ -16,8 +16,10 @@ const UseCases = () => {
             {" "}
             <MoreOverlay />
             <RowContent>
-              <CaseTitle>For Dispatch</CaseTitle>{" "}
-              <CaseButtonLink to="/dispatch">Learn more</CaseButtonLink>
+              <CaseTitle>For Dispatch</CaseTitle>
+              <Link href="/dispatch" passHref>
+                <CaseButtonLink>Learn more</CaseButtonLink>
+              </Link>
             </RowContent>
           </CaseRowUsers>
           <CaseRowDrivers>
@@ -25,8 +27,9 @@ const UseCases = () => {
             <MoreOverlay />
             <RowContent>
               <CaseTitle>For pickups</CaseTitle>
-
-              <CaseButtonLink to="/pick-up">Learn more</CaseButtonLink>
+              <Link passHref href="/pick-up">
+                <CaseButtonLink>Learn more</CaseButtonLink>
+              </Link>
             </RowContent>
           </CaseRowDrivers>
         </CaseGrid>
@@ -109,7 +112,7 @@ const CaseRowUsers = styled.div`
   z-index: 2;
   border-radius: 20px;
   padding: 16px;
-  background: url(${user}) no-repeat center center/cover;
+  background: url("/user.png") no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
     max-height: 600px;
     min-height: 550px;
@@ -150,7 +153,7 @@ const CaseRowDrivers = styled.div`
   width: 100%;
 
   border-radius: 20px;
-  background: url(${driver}) no-repeat center center/cover;
+  background: url("/driver.png") no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
     max-height: 600px;
     min-height: 550px;

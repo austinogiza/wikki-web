@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
+import { WikkiTheme } from "styles/ColorStyles"
 import { HiOutlineArrowUp } from "react-icons/hi"
-import { Caption } from "~/styles/TextStyles"
+import { Caption } from "styles/TextStyles"
 interface ScrollProps {
   scrolled?: boolean
 }

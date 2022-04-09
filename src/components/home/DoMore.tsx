@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import point from "~/images/pointcard.gif"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body3, Header5, Header1 } from "~/styles/TextStyles"
+
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body3, Header5, Header1 } from "styles/TextStyles"
 const DoMore = () => {
   return (
     <Body>
@@ -29,7 +29,7 @@ const Body = styled.section`
   color: ${WikkiTheme.white};
   width: 100%;
   padding: 16px;
-  background: url(${point}) no-repeat center center/cover;
+  background: url("/pointcard.gif") no-repeat center center/cover;
   @media only screen and (max-width: 550px) {
     min-height: 450px;
   }

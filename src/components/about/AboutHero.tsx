@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import main from "~/images/main.png"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body2, Header1 } from "~/styles/TextStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body2, Header1 } from "styles/TextStyles"
 import NavCover from "../navbar/NavCover"
 
 const AboutHero = () => {
@@ -12,7 +11,7 @@ const AboutHero = () => {
       <Cover>
         <MoreTitle>ABOUT WIKKI</MoreTitle>
         <CoverImage>
-          <AboutImage src={main} alt="the wikki my wikki" />
+          <AboutImage src="/main.png" alt="the wikki my wikki" />
         </CoverImage>
         <CoverDets>
           <CoverTitle>Robust delivery and pickup for Nigeria</CoverTitle>

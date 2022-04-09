@@ -1,13 +1,12 @@
 import React from "react"
-import { Link } from "remix"
+import Link from "next/link"
 import styled from "styled-components"
-import { MenuData, ProductsData } from "~/data/FooterData"
-import logo from "~/images/logo.svg"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Header3, Header5, SubTitle } from "~/styles/TextStyles"
-import appstore from "~/images/appstore.svg"
-import playstore from "~/images/playstore.svg"
-import { DownloadButton } from "~/styles/ButtonStyles"
+import { MenuData, ProductsData } from "data/FooterData"
+
+import { WikkiTheme } from "styles/ColorStyles"
+import { Header3, Header5, SubTitle } from "styles/TextStyles"
+
+import { DownloadButton } from "styles/ButtonStyles"
 const Footer = () => {
   return (
     <Body>
@@ -15,16 +14,17 @@ const Footer = () => {
         <FooterTop>
           {" "}
           <FooterRow>
-            <FooterLogo src={logo} alt="Wikki logo" />
+            <Link href="/" passHref>
+              <FooterLogo src="/logo.svg" alt="Wikki logo" />
+            </Link>
           </FooterRow>
           <FooterRow>
             <FooterColumn>
               <ColTitle>Menu</ColTitle>
               <FooterList>
-                {MenuData.map((data, index) => (
+                {MenuData.map((data: any, index: number) => (
                   <FooterLinks key={index}>
-                    <Link to={`/${data.link}`}>
-                      {" "}
+                    <Link href={`/${data.link}`} passHref>
                       <FooterText>{data.name}</FooterText>
                     </Link>
                   </FooterLinks>
@@ -38,8 +38,7 @@ const Footer = () => {
               <FooterList>
                 {ProductsData.map((data, index) => (
                   <FooterLinks key={index}>
-                    <Link to={`/${data.link}`}>
-                      {" "}
+                    <Link href={`/${data.link}`} passHref>
                       <FooterText>{data.name}</FooterText>
                     </Link>
                   </FooterLinks>
@@ -52,14 +51,16 @@ const Footer = () => {
               <GingerTitle>Get the app</GingerTitle>{" "}
               <GingerRow>
                 <CommunityMainButton target="_blank" rel="noopener noreferrer">
-                  <StoreIcon src={appstore} alt="wikki download" /> App Store
+                  <StoreIcon src="/appstore.svg" alt="wikki download" /> App
+                  Store
                 </CommunityMainButton>
 
                 <CommunityOutlineButton
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <StoreIcon src={playstore} alt="wikki download" /> Google Play
+                  <StoreIcon src="/playstore.svg" alt="wikki download" /> Google
+                  Play
                 </CommunityOutlineButton>
               </GingerRow>
             </FooterColumn>

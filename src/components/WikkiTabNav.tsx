@@ -2,9 +2,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import React, { FC } from "react"
 
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
+import { WikkiTheme } from "styles/ColorStyles"
 
-import { Header5 } from "~/styles/TextStyles"
+import { Header5 } from "styles/TextStyles"
 
 interface TabStyleProps {
   active?: boolean

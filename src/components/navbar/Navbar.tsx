@@ -1,12 +1,12 @@
 import React, { FC, useEffect, useState } from "react"
 import styled from "styled-components"
-import { Link, useLocation } from "remix"
-import logo from "~/images/logo.svg"
-import { SubTitle } from "~/styles/TextStyles"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { NavbarButton } from "~/styles/ButtonStyles"
-import { isMobile } from "react-device-detect"
+import Link from "next/link"
 
+import { SubTitle } from "styles/TextStyles"
+import { WikkiTheme } from "styles/ColorStyles"
+import { NavbarButton } from "styles/ButtonStyles"
+import { isMobile } from "react-device-detect"
+import { useRouter } from "next/router"
 interface LinkProps {
   linkTrue?: boolean
 }
@@ -23,7 +23,7 @@ const Navbar: FC<NavbarProps> = (props) => {
   const [open, setOpen] = useState<boolean>(false)
   const [currentRoute, setCurrentRoute] = useState<boolean>(false)
   const { onClick } = props
-  const router = useLocation()
+  const router = useRouter()
 
   const toggle = () => {
     setOpen(!open)
@@ -41,8 +41,8 @@ const Navbar: FC<NavbarProps> = (props) => {
   return (
     <Body routerOpened={currentRoute}>
       <MobileLogo>
-        <Link to="/">
-          <Logo src={logo} alt="Wikki logo" />
+        <Link href="/" passHref>
+          <Logo src="/logo.svg" alt="Wikki logo" />
         </Link>
       </MobileLogo>
       <MobileToggle onClick={toggle}>
@@ -52,13 +52,13 @@ const Navbar: FC<NavbarProps> = (props) => {
       </MobileToggle>
       <Cover open={open} routerOpened={currentRoute}>
         <WikkiLogo>
-          <Link to="/">
-            <Logo src={logo} alt="Wikki logo" />
+          <Link href="/" passHref>
+            <Logo src="/logo.svg" alt="Wikki logo" />
           </Link>
         </WikkiLogo>
         <WikkiLinksCover>
           <WikkiLinks>
-            <Link to="/about">
+            <Link href="/about" passHref>
               <WikkiHref>
                 <LinkText
                   linkTrue={
@@ -71,7 +71,7 @@ const Navbar: FC<NavbarProps> = (props) => {
                 </LinkText>
               </WikkiHref>
             </Link>
-            <Link to="/driver-requirements">
+            <Link href="/driver-requirements" passHref>
               <WikkiHref>
                 <LinkText
                   linkTrue={
@@ -84,7 +84,7 @@ const Navbar: FC<NavbarProps> = (props) => {
                 </LinkText>
               </WikkiHref>
             </Link>
-            <Link to="/how-it-works">
+            <Link href="/how-it-works" passHref>
               <WikkiHref>
                 <LinkText
                   linkTrue={
@@ -97,7 +97,7 @@ const Navbar: FC<NavbarProps> = (props) => {
                 </LinkText>
               </WikkiHref>
             </Link>{" "}
-            <Link to="/contact">
+            <Link href="/contact" passHref>
               <WikkiHref>
                 <LinkText
                   linkTrue={
@@ -158,6 +158,7 @@ const WikkiLogo = styled.div`
 const Logo = styled.img`
   height: 56px;
   width: 141px;
+  cursor: pointer;
 `
 
 const WikkiLinksCover = styled.div`
@@ -179,6 +180,7 @@ const WikkiLinks = styled.ul`
 `
 const WikkiHref = styled.li`
   margin: 12px;
+  cursor: pointer;
 `
 const LinkText = styled(SubTitle)<LinkProps>`
   transition: all 0.4s ease-in-out;

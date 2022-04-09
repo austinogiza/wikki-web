@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
+import { WikkiTheme } from "styles/ColorStyles"
 import { Form, Formik, FormikHelpers } from "formik"
 import * as Yup from "yup"
-import { TextInput, TextArea } from "~/styles/InputStyles"
-import { SubTitleSmall, Header3, SubTitle } from "~/styles/TextStyles"
-import { FormButton } from "~/styles/ButtonStyles"
+import { TextInput, TextArea } from "styles/InputStyles"
+import { SubTitleSmall, Header3, SubTitle } from "styles/TextStyles"
+import { FormButton } from "styles/ButtonStyles"
 
 interface Values {
   email: string

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { WikkiTheme } from "./ColorStyles"
-import { Link } from "remix"
+
 export const MainButton = styled.button`
   height: 56px;
   max-width: 180px;
@@ -110,7 +110,7 @@ export const FormButton = styled.button`
   align-items: center;
   justify-content: center;
 `
-export const CaseButton = styled(Link)`
+export const CaseButton = styled.a`
   height: 64px;
   max-width: 180px;
   width: 100%;
@@ -216,7 +216,7 @@ export const DownloadButton = styled.a`
   }
 `
 
-export const BusinessButton = styled(Link)`
+export const BusinessButton = styled.a`
   height: 64px;
   max-width: 441px;
   width: 100%;

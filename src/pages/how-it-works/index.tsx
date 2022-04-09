@@ -1,31 +1,28 @@
 import React from "react"
 import styled from "styled-components"
-import { WikkiTheme } from "~/styles/ColorStyles"
-import { Body3, Header3, Header5, SubTitle } from "~/styles/TextStyles"
-import route from "~/images/route.png"
-import pay from "~/images/pay.png"
-import app from "~/images/app.png"
-import bave from "~/images/bave.svg"
-import mask from "~/images/mask.svg"
-import { Link, MetaFunction } from "remix"
-export const meta: MetaFunction = () => {
-  return {
-    title: "How it works users - Use Wikki",
-    description: "Real time deliveries",
-  }
-}
+import { WikkiTheme } from "styles/ColorStyles"
+import { Body3, Header3, Header5, SubTitle } from "styles/TextStyles"
+
+import Link from "next/link"
+import LayoutHead from "container/LayoutHead"
+
 const index = () => {
   return (
     <Body>
+      <LayoutHead title="How it works users" />
       <Cover>
         <WorksSelector>
           <Selector>
-            <User to="/how-it-works">
-              <SelectorText>Rider</SelectorText>
-            </User>
-            <Driver to="/how-it-works/driver">
-              <SelectorText>Driver</SelectorText>
-            </Driver>
+            <Link href="/how-it-works" passHref>
+              <User>
+                <SelectorText>Rider</SelectorText>
+              </User>
+            </Link>
+            <Link href="/how-it-works/driver" passHref>
+              <Driver>
+                <SelectorText>Driver</SelectorText>
+              </Driver>
+            </Link>
           </Selector>
         </WorksSelector>
 
@@ -47,14 +44,14 @@ const index = () => {
                   </DownloadText>
                 </DownloadContent>
                 <DownloadApp>
-                  <AppImage src={app} alt="use wikki my wikki" />
+                  <AppImage src="/app.png" alt="use wikki my wikki" />
                 </DownloadApp>
               </DownloadCover>
             </DownloadSection>
           </TopRow>
           <BottomRow>
             <SecondRow>
-              <SecondMask src={mask} alt="use wikki my wikki" />
+              <SecondMask src="/mask.svg" alt="use wikki my wikki" />
               <BottomCover>
                 <SecondContent>
                   <SecondNumber>
@@ -73,12 +70,12 @@ const index = () => {
                   </SecondDownload>
                 </SecondContent>
                 <SecondImage>
-                  <SecondLustration src={route} alt="mywikki use wikki" />
+                  <SecondLustration src="/route.png" alt="mywikki use wikki" />
                 </SecondImage>
               </BottomCover>
             </SecondRow>{" "}
             <ThirdRow>
-              <ThirdMask src={bave} alt="use wikki my wikki" />
+              <ThirdMask src="/bave.svg" alt="use wikki my wikki" />
               <ThirdBottomCover>
                 <ThirdContent>
                   <ThirdNumber>
@@ -94,7 +91,7 @@ const index = () => {
                   </ThirdDownload>
                 </ThirdContent>
                 <ThirdImage>
-                  <ThirdLustration src={pay} alt="mywikki use wikki" />
+                  <ThirdLustration src="/pay.png" alt="mywikki use wikki" />
                 </ThirdImage>
               </ThirdBottomCover>
             </ThirdRow>
@@ -149,7 +146,7 @@ const Selector = styled.div`
   flex-direction: row;
   align-items: center;
 `
-const User = styled(Link)`
+const User = styled.a`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -162,7 +159,7 @@ const User = styled(Link)`
   justify-content: center;
   align-items: center;
 `
-const Driver = styled(Link)`
+const Driver = styled.a`
   height: 44px;
   max-width: 154px;
   width: 100%;

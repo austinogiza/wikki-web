@@ -1,19 +1,16 @@
 import React from "react"
-import { MetaFunction } from "remix"
+
 import styled from "styled-components"
 import DriverAdvantage from "components/driver/DriverAdvantage"
 import DriverHero from "components/driver/DriverHero"
 import DriverMessage from "components/driver/DriverMessage"
 import DriverRequirements from "components/driver/DriverRequirements"
-export const meta: MetaFunction = () => {
-  return {
-    title: "Become a driver - Use Wikki",
-    description: "Realtime delivery",
-  }
-}
+import LayoutHead from "container/LayoutHead"
+
 const driver = () => {
   return (
     <Body>
+      <LayoutHead title="Become a driver" />
       <DriverHero />
       <DriverAdvantage />
       <DriverMessage />

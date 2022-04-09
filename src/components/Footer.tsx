@@ -157,7 +157,7 @@ const GingerRow = styled.div`
   margin: 40px auto;
   width: 100%;
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 350px) {
     flex-direction: column;
   }
 `

@@ -367,7 +367,7 @@ __export(root_exports, {
   meta: () => meta
 });
 init_react();
-var import_remix4 = __toESM(require_remix());
+var import_remix5 = __toESM(require_remix());
 var import_nprogress = __toESM(require("nprogress"));
 
 // app/styles/nprogress.css
@@ -385,27 +385,44 @@ var import_react_toastify = require("react-toastify");
 // app/components/Footer.tsx
 init_react();
 var import_react = __toESM(require("react"));
-var Footer = () => {
-  return /* @__PURE__ */ import_react.default.createElement("div", null);
-};
-var Footer_default = Footer;
-
-// route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\root.tsx
-var import_react5 = require("react");
-
-// app/components/navbar/NavCover.tsx
-init_react();
-var import_react3 = __toESM(require("react"));
-var import_styled_components5 = __toESM(require("styled-components"));
-
-// app/components/navbar/Navbar.tsx
-init_react();
-var import_react2 = __toESM(require("react"));
-var import_styled_components4 = __toESM(require("styled-components"));
 var import_remix3 = __toESM(require_remix());
+var import_styled_components4 = __toESM(require("styled-components"));
+
+// app/data/FooterData.tsx
+init_react();
+var MenuData = [
+  { name: "About us", link: "about" },
+  { name: "Use cases", link: "about" },
+  { name: "How it works", link: "about" },
+  { name: "How to get started as a driver", link: "about" },
+  { name: "Contact", link: "contact" }
+];
+var ProductsData = [
+  { name: "Delivery", link: "about" },
+  { name: "Wikki pickup", link: "about" }
+];
 
 // app/images/logo.svg
 var logo_default = "/build/_assets/logo-ER6L2UUP.svg";
+
+// app/styles/ColorStyles.tsx
+init_react();
+var WikkiTheme = {
+  primary: "#330066",
+  secondary: "#FF9E17",
+  white: "#ffffff",
+  black: "#000000",
+  dark: "#0a0b1a",
+  snowWhite: "#FAFAFF",
+  smokeWhite: "#FAFAFA",
+  red: "#ff0000",
+  gray: "#818181",
+  yellow: "#FFCE32",
+  blue: "#1D63FF",
+  lightYelllow: "#FEFAF0",
+  darkRed: "#F34646",
+  switchBG: "rgba(118, 118, 128, 0.5)"
+};
 
 // app/styles/TextStyles.tsx
 init_react();
@@ -534,22 +551,11 @@ var Body4 = import_styled_components2.default.p`
   }
 `;
 
-// app/styles/ColorStyles.tsx
-init_react();
-var WikkiTheme = {
-  primary: "#330066",
-  secondary: "#FF9E17",
-  white: "#ffffff",
-  black: "#000000",
-  dark: "#0a0b1a",
-  snowWhite: "#FAFAFF",
-  red: "#ff0000",
-  gray: "#818181",
-  yellow: "#FFCE32",
-  blue: "#1D63FF",
-  lightYelllow: "#FEFAF0",
-  darkRed: "#F34646"
-};
+// app/images/appstore.svg
+var appstore_default = "/build/_assets/appstore-ZWACUNEJ.svg";
+
+// app/images/playstore.svg
+var playstore_default = "/build/_assets/playstore-XLZVLEQK.svg";
 
 // app/styles/ButtonStyles.tsx
 init_react();
@@ -730,14 +736,171 @@ var NavbarButton = import_styled_components3.default.button`
     }
   }
 `;
+var DownloadButton = import_styled_components3.default.a`
+  height: 64px;
+  max-width: 200px;
+  width: 100%;
+  background: ${WikkiTheme.dark};
+  cursor: pointer;
+  color: ${WikkiTheme.white};
+  border-radius: 32px;
+  margin: 8px;
+  border: none;
+  outline: none;
+  font-family: "Clash Display Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+// app/components/Footer.tsx
+var Footer = () => {
+  return /* @__PURE__ */ import_react.default.createElement(Body, null, /* @__PURE__ */ import_react.default.createElement(Cover, null, /* @__PURE__ */ import_react.default.createElement(FooterTop, null, " ", /* @__PURE__ */ import_react.default.createElement(FooterRow, null, /* @__PURE__ */ import_react.default.createElement(FooterLogo, {
+    src: logo_default,
+    alt: "Wikki logo"
+  })), /* @__PURE__ */ import_react.default.createElement(FooterRow, null, /* @__PURE__ */ import_react.default.createElement(FooterColumn, null, /* @__PURE__ */ import_react.default.createElement(ColTitle, null, "Menu"), /* @__PURE__ */ import_react.default.createElement(FooterList, null, MenuData.map((data, index3) => /* @__PURE__ */ import_react.default.createElement(FooterLinks, {
+    key: index3
+  }, /* @__PURE__ */ import_react.default.createElement(import_remix3.Link, {
+    to: `/${data.link}`
+  }, " ", /* @__PURE__ */ import_react.default.createElement(FooterText, null, data.name)))), " "))), " ", /* @__PURE__ */ import_react.default.createElement(FooterRow, null, /* @__PURE__ */ import_react.default.createElement(FooterColumn, null, /* @__PURE__ */ import_react.default.createElement(ColTitle, null, "Products"), /* @__PURE__ */ import_react.default.createElement(FooterList, null, ProductsData.map((data, index3) => /* @__PURE__ */ import_react.default.createElement(FooterLinks, {
+    key: index3
+  }, /* @__PURE__ */ import_react.default.createElement(import_remix3.Link, {
+    to: `/${data.link}`
+  }, " ", /* @__PURE__ */ import_react.default.createElement(FooterText, null, data.name)))), " "))), " ", /* @__PURE__ */ import_react.default.createElement(FooterRow, null, /* @__PURE__ */ import_react.default.createElement(FooterColumn, null, /* @__PURE__ */ import_react.default.createElement(GingerTitle, null, "Get the app"), " ", /* @__PURE__ */ import_react.default.createElement(GingerRow, null, /* @__PURE__ */ import_react.default.createElement(CommunityMainButton, {
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /* @__PURE__ */ import_react.default.createElement(StoreIcon, {
+    src: appstore_default,
+    alt: "wikki download"
+  }), " App Store"), /* @__PURE__ */ import_react.default.createElement(CommunityOutlineButton, {
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /* @__PURE__ */ import_react.default.createElement(StoreIcon, {
+    src: playstore_default,
+    alt: "wikki download"
+  }), " Google Play"))))), /* @__PURE__ */ import_react.default.createElement(FooterBottom, null, /* @__PURE__ */ import_react.default.createElement(FooterText, null, "Copyright ", new Date().getFullYear()))));
+};
+var Body = import_styled_components4.default.footer`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  background: ${WikkiTheme.black};
+`;
+var Cover = import_styled_components4.default.div`
+  max-width: 1232px;
+  margin: 24px auto;
+  color: ${WikkiTheme.white};
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
+var FooterTop = import_styled_components4.default.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-gap: 24px;
+  gap: 24px;
+  width: 100%;
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+var FooterRow = import_styled_components4.default.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+`;
+var FooterLogo = import_styled_components4.default.img`
+  height: 56px;
+  max-width: 141px;
+  width: 100%;
+`;
+var FooterColumn = import_styled_components4.default.div`
+  display: flex;
+  flex-direction: column;
+`;
+var ColTitle = (0, import_styled_components4.default)(Header5)``;
+var FooterList = import_styled_components4.default.ul`
+  margin: 24px 0;
+`;
+var FooterLinks = import_styled_components4.default.li`
+  margin: 10px 0;
+  color: ${WikkiTheme.white};
+
+  a {
+    color: ${WikkiTheme.white};
+    transition: 0.4s ease-in;
+
+    :hover {
+      color: ${WikkiTheme.secondary};
+    }
+  }
+`;
+var FooterText = (0, import_styled_components4.default)(SubTitle)``;
+var FooterBottom = import_styled_components4.default.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 24px 0;
+`;
+var GingerTitle = (0, import_styled_components4.default)(Header3)`
+  color: ${WikkiTheme.white};
+  margin: 8px 0;
+  text-align: left;
+`;
+var GingerRow = import_styled_components4.default.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+
+  margin: 40px auto;
+  width: 100%;
+
+  @media only screen and (max-width: 450px) {
+    flex-direction: column;
+  }
+`;
+var StoreIcon = import_styled_components4.default.img`
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+`;
+var CommunityMainButton = (0, import_styled_components4.default)(DownloadButton)``;
+var CommunityOutlineButton = (0, import_styled_components4.default)(DownloadButton)``;
+var Footer_default = Footer;
+
+// route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\root.tsx
+var import_react8 = require("react");
+
+// app/components/navbar/NavCover.tsx
+init_react();
+var import_react3 = __toESM(require("react"));
+var import_styled_components6 = __toESM(require("styled-components"));
 
 // app/components/navbar/Navbar.tsx
+init_react();
+var import_react2 = __toESM(require("react"));
+var import_styled_components5 = __toESM(require("styled-components"));
+var import_remix4 = __toESM(require_remix());
 var import_react_device_detect = require("react-device-detect");
 var Navbar = (props) => {
   const [open, setOpen] = (0, import_react2.useState)(false);
   const [currentRoute, setCurrentRoute] = (0, import_react2.useState)(false);
   const { onClick } = props;
-  const router = (0, import_remix3.useLocation)();
+  const router = (0, import_remix4.useLocation)();
   const toggle = () => {
     setOpen(!open);
   };
@@ -749,9 +912,9 @@ var Navbar = (props) => {
     }
     setOpen(false);
   }, [router]);
-  return /* @__PURE__ */ import_react2.default.createElement(Body, {
+  return /* @__PURE__ */ import_react2.default.createElement(Body5, {
     routerOpened: currentRoute
-  }, /* @__PURE__ */ import_react2.default.createElement(MobileLogo, null, /* @__PURE__ */ import_react2.default.createElement(import_remix3.Link, {
+  }, /* @__PURE__ */ import_react2.default.createElement(MobileLogo, null, /* @__PURE__ */ import_react2.default.createElement(import_remix4.Link, {
     to: "/"
   }, /* @__PURE__ */ import_react2.default.createElement(Logo, {
     src: logo_default,
@@ -767,27 +930,27 @@ var Navbar = (props) => {
   }), /* @__PURE__ */ import_react2.default.createElement(ToggleBottom, {
     open,
     routerOpened: currentRoute
-  })), /* @__PURE__ */ import_react2.default.createElement(Cover, {
+  })), /* @__PURE__ */ import_react2.default.createElement(Cover2, {
     open,
     routerOpened: currentRoute
-  }, /* @__PURE__ */ import_react2.default.createElement(WikkiLogo, null, /* @__PURE__ */ import_react2.default.createElement(import_remix3.Link, {
+  }, /* @__PURE__ */ import_react2.default.createElement(WikkiLogo, null, /* @__PURE__ */ import_react2.default.createElement(import_remix4.Link, {
     to: "/"
   }, /* @__PURE__ */ import_react2.default.createElement(Logo, {
     src: logo_default,
     alt: "Wikki logo"
-  }))), /* @__PURE__ */ import_react2.default.createElement(WikkiLinksCover, null, /* @__PURE__ */ import_react2.default.createElement(WikkiLinks, null, /* @__PURE__ */ import_react2.default.createElement(import_remix3.Link, {
+  }))), /* @__PURE__ */ import_react2.default.createElement(WikkiLinksCover, null, /* @__PURE__ */ import_react2.default.createElement(WikkiLinks, null, /* @__PURE__ */ import_react2.default.createElement(import_remix4.Link, {
     to: "/about"
   }, /* @__PURE__ */ import_react2.default.createElement(WikkiHref, null, /* @__PURE__ */ import_react2.default.createElement(LinkText, {
     linkTrue: router.pathname === "/" || router.pathname === "/about" ? true : false
-  }, "About Us", " "))), /* @__PURE__ */ import_react2.default.createElement(import_remix3.Link, {
+  }, "About Us", " "))), /* @__PURE__ */ import_react2.default.createElement(import_remix4.Link, {
     to: "/driver-requirements"
   }, /* @__PURE__ */ import_react2.default.createElement(WikkiHref, null, /* @__PURE__ */ import_react2.default.createElement(LinkText, {
     linkTrue: router.pathname === "/" || router.pathname === "/about" ? true : false
-  }, "Become A Driver"))), /* @__PURE__ */ import_react2.default.createElement(import_remix3.Link, {
+  }, "Become A Driver"))), /* @__PURE__ */ import_react2.default.createElement(import_remix4.Link, {
     to: "/how-it-works"
   }, /* @__PURE__ */ import_react2.default.createElement(WikkiHref, null, /* @__PURE__ */ import_react2.default.createElement(LinkText, {
     linkTrue: router.pathname === "/" || router.pathname === "/about" ? true : false
-  }, "How It Works"))), " ", /* @__PURE__ */ import_react2.default.createElement(import_remix3.Link, {
+  }, "How It Works"))), " ", /* @__PURE__ */ import_react2.default.createElement(import_remix4.Link, {
     to: "/contact"
   }, /* @__PURE__ */ import_react2.default.createElement(WikkiHref, null, /* @__PURE__ */ import_react2.default.createElement(LinkText, {
     linkTrue: router.pathname === "/" || router.pathname === "/about" ? true : false
@@ -795,14 +958,14 @@ var Navbar = (props) => {
     onClick
   }, /* @__PURE__ */ import_react2.default.createElement(NavButton, null, "Get App"))));
 };
-var Body = import_styled_components4.default.section`
+var Body5 = import_styled_components5.default.section`
   position: relative;
   @media only screen and (max-width: 800px) {
     background: ${(props) => props.routerOpened ? `${WikkiTheme.white}` : `${WikkiTheme.primary}`};
     height: 100px;
   }
 `;
-var Cover = import_styled_components4.default.div`
+var Cover2 = import_styled_components5.default.div`
   margin: 24px auto;
   padding: 16px;
   height: 92px;
@@ -822,23 +985,23 @@ var Cover = import_styled_components4.default.div`
     background: ${(props) => props.routerOpened ? `${WikkiTheme.white}` : `${WikkiTheme.primary}`};
   }
 `;
-var WikkiLogo = import_styled_components4.default.div`
+var WikkiLogo = import_styled_components5.default.div`
   @media only screen and (max-width: 800px) {
     display: none;
   }
 `;
-var Logo = import_styled_components4.default.img`
+var Logo = import_styled_components5.default.img`
   height: 56px;
   width: 141px;
 `;
-var WikkiLinksCover = import_styled_components4.default.div`
+var WikkiLinksCover = import_styled_components5.default.div`
   display: flex;
   flex-direction: row;
   @media only screen and (max-width: 800px) {
     flex-direction: column;
   }
 `;
-var WikkiLinks = import_styled_components4.default.ul`
+var WikkiLinks = import_styled_components5.default.ul`
   display: flex;
   flex-direction: row;
   @media only screen and (max-width: 800px) {
@@ -848,25 +1011,25 @@ var WikkiLinks = import_styled_components4.default.ul`
     align-items: center;
   }
 `;
-var WikkiHref = import_styled_components4.default.li`
+var WikkiHref = import_styled_components5.default.li`
   margin: 12px;
 `;
-var LinkText = (0, import_styled_components4.default)(SubTitle)`
+var LinkText = (0, import_styled_components5.default)(SubTitle)`
   transition: all 0.4s ease-in-out;
   color: ${(props) => props.linkTrue ? `${WikkiTheme.white}` : `${WikkiTheme.black}`};
   :hover {
     color: ${WikkiTheme.secondary};
   }
 `;
-var NavBut = import_styled_components4.default.div`
+var NavBut = import_styled_components5.default.div`
   max-width: 200px;
   width: 100%;
   @media only screen and (max-width: 800px) {
     margin: 32px 0;
   }
 `;
-var NavButton = (0, import_styled_components4.default)(NavbarButton)``;
-var MobileLogo = import_styled_components4.default.div`
+var NavButton = (0, import_styled_components5.default)(NavbarButton)``;
+var MobileLogo = import_styled_components5.default.div`
   display: none;
   @media only screen and (max-width: 800px) {
     display: flex;
@@ -876,7 +1039,7 @@ var MobileLogo = import_styled_components4.default.div`
     max-width: 1232px;
   }
 `;
-var MobileToggle = import_styled_components4.default.div`
+var MobileToggle = import_styled_components5.default.div`
   display: none;
   justify-content: center;
   align-items: center;
@@ -892,14 +1055,14 @@ var MobileToggle = import_styled_components4.default.div`
     display: flex;
   }
 `;
-var ToggleTop = import_styled_components4.default.span`
+var ToggleTop = import_styled_components5.default.span`
   height: 2px;
   width: 100%;
   transition: 0.3s ease-in;
   transform: ${(props) => props.open ? "rotate(-45deg) translate(-3px,2px)" : "rotate(0)"};
   background: ${(props) => props.routerOpened ? `${WikkiTheme.black}` : `${WikkiTheme.white}`};
 `;
-var ToggleMiddle = import_styled_components4.default.span`
+var ToggleMiddle = import_styled_components5.default.span`
   height: 2px;
   margin: 4px 0;
   width: 100%;
@@ -907,7 +1070,7 @@ var ToggleMiddle = import_styled_components4.default.span`
   display: ${(props) => props.open ? "none" : "flex"};
   background: ${(props) => props.routerOpened ? `${WikkiTheme.black}` : `${WikkiTheme.white}`};
 `;
-var ToggleBottom = import_styled_components4.default.span`
+var ToggleBottom = import_styled_components5.default.span`
   transform: ${(props) => props.open ? "rotate(45deg) translate(-4px,-3px)" : "rotate(0)"};
   height: 2px;
   background: ${(props) => props.routerOpened ? `${WikkiTheme.black}` : `${WikkiTheme.white}`};
@@ -918,9 +1081,9 @@ var Navbar_default = Navbar;
 
 // app/components/navbar/NavCover.tsx
 var NavCover = () => {
-  return /* @__PURE__ */ import_react3.default.createElement(Body5, null, /* @__PURE__ */ import_react3.default.createElement(Navbar_default, null));
+  return /* @__PURE__ */ import_react3.default.createElement(Body6, null, /* @__PURE__ */ import_react3.default.createElement(Navbar_default, null));
 };
-var Body5 = import_styled_components5.default.nav`
+var Body6 = import_styled_components6.default.nav`
   position: absolute;
   top: 0;
   left: 0;
@@ -933,7 +1096,7 @@ var NavCover_default = NavCover;
 // app/components/BackToTop.tsx
 init_react();
 var import_react4 = __toESM(require("react"));
-var import_styled_components6 = __toESM(require("styled-components"));
+var import_styled_components7 = __toESM(require("styled-components"));
 var import_hi = require("react-icons/hi");
 var BackToTop = () => {
   const [scrolled, setScrolled] = (0, import_react4.useState)(false);
@@ -950,12 +1113,12 @@ var BackToTop = () => {
   (0, import_react4.useEffect)(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
-  return /* @__PURE__ */ import_react4.default.createElement(Body6, {
+  return /* @__PURE__ */ import_react4.default.createElement(Body7, {
     scrolled,
     onClick: backTo
-  }, /* @__PURE__ */ import_react4.default.createElement(Cover2, null, /* @__PURE__ */ import_react4.default.createElement(ScrollText, null)));
+  }, /* @__PURE__ */ import_react4.default.createElement(Cover3, null, /* @__PURE__ */ import_react4.default.createElement(ScrollText, null)));
 };
-var Body6 = import_styled_components6.default.div`
+var Body7 = import_styled_components7.default.div`
   width: 64px;
   height: 64px;
   background: ${WikkiTheme.white};
@@ -984,19 +1147,228 @@ var Body6 = import_styled_components6.default.div`
     outline-offset: 3px;
   }
 `;
-var Cover2 = import_styled_components6.default.div`
+var Cover3 = import_styled_components7.default.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
-var ScrollText = (0, import_styled_components6.default)(import_hi.HiOutlineArrowUp)`
+var ScrollText = (0, import_styled_components7.default)(import_hi.HiOutlineArrowUp)`
   stroke: ${WikkiTheme.black};
 
   width: 32px;
   height: 32px;
 `;
 var BackToTop_default = BackToTop;
+
+// app/components/DriverMessage.tsx
+init_react();
+var import_react7 = __toESM(require("react"));
+var import_styled_components10 = __toESM(require("styled-components"));
+
+// app/data/downloadData.tsx
+init_react();
+var downloadData = [
+  {
+    name: "Rider",
+    title: "Download Wikki",
+    text: "Gain access to real time, affordable high-quality logistics, delivery and pickup directly from your phone.",
+    android: "",
+    ios: ""
+  },
+  {
+    name: "Driver",
+    title: "Download Wikki Driver",
+    text: "Gain access to real time, affordable high-quality logistics, delivery and pickup directly from your phone.",
+    android: "",
+    ios: ""
+  }
+];
+
+// app/components/WikkiInfo.tsx
+init_react();
+var import_react5 = __toESM(require("react"));
+var import_styled_components8 = __toESM(require("styled-components"));
+var import_framer_motion = require("framer-motion");
+var WikkiInfo = (props) => {
+  const { active, title, text, ios, android } = props;
+  return /* @__PURE__ */ import_react5.default.createElement(Body8, {
+    active
+  }, /* @__PURE__ */ import_react5.default.createElement(Cover4, null, /* @__PURE__ */ import_react5.default.createElement(InfoLeft, null, " ", /* @__PURE__ */ import_react5.default.createElement(GingerTitle2, null, title), /* @__PURE__ */ import_react5.default.createElement(TeaseText, null, text), /* @__PURE__ */ import_react5.default.createElement(GingerRow2, null, /* @__PURE__ */ import_react5.default.createElement(CommunityMainButton2, {
+    href: `${ios}`,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /* @__PURE__ */ import_react5.default.createElement(StoreIcon2, {
+    src: appstore_default,
+    alt: "wikki download"
+  }), " App Store"), /* @__PURE__ */ import_react5.default.createElement(CommunityOutlineButton2, {
+    href: `${android}`,
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /* @__PURE__ */ import_react5.default.createElement(StoreIcon2, {
+    src: playstore_default,
+    alt: "wikki download"
+  }), " Google Play")))));
+};
+var Body8 = (0, import_styled_components8.default)(import_framer_motion.motion.div)`
+  min-height: 300px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: ${(props) => props.active ? "flex" : "none"};
+`;
+var Cover4 = import_styled_components8.default.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+var InfoLeft = import_styled_components8.default.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+var GingerTitle2 = (0, import_styled_components8.default)(Header3)`
+  color: ${WikkiTheme.white};
+  margin: 8px 0;
+  text-align: center;
+`;
+var TeaseText = (0, import_styled_components8.default)(Body2)`
+  color: ${WikkiTheme.white};
+  margin: 0;
+  text-align: center;
+`;
+var GingerRow2 = import_styled_components8.default.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  width: 100%;
+
+  @media only screen and (max-width: 450px) {
+    flex-direction: column;
+  }
+`;
+var CommunityMainButton2 = (0, import_styled_components8.default)(DownloadButton)``;
+var CommunityOutlineButton2 = (0, import_styled_components8.default)(DownloadButton)``;
+var StoreIcon2 = import_styled_components8.default.img`
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+`;
+var WikkiInfo_default = WikkiInfo;
+
+// app/components/WikkiTabNav.tsx
+init_react();
+var import_framer_motion2 = require("framer-motion");
+var import_react6 = __toESM(require("react"));
+var import_styled_components9 = __toESM(require("styled-components"));
+var WikkiTabNav = (props) => {
+  const { tab, active, click } = props;
+  return /* @__PURE__ */ import_react6.default.createElement(import_framer_motion2.AnimatePresence, null, /* @__PURE__ */ import_react6.default.createElement(Tabs, {
+    layout: true,
+    transition: { layout: { duration: 1, type: "spring" } },
+    active,
+    onClick: () => click(tab)
+  }, /* @__PURE__ */ import_react6.default.createElement(TabText, {
+    layout: "position",
+    active
+  }, tab)));
+};
+var Tabs = (0, import_styled_components9.default)(import_framer_motion2.motion.button)`
+  cursor: pointer;
+  background: ${(props) => props.active ? `${WikkiTheme.white}` : "transparent"};
+  margin: 8px 0;
+  height: 64px;
+  max-width: 140px;
+  border: none;
+  outline: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  :hover {
+    outline: none;
+  }
+  :focus {
+    outline: none;
+  }
+  :focus-within {
+    outline: none;
+  }
+`;
+var TabText = (0, import_styled_components9.default)((0, import_framer_motion2.motion)(Header5))`
+  color: ${(props) => props.active ? `${WikkiTheme.black}` : `${WikkiTheme.white}`};
+`;
+var WikkiTabNav_default = WikkiTabNav;
+
+// app/components/DriverMessage.tsx
+var DriverMessage = () => {
+  const [selectedTab, setSelectedTab] = (0, import_react7.useState)("Rider");
+  const clickTab = (tab) => {
+    setSelectedTab(tab);
+  };
+  const tabNames = [{ name: "Rider" }, { name: "Driver" }];
+  return /* @__PURE__ */ import_react7.default.createElement(Body9, null, /* @__PURE__ */ import_react7.default.createElement(Cover5, null, /* @__PURE__ */ import_react7.default.createElement(TabBody, null, /* @__PURE__ */ import_react7.default.createElement(TabCover, null, tabNames.map((data, index3) => /* @__PURE__ */ import_react7.default.createElement(WikkiTabNav_default, {
+    click: () => clickTab(data.name),
+    key: index3,
+    tab: data.name,
+    active: selectedTab === data.name
+  })))), downloadData.map((data, index3) => /* @__PURE__ */ import_react7.default.createElement(WikkiInfo_default, {
+    key: index3,
+    active: selectedTab === data.name,
+    link: data.name,
+    text: data.text,
+    title: data.title,
+    ios: data.ios,
+    android: data.android
+  }))));
+};
+var Body9 = import_styled_components10.default.section`
+  min-height: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  background: ${WikkiTheme.black};
+  padding: 40px 24px;
+`;
+var Cover5 = import_styled_components10.default.div`
+  display: flex;
+  flex-direction: column;
+`;
+var TabBody = import_styled_components10.default.section`
+  min-height: 72px;
+  max-width: 300px;
+  margin: 24px auto;
+  width: 100%;
+  border-radius: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: ${WikkiTheme.switchBG};
+`;
+var TabCover = import_styled_components10.default.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+var DriverMessage_default = DriverMessage;
 
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\root.tsx
 var meta = () => {
@@ -1012,14 +1384,13 @@ var links = () => {
     { rel: "stylesheet", href: nprogress_default },
     {
       rel: "icon",
-      href: "/favicon.png",
-      type: "image/png"
+      href: "/favicon.ico"
     }
   ];
 };
 function App() {
-  const transition = (0, import_remix4.useTransition)();
-  (0, import_react5.useEffect)(() => {
+  const transition = (0, import_remix5.useTransition)();
+  (0, import_react8.useEffect)(() => {
     if (transition.state === "idle")
       import_nprogress.default.done();
     else
@@ -1032,7 +1403,7 @@ function App() {
   }), /* @__PURE__ */ React.createElement("meta", {
     name: "viewport",
     content: "width=device-width,initial-scale=1"
-  }), /* @__PURE__ */ React.createElement(import_remix4.Meta, null), /* @__PURE__ */ React.createElement(import_remix4.Links, null), typeof document === "undefined" ? "__STYLES__" : null), /* @__PURE__ */ React.createElement("body", null, /* @__PURE__ */ React.createElement(import_react_toastify.ToastContainer, {
+  }), /* @__PURE__ */ React.createElement(import_remix5.Meta, null), /* @__PURE__ */ React.createElement(import_remix5.Links, null), typeof document === "undefined" ? "__STYLES__" : null), /* @__PURE__ */ React.createElement("body", null, /* @__PURE__ */ React.createElement(import_react_toastify.ToastContainer, {
     position: "top-right",
     autoClose: 5e3,
     hideProgressBar: true,
@@ -1042,7 +1413,7 @@ function App() {
     pauseOnFocusLoss: true,
     draggable: true,
     pauseOnHover: true
-  }), /* @__PURE__ */ React.createElement(NavCover_default, null), /* @__PURE__ */ React.createElement(BackToTop_default, null), /* @__PURE__ */ React.createElement(import_remix4.Outlet, null), /* @__PURE__ */ React.createElement(Footer_default, null), /* @__PURE__ */ React.createElement(import_remix4.ScrollRestoration, null), /* @__PURE__ */ React.createElement(import_remix4.Scripts, null), false));
+  }), /* @__PURE__ */ React.createElement(NavCover_default, null), /* @__PURE__ */ React.createElement(BackToTop_default, null), /* @__PURE__ */ React.createElement(import_remix5.Outlet, null), /* @__PURE__ */ React.createElement(DriverMessage_default, null), /* @__PURE__ */ React.createElement(Footer_default, null), /* @__PURE__ */ React.createElement(import_remix5.ScrollRestoration, null), /* @__PURE__ */ React.createElement(import_remix5.Scripts, null), false));
 }
 
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\driver-requirements.tsx
@@ -1052,13 +1423,13 @@ __export(driver_requirements_exports, {
   meta: () => meta2
 });
 init_react();
-var import_react11 = __toESM(require("react"));
-var import_styled_components12 = __toESM(require("styled-components"));
+var import_react14 = __toESM(require("react"));
+var import_styled_components16 = __toESM(require("styled-components"));
 
 // app/components/driver/DriverAdvantage.tsx
 init_react();
-var import_react6 = __toESM(require("react"));
-var import_styled_components7 = __toESM(require("styled-components"));
+var import_react9 = __toESM(require("react"));
+var import_styled_components11 = __toESM(require("styled-components"));
 
 // app/components/driver/PurposeData.tsx
 init_react();
@@ -1118,14 +1489,14 @@ var main_default = "/build/_assets/main-WO4APGIB.png";
 
 // app/components/driver/DriverAdvantage.tsx
 var DriverAdvantage = () => {
-  return /* @__PURE__ */ import_react6.default.createElement(Body7, null, /* @__PURE__ */ import_react6.default.createElement(Cover3, null, /* @__PURE__ */ import_react6.default.createElement(DriverGrid, null, /* @__PURE__ */ import_react6.default.createElement(DriverLeft, null, /* @__PURE__ */ import_react6.default.createElement(DiverCover, null, /* @__PURE__ */ import_react6.default.createElement(DriverTitle, null, "Help solve logistics problem"), /* @__PURE__ */ import_react6.default.createElement(DriverText, null, "Integrate Banky on your web-site to offer fast, secure and seamless online bank transfer payment method. You could receive payments straight into your company bank account or open a Banky merchant account and collect funds there."), /* @__PURE__ */ import_react6.default.createElement(DriverButton, null, "Get started"))), /* @__PURE__ */ import_react6.default.createElement(DriverRight, null, /* @__PURE__ */ import_react6.default.createElement(RightSection, null, /* @__PURE__ */ import_react6.default.createElement(DriverImage, {
+  return /* @__PURE__ */ import_react9.default.createElement(Body10, null, /* @__PURE__ */ import_react9.default.createElement(Cover6, null, /* @__PURE__ */ import_react9.default.createElement(DriverGrid, null, /* @__PURE__ */ import_react9.default.createElement(DriverLeft, null, /* @__PURE__ */ import_react9.default.createElement(DiverCover, null, /* @__PURE__ */ import_react9.default.createElement(DriverTitle, null, "Help solve logistics problem"), /* @__PURE__ */ import_react9.default.createElement(DriverText, null, "Integrate Banky on your web-site to offer fast, secure and seamless online bank transfer payment method. You could receive payments straight into your company bank account or open a Banky merchant account and collect funds there."), /* @__PURE__ */ import_react9.default.createElement(DriverButton, null, "Get started"))), /* @__PURE__ */ import_react9.default.createElement(DriverRight, null, /* @__PURE__ */ import_react9.default.createElement(RightSection, null, /* @__PURE__ */ import_react9.default.createElement(DriverImage, {
     src: main_default,
     alt: "wikki driver requirement"
-  })), driverData.map((data, index3) => /* @__PURE__ */ import_react6.default.createElement(RightSection, {
+  })), driverData.map((data, index3) => /* @__PURE__ */ import_react9.default.createElement(RightSection, {
     key: index3
-  }, /* @__PURE__ */ import_react6.default.createElement(SectionCover, null, /* @__PURE__ */ import_react6.default.createElement(SectionIcon, null, data.icon), /* @__PURE__ */ import_react6.default.createElement(SectionTitle, null, data.title), /* @__PURE__ */ import_react6.default.createElement(SectionText, null, data.text))))))));
+  }, /* @__PURE__ */ import_react9.default.createElement(SectionCover, null, /* @__PURE__ */ import_react9.default.createElement(SectionIcon, null, data.icon), /* @__PURE__ */ import_react9.default.createElement(SectionTitle, null, data.title), /* @__PURE__ */ import_react9.default.createElement(SectionText, null, data.text))))))));
 };
-var Body7 = import_styled_components7.default.section`
+var Body10 = import_styled_components11.default.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1136,7 +1507,7 @@ var Body7 = import_styled_components7.default.section`
 
   background: ${WikkiTheme.secondary};
 `;
-var Cover3 = import_styled_components7.default.div`
+var Cover6 = import_styled_components11.default.div`
   max-width: 1800px;
   width: 100%;
   height: 100%;
@@ -1146,7 +1517,7 @@ var Cover3 = import_styled_components7.default.div`
   justify-content: center;
   align-items: center;
 `;
-var DriverGrid = import_styled_components7.default.div`
+var DriverGrid = import_styled_components11.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
@@ -1154,7 +1525,7 @@ var DriverGrid = import_styled_components7.default.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
-var DriverLeft = import_styled_components7.default.div`
+var DriverLeft = import_styled_components11.default.div`
   max-width: 1232px;
   width: 100%;
   margin: 0 auto;
@@ -1164,8 +1535,12 @@ var DriverLeft = import_styled_components7.default.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  @media only screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 400px;
+  }
 `;
-var DiverCover = import_styled_components7.default.div`
+var DiverCover = import_styled_components11.default.div`
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
@@ -1177,16 +1552,16 @@ var DiverCover = import_styled_components7.default.div`
     margin: 40px 0;
   }
 `;
-var DriverTitle = (0, import_styled_components7.default)(Header2)`
+var DriverTitle = (0, import_styled_components11.default)(Header2)`
   margin: 0;
   text-align: left;
 `;
-var DriverText = (0, import_styled_components7.default)(Body3)`
+var DriverText = (0, import_styled_components11.default)(Body3)`
   text-align: left;
   margin: 16px 0 40px 0;
 `;
-var DriverButton = (0, import_styled_components7.default)(MainButton)``;
-var DriverRight = import_styled_components7.default.div`
+var DriverButton = (0, import_styled_components11.default)(MainButton)``;
+var DriverRight = import_styled_components11.default.div`
   min-height: 700px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1194,9 +1569,10 @@ var DriverRight = import_styled_components7.default.div`
   background: ${WikkiTheme.white};
   @media only screen and (max-width: 550px) {
     grid-template-columns: repeat(1, 1fr);
+    min-height: 300px;
   }
 `;
-var DriverImage = import_styled_components7.default.img`
+var DriverImage = import_styled_components11.default.img`
   min-height: 350px;
   max-width: 360px;
   width: 100%;
@@ -1205,7 +1581,7 @@ var DriverImage = import_styled_components7.default.img`
     max-width: 550px;
   }
 `;
-var RightSection = import_styled_components7.default.div`
+var RightSection = import_styled_components11.default.div`
   min-height: 350px;
   max-width: 360px;
   width: 100%;
@@ -1217,16 +1593,16 @@ var RightSection = import_styled_components7.default.div`
     min-height: 150px;
   }
 `;
-var SectionIcon = import_styled_components7.default.div``;
-var SectionTitle = (0, import_styled_components7.default)(Header5)`
+var SectionIcon = import_styled_components11.default.div``;
+var SectionTitle = (0, import_styled_components11.default)(Header5)`
   text-align: left;
   margin: 32px 0 8px 0;
 `;
-var SectionText = (0, import_styled_components7.default)(Body3)`
+var SectionText = (0, import_styled_components11.default)(Body3)`
   text-align: left;
   margin: 0;
 `;
-var SectionCover = import_styled_components7.default.div`
+var SectionCover = import_styled_components11.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1241,12 +1617,12 @@ var DriverAdvantage_default = DriverAdvantage;
 
 // app/components/driver/DriverHero.tsx
 init_react();
-var import_react7 = __toESM(require("react"));
-var import_styled_components8 = __toESM(require("styled-components"));
+var import_react10 = __toESM(require("react"));
+var import_styled_components12 = __toESM(require("styled-components"));
 var DriverHero = () => {
-  return /* @__PURE__ */ import_react7.default.createElement(Body8, null, /* @__PURE__ */ import_react7.default.createElement(Cover4, null, /* @__PURE__ */ import_react7.default.createElement(DriverTitle2, null, "Get in the driver\u2019s seat and get paid"), /* @__PURE__ */ import_react7.default.createElement(DriverText2, null, "Make the most of your time on the road on the platform with the largest network of active riders.")));
+  return /* @__PURE__ */ import_react10.default.createElement(Body11, null, /* @__PURE__ */ import_react10.default.createElement(Cover7, null, /* @__PURE__ */ import_react10.default.createElement(DriverTitle2, null, "Get in the driver\u2019s seat and get paid"), /* @__PURE__ */ import_react10.default.createElement(DriverText2, null, "Make the most of your time on the road on the platform with the largest network of active riders.")));
 };
-var Body8 = import_styled_components8.default.section`
+var Body11 = import_styled_components12.default.section`
   position: relative;
   z-index: 1;
   display: flex;
@@ -1264,7 +1640,7 @@ var Body8 = import_styled_components8.default.section`
     min-height: 350px;
   }
 `;
-var Cover4 = import_styled_components8.default.div`
+var Cover7 = import_styled_components12.default.div`
   color: ${WikkiTheme.black};
   max-width: 500px;
   width: 100%;
@@ -1275,10 +1651,10 @@ var Cover4 = import_styled_components8.default.div`
   justify-content: center;
   align-items: center;
 `;
-var DriverTitle2 = (0, import_styled_components8.default)(Header2)`
+var DriverTitle2 = (0, import_styled_components12.default)(Header2)`
   text-align: center;
 `;
-var DriverText2 = (0, import_styled_components8.default)(Body3)`
+var DriverText2 = (0, import_styled_components12.default)(Body3)`
   text-align: center;
   margin: 8px 0;
 `;
@@ -1286,12 +1662,12 @@ var DriverHero_default = DriverHero;
 
 // app/components/driver/DriverMessage.tsx
 init_react();
-var import_react8 = __toESM(require("react"));
-var import_styled_components9 = __toESM(require("styled-components"));
-var DriverMessage = () => {
-  return /* @__PURE__ */ import_react8.default.createElement(Body9, null, /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react8.default.createElement(Cover5, null, /* @__PURE__ */ import_react8.default.createElement(RideText, null, "Ride with us")));
+var import_react11 = __toESM(require("react"));
+var import_styled_components13 = __toESM(require("styled-components"));
+var DriverMessage2 = () => {
+  return /* @__PURE__ */ import_react11.default.createElement(Body12, null, /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")), /* @__PURE__ */ import_react11.default.createElement(Cover8, null, /* @__PURE__ */ import_react11.default.createElement(RideText, null, "Ride with us")));
 };
-var Body9 = import_styled_components9.default.div`
+var Body12 = import_styled_components13.default.div`
   height: 276px;
   width: 100%;
   overflow: hidden;
@@ -1303,7 +1679,7 @@ var Body9 = import_styled_components9.default.div`
     height: 200px;
   }
 `;
-var animation = import_styled_components9.keyframes`
+var animation = import_styled_components13.keyframes`
 
  0% {
     transform: translateZ(0);
@@ -1313,52 +1689,52 @@ var animation = import_styled_components9.keyframes`
   }
 
 `;
-var Cover5 = import_styled_components9.default.div`
+var Cover8 = import_styled_components13.default.div`
   animation: ${animation} 15s linear infinite;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 `;
-var RideText = (0, import_styled_components9.default)(LargeHeader)`
+var RideText = (0, import_styled_components13.default)(LargeHeader)`
   white-space: nowrap;
   margin: 40px;
 `;
-var DriverMessage_default = DriverMessage;
+var DriverMessage_default2 = DriverMessage2;
 
 // app/components/driver/DriverRequirements.tsx
 init_react();
-var import_react10 = __toESM(require("react"));
-var import_styled_components11 = __toESM(require("styled-components"));
+var import_react13 = __toESM(require("react"));
+var import_styled_components15 = __toESM(require("styled-components"));
 
 // app/components/driver/DriverAccordion.tsx
 init_react();
-var import_react9 = __toESM(require("react"));
+var import_react12 = __toESM(require("react"));
 var import_fi = require("react-icons/fi");
-var import_styled_components10 = __toESM(require("styled-components"));
-var import_framer_motion = require("framer-motion");
+var import_styled_components14 = __toESM(require("styled-components"));
+var import_framer_motion3 = require("framer-motion");
 var DriverAccordion = (props) => {
   const { number, active, text, content, click } = props;
-  return /* @__PURE__ */ import_react9.default.createElement(import_framer_motion.AnimatePresence, null, /* @__PURE__ */ import_react9.default.createElement(Body10, {
+  return /* @__PURE__ */ import_react12.default.createElement(import_framer_motion3.AnimatePresence, null, /* @__PURE__ */ import_react12.default.createElement(Body13, {
     layout: "position",
     onClick: () => click(number)
-  }, /* @__PURE__ */ import_react9.default.createElement(Cover6, {
+  }, /* @__PURE__ */ import_react12.default.createElement(Cover9, {
     layout: "position"
-  }, /* @__PURE__ */ import_react9.default.createElement(DriverNumber, {
+  }, /* @__PURE__ */ import_react12.default.createElement(DriverNumber, {
     layout: "position"
-  }, /* @__PURE__ */ import_react9.default.createElement(NumberText, {
+  }, /* @__PURE__ */ import_react12.default.createElement(NumberText, {
     layout: "position"
-  }, number)), /* @__PURE__ */ import_react9.default.createElement(DriverBody, {
+  }, number)), /* @__PURE__ */ import_react12.default.createElement(DriverBody, {
     layout: "position"
-  }, /* @__PURE__ */ import_react9.default.createElement(DriverContent, {
+  }, /* @__PURE__ */ import_react12.default.createElement(DriverContent, {
     layout: "position"
-  }, text), /* @__PURE__ */ import_react9.default.createElement(DriverPara, {
+  }, text), /* @__PURE__ */ import_react12.default.createElement(DriverPara, {
     active
-  }, content)), /* @__PURE__ */ import_react9.default.createElement(DriverIcon, {
+  }, content)), /* @__PURE__ */ import_react12.default.createElement(DriverIcon, {
     layout: "position"
-  }, active ? /* @__PURE__ */ import_react9.default.createElement(DriverDown, null) : /* @__PURE__ */ import_react9.default.createElement(DriverUp, null)))));
+  }, active ? /* @__PURE__ */ import_react12.default.createElement(DriverDown, null) : /* @__PURE__ */ import_react12.default.createElement(DriverUp, null)))));
 };
-var Body10 = (0, import_styled_components10.default)(import_framer_motion.motion.div)`
+var Body13 = (0, import_styled_components14.default)(import_framer_motion3.motion.div)`
   min-height: 50px;
   max-width: 520px;
   width: 100%;
@@ -1374,14 +1750,14 @@ var Body10 = (0, import_styled_components10.default)(import_framer_motion.motion
     margin: 16px 0;
   }
 `;
-var Cover6 = (0, import_styled_components10.default)(import_framer_motion.motion.div)`
+var Cover9 = (0, import_styled_components14.default)(import_framer_motion3.motion.div)`
   display: grid;
   grid-template-columns: 48px auto 32px;
   grid-gap: 16px;
   gap: 16px;
   transition: 0.4s ease-in-out;
 `;
-var DriverNumber = (0, import_styled_components10.default)(import_framer_motion.motion.div)`
+var DriverNumber = (0, import_styled_components14.default)(import_framer_motion3.motion.div)`
   height: 40px;
   width: 40px;
   transition: 0.4s ease-in-out;
@@ -1397,30 +1773,30 @@ var DriverNumber = (0, import_styled_components10.default)(import_framer_motion.
     width: 32px;
   }
 `;
-var NumberText = (0, import_styled_components10.default)((0, import_framer_motion.motion)(Header5))``;
-var DriverBody = (0, import_styled_components10.default)(import_framer_motion.motion.div)`
+var NumberText = (0, import_styled_components14.default)((0, import_framer_motion3.motion)(Header5))``;
+var DriverBody = (0, import_styled_components14.default)(import_framer_motion3.motion.div)`
   display: flex;
   flex-direction: column;
   transition: 0.4s ease-in-out;
 `;
-var DriverContent = (0, import_styled_components10.default)((0, import_framer_motion.motion)(Header5))`
+var DriverContent = (0, import_styled_components14.default)((0, import_framer_motion3.motion)(Header5))`
   transition: 0.4s ease-in-out;
 `;
-var DriverPara = (0, import_styled_components10.default)((0, import_framer_motion.motion)(Body4))`
+var DriverPara = (0, import_styled_components14.default)((0, import_framer_motion3.motion)(Body4))`
   margin: 8px 0;
   transition: 0.4s ease-in-out;
   height: ${(props) => props.active ? "100%" : "0px"};
   display: ${(props) => props.active ? "flex" : "none"};
 `;
-var DriverIcon = (0, import_styled_components10.default)(import_framer_motion.motion.div)`
+var DriverIcon = (0, import_styled_components14.default)(import_framer_motion3.motion.div)`
   transition: 0.4s ease-in-out;
 `;
-var DriverUp = (0, import_styled_components10.default)((0, import_framer_motion.motion)(import_fi.FiChevronUp))`
+var DriverUp = (0, import_styled_components14.default)((0, import_framer_motion3.motion)(import_fi.FiChevronUp))`
   height: 24px;
   width: 24px;
   transition: 0.4s ease-in-out;
 `;
-var DriverDown = (0, import_styled_components10.default)((0, import_framer_motion.motion)(import_fi.FiChevronDown))`
+var DriverDown = (0, import_styled_components14.default)((0, import_framer_motion3.motion)(import_fi.FiChevronDown))`
   height: 24px;
   width: 24px;
   transition: 0.4s ease-in-out;
@@ -1457,26 +1833,26 @@ var driver2_default = "/build/_assets/driver2-4CVY7SOR.png";
 
 // app/components/driver/DriverRequirements.tsx
 var DriverRequirements = () => {
-  const [selected, setSelected] = (0, import_react10.useState)(1);
+  const [selected, setSelected] = (0, import_react13.useState)(1);
   const selectRequirement = (number) => {
     if (selected === number) {
       return setSelected(null);
     }
     setSelected(number);
   };
-  return /* @__PURE__ */ import_react10.default.createElement(Body11, null, /* @__PURE__ */ import_react10.default.createElement(Cover7, null, /* @__PURE__ */ import_react10.default.createElement(DriverCover, null, " ", /* @__PURE__ */ import_react10.default.createElement(DriverTitle3, null, "Driver\u2019s requirement"), /* @__PURE__ */ import_react10.default.createElement(DriverText3, null, "Wikki is a great way to be your own boss and make money.")), /* @__PURE__ */ import_react10.default.createElement(DriverGrid2, null, /* @__PURE__ */ import_react10.default.createElement(DriverNeeds, null, requirementData.map((data) => /* @__PURE__ */ import_react10.default.createElement(DriverAccordion_default, {
+  return /* @__PURE__ */ import_react13.default.createElement(Body14, null, /* @__PURE__ */ import_react13.default.createElement(Cover10, null, /* @__PURE__ */ import_react13.default.createElement(DriverCover, null, " ", /* @__PURE__ */ import_react13.default.createElement(DriverTitle3, null, "Driver\u2019s requirement"), /* @__PURE__ */ import_react13.default.createElement(DriverText3, null, "Wikki is a great way to be your own boss and make money.")), /* @__PURE__ */ import_react13.default.createElement(DriverGrid2, null, /* @__PURE__ */ import_react13.default.createElement(DriverNeeds, null, requirementData.map((data) => /* @__PURE__ */ import_react13.default.createElement(DriverAccordion_default, {
     key: data.id,
     number: data.id,
     text: data.title,
     content: data.text,
     click: () => selectRequirement(data.id),
     active: data.id === selected ? true : false
-  }))), /* @__PURE__ */ import_react10.default.createElement(DriverImage2, null, /* @__PURE__ */ import_react10.default.createElement(DriverPhoto, {
+  }))), /* @__PURE__ */ import_react13.default.createElement(DriverImage2, null, /* @__PURE__ */ import_react13.default.createElement(DriverPhoto, {
     src: driver2_default,
     alt: "wikki"
   })))));
 };
-var Body11 = import_styled_components11.default.section`
+var Body14 = import_styled_components15.default.section`
   position: relative;
   z-index: 1;
   padding: 16px;
@@ -1493,7 +1869,7 @@ var Body11 = import_styled_components11.default.section`
     min-height: 350px;
   }
 `;
-var Cover7 = import_styled_components11.default.div`
+var Cover10 = import_styled_components15.default.div`
   color: ${WikkiTheme.black};
   max-width: 1232px;
   width: 100%;
@@ -1504,21 +1880,21 @@ var Cover7 = import_styled_components11.default.div`
   align-items: flex-start;
   justify-content: center;
 `;
-var DriverCover = import_styled_components11.default.div`
+var DriverCover = import_styled_components15.default.div`
   display: flex;
   flex-direction: column;
   max-width: 380px;
   width: 100%;
   margin: 80px 0;
 `;
-var DriverTitle3 = (0, import_styled_components11.default)(Header2)`
+var DriverTitle3 = (0, import_styled_components15.default)(Header2)`
   text-align: left;
 `;
-var DriverText3 = (0, import_styled_components11.default)(Body3)`
+var DriverText3 = (0, import_styled_components15.default)(Body3)`
   text-align: left;
   margin: 8px 0;
 `;
-var DriverGrid2 = import_styled_components11.default.div`
+var DriverGrid2 = import_styled_components15.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -1531,13 +1907,13 @@ var DriverGrid2 = import_styled_components11.default.div`
     gap: 24px;
   }
 `;
-var DriverNeeds = import_styled_components11.default.div`
+var DriverNeeds = import_styled_components15.default.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
 `;
-var DriverImage2 = import_styled_components11.default.div`
+var DriverImage2 = import_styled_components15.default.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1545,7 +1921,7 @@ var DriverImage2 = import_styled_components11.default.div`
 
   justify-content: center;
 `;
-var DriverPhoto = import_styled_components11.default.img`
+var DriverPhoto = import_styled_components15.default.img`
   min-height: 690px;
   max-height: 700px;
   height: 100%;
@@ -1574,9 +1950,9 @@ var meta2 = () => {
   };
 };
 var driver = () => {
-  return /* @__PURE__ */ import_react11.default.createElement(Body12, null, /* @__PURE__ */ import_react11.default.createElement(DriverHero_default, null), /* @__PURE__ */ import_react11.default.createElement(DriverAdvantage_default, null), /* @__PURE__ */ import_react11.default.createElement(DriverMessage_default, null), /* @__PURE__ */ import_react11.default.createElement(DriverRequirements_default, null));
+  return /* @__PURE__ */ import_react14.default.createElement(Body15, null, /* @__PURE__ */ import_react14.default.createElement(DriverHero_default, null), /* @__PURE__ */ import_react14.default.createElement(DriverAdvantage_default, null), /* @__PURE__ */ import_react14.default.createElement(DriverMessage_default2, null), /* @__PURE__ */ import_react14.default.createElement(DriverRequirements_default, null));
 };
-var Body12 = import_styled_components12.default.div``;
+var Body15 = import_styled_components16.default.div``;
 var driver_requirements_default = driver;
 
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\how-it-works\driver.tsx
@@ -1586,8 +1962,8 @@ __export(driver_exports, {
   meta: () => meta3
 });
 init_react();
-var import_react12 = __toESM(require("react"));
-var import_styled_components13 = __toESM(require("styled-components"));
+var import_react15 = __toESM(require("react"));
+var import_styled_components17 = __toESM(require("styled-components"));
 
 // app/images/route.png
 var route_default = "/build/_assets/route-VXW45UB7.png";
@@ -1605,7 +1981,7 @@ var bave_default = "/build/_assets/bave-HY4I543D.svg";
 var icon_default = "/build/_assets/icon-C76T6UYX.png";
 
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\how-it-works\driver.tsx
-var import_remix5 = __toESM(require_remix());
+var import_remix6 = __toESM(require_remix());
 var meta3 = () => {
   return {
     title: "How it works driver - Use Wikki",
@@ -1613,28 +1989,28 @@ var meta3 = () => {
   };
 };
 var WorksDriver = () => {
-  return /* @__PURE__ */ import_react12.default.createElement(Body13, null, /* @__PURE__ */ import_react12.default.createElement(Cover8, null, /* @__PURE__ */ import_react12.default.createElement(WorksSelector, null, /* @__PURE__ */ import_react12.default.createElement(Selector, null, /* @__PURE__ */ import_react12.default.createElement(Driver, {
+  return /* @__PURE__ */ import_react15.default.createElement(Body16, null, /* @__PURE__ */ import_react15.default.createElement(Cover11, null, /* @__PURE__ */ import_react15.default.createElement(WorksSelector, null, /* @__PURE__ */ import_react15.default.createElement(Selector, null, /* @__PURE__ */ import_react15.default.createElement(Driver, {
     to: "/how-it-works"
-  }, /* @__PURE__ */ import_react12.default.createElement(SelectorText, null, "Rider ")), /* @__PURE__ */ import_react12.default.createElement(User, {
+  }, /* @__PURE__ */ import_react15.default.createElement(SelectorText, null, "Rider ")), /* @__PURE__ */ import_react15.default.createElement(User, {
     to: "/how-it-works/driver"
-  }, /* @__PURE__ */ import_react12.default.createElement(SelectorText, null, "Driver")))), /* @__PURE__ */ import_react12.default.createElement(WorksRow, null, /* @__PURE__ */ import_react12.default.createElement(TopRow, null, /* @__PURE__ */ import_react12.default.createElement(DownloadSection, null, /* @__PURE__ */ import_react12.default.createElement(DownloadCover, null, /* @__PURE__ */ import_react12.default.createElement(DownloadContent, null, /* @__PURE__ */ import_react12.default.createElement(DownloadNumber, null, /* @__PURE__ */ import_react12.default.createElement(NumberText2, null, "1")), /* @__PURE__ */ import_react12.default.createElement(DownloadText, null, /* @__PURE__ */ import_react12.default.createElement(DownloadTitle, null, "Download the app and sign up"), /* @__PURE__ */ import_react12.default.createElement(Downloadbody, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react12.default.createElement(DownloadApp, null, /* @__PURE__ */ import_react12.default.createElement(AppImage, {
+  }, /* @__PURE__ */ import_react15.default.createElement(SelectorText, null, "Driver")))), /* @__PURE__ */ import_react15.default.createElement(WorksRow, null, /* @__PURE__ */ import_react15.default.createElement(TopRow, null, /* @__PURE__ */ import_react15.default.createElement(DownloadSection, null, /* @__PURE__ */ import_react15.default.createElement(DownloadCover, null, /* @__PURE__ */ import_react15.default.createElement(DownloadContent, null, /* @__PURE__ */ import_react15.default.createElement(DownloadNumber, null, /* @__PURE__ */ import_react15.default.createElement(NumberText2, null, "1")), /* @__PURE__ */ import_react15.default.createElement(DownloadText, null, /* @__PURE__ */ import_react15.default.createElement(DownloadTitle, null, "Download the app and sign up"), /* @__PURE__ */ import_react15.default.createElement(Downloadbody, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react15.default.createElement(DownloadApp, null, /* @__PURE__ */ import_react15.default.createElement(AppImage, {
     src: app_default2,
     alt: "use wikki my wikki"
-  }))))), /* @__PURE__ */ import_react12.default.createElement(BottomRow, null, /* @__PURE__ */ import_react12.default.createElement(SecondRow, null, /* @__PURE__ */ import_react12.default.createElement(SecondMask, {
+  }))))), /* @__PURE__ */ import_react15.default.createElement(BottomRow, null, /* @__PURE__ */ import_react15.default.createElement(SecondRow, null, /* @__PURE__ */ import_react15.default.createElement(SecondMask, {
     src: icon_default,
     alt: "use wikki my wikki"
-  }), /* @__PURE__ */ import_react12.default.createElement(BottomCover, null, /* @__PURE__ */ import_react12.default.createElement(SecondContent, null, /* @__PURE__ */ import_react12.default.createElement(SecondNumber, null, /* @__PURE__ */ import_react12.default.createElement(SecondText, null, "2")), /* @__PURE__ */ import_react12.default.createElement(SecondDownload, null, /* @__PURE__ */ import_react12.default.createElement(SecondTitle, null, "Pick up order, and deliver"), /* @__PURE__ */ import_react12.default.createElement(SecondPara, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react12.default.createElement(SecondImage, null, /* @__PURE__ */ import_react12.default.createElement(SecondLustration, {
+  }), /* @__PURE__ */ import_react15.default.createElement(BottomCover, null, /* @__PURE__ */ import_react15.default.createElement(SecondContent, null, /* @__PURE__ */ import_react15.default.createElement(SecondNumber, null, /* @__PURE__ */ import_react15.default.createElement(SecondText, null, "2")), /* @__PURE__ */ import_react15.default.createElement(SecondDownload, null, /* @__PURE__ */ import_react15.default.createElement(SecondTitle, null, "Pick up order, and deliver"), /* @__PURE__ */ import_react15.default.createElement(SecondPara, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react15.default.createElement(SecondImage, null, /* @__PURE__ */ import_react15.default.createElement(SecondLustration, {
     src: route_default,
     alt: "mywikki use wikki"
-  })))), " ", /* @__PURE__ */ import_react12.default.createElement(ThirdRow, null, /* @__PURE__ */ import_react12.default.createElement(ThirdMask, {
+  })))), " ", /* @__PURE__ */ import_react15.default.createElement(ThirdRow, null, /* @__PURE__ */ import_react15.default.createElement(ThirdMask, {
     src: bave_default,
     alt: "use wikki my wikki"
-  }), /* @__PURE__ */ import_react12.default.createElement(ThirdBottomCover, null, /* @__PURE__ */ import_react12.default.createElement(ThirdContent, null, /* @__PURE__ */ import_react12.default.createElement(ThirdNumber, null, /* @__PURE__ */ import_react12.default.createElement(ThirdText, null, "3")), /* @__PURE__ */ import_react12.default.createElement(ThirdDownload, null, /* @__PURE__ */ import_react12.default.createElement(ThirdTitle, null, "Get paid and cashout"), /* @__PURE__ */ import_react12.default.createElement(ThirdPara, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react12.default.createElement(ThirdImage, null, /* @__PURE__ */ import_react12.default.createElement(ThirdLustration, {
+  }), /* @__PURE__ */ import_react15.default.createElement(ThirdBottomCover, null, /* @__PURE__ */ import_react15.default.createElement(ThirdContent, null, /* @__PURE__ */ import_react15.default.createElement(ThirdNumber, null, /* @__PURE__ */ import_react15.default.createElement(ThirdText, null, "3")), /* @__PURE__ */ import_react15.default.createElement(ThirdDownload, null, /* @__PURE__ */ import_react15.default.createElement(ThirdTitle, null, "Get paid and cashout"), /* @__PURE__ */ import_react15.default.createElement(ThirdPara, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react15.default.createElement(ThirdImage, null, /* @__PURE__ */ import_react15.default.createElement(ThirdLustration, {
     src: pay_default,
     alt: "mywikki use wikki"
   }))))))));
 };
-var Body13 = import_styled_components13.default.section`
+var Body16 = import_styled_components17.default.section`
   position: relative;
   z-index: 1;
   display: flex;
@@ -1650,7 +2026,7 @@ var Body13 = import_styled_components13.default.section`
     min-height: 450px;
   }
 `;
-var Cover8 = import_styled_components13.default.div`
+var Cover11 = import_styled_components17.default.div`
   color: ${WikkiTheme.black};
   max-width: 1100px;
   width: 100%;
@@ -1660,14 +2036,14 @@ var Cover8 = import_styled_components13.default.div`
   justify-content: center;
   align-items: center;
 `;
-var WorksSelector = import_styled_components13.default.div`
+var WorksSelector = import_styled_components17.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 `;
-var Selector = import_styled_components13.default.div`
+var Selector = import_styled_components17.default.div`
   height: 64px;
   max-width: 340px;
   margin: 40px auto;
@@ -1679,7 +2055,7 @@ var Selector = import_styled_components13.default.div`
   flex-direction: row;
   align-items: center;
 `;
-var User = (0, import_styled_components13.default)(import_remix5.Link)`
+var User = (0, import_styled_components17.default)(import_remix6.Link)`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -1692,7 +2068,7 @@ var User = (0, import_styled_components13.default)(import_remix5.Link)`
   justify-content: center;
   align-items: center;
 `;
-var Driver = (0, import_styled_components13.default)(import_remix5.Link)`
+var Driver = (0, import_styled_components17.default)(import_remix6.Link)`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -1705,13 +2081,13 @@ var Driver = (0, import_styled_components13.default)(import_remix5.Link)`
   justify-content: center;
   align-items: center;
 `;
-var SelectorText = (0, import_styled_components13.default)(SubTitle)``;
-var WorksRow = import_styled_components13.default.div`
+var SelectorText = (0, import_styled_components17.default)(SubTitle)``;
+var WorksRow = import_styled_components17.default.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
-var TopRow = import_styled_components13.default.div`
+var TopRow = import_styled_components17.default.div`
   width: 100%;
   margin: 40px auto;
   display: flex;
@@ -1719,7 +2095,7 @@ var TopRow = import_styled_components13.default.div`
   justify-content: center;
   align-items: center;
 `;
-var BottomRow = import_styled_components13.default.div`
+var BottomRow = import_styled_components17.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -1732,7 +2108,7 @@ var BottomRow = import_styled_components13.default.div`
     gap: 24px;
   }
 `;
-var DownloadSection = import_styled_components13.default.div`
+var DownloadSection = import_styled_components17.default.div`
   max-height: 550px;
   height: 100%;
   min-height: 540px;
@@ -1743,7 +2119,7 @@ var DownloadSection = import_styled_components13.default.div`
   border-radius: 40px;
   background: ${WikkiTheme.white};
 `;
-var DownloadCover = import_styled_components13.default.div`
+var DownloadCover = import_styled_components17.default.div`
   max-width: 972px;
   width: 100%;
   margin: 64px auto 0 auto;
@@ -1760,7 +2136,7 @@ var DownloadCover = import_styled_components13.default.div`
     gap: 36px;
   }
 `;
-var DownloadContent = import_styled_components13.default.div`
+var DownloadContent = import_styled_components17.default.div`
   display: grid;
   grid-template-columns: 80px auto;
   grid-gap: 32px;
@@ -1770,7 +2146,7 @@ var DownloadContent = import_styled_components13.default.div`
     grid-template-columns: 48px auto;
   }
 `;
-var DownloadNumber = import_styled_components13.default.span`
+var DownloadNumber = import_styled_components17.default.span`
   height: 80px;
   width: 80px;
   border: 1px solid ${WikkiTheme.black};
@@ -1784,29 +2160,29 @@ var DownloadNumber = import_styled_components13.default.span`
     width: 48px;
   }
 `;
-var NumberText2 = (0, import_styled_components13.default)(Header5)``;
-var DownloadText = import_styled_components13.default.div`
+var NumberText2 = (0, import_styled_components17.default)(Header5)``;
+var DownloadText = import_styled_components17.default.div`
   display: flex;
   flex-direction: column;
 `;
-var DownloadTitle = (0, import_styled_components13.default)(Header3)``;
-var Downloadbody = (0, import_styled_components13.default)(Body3)`
+var DownloadTitle = (0, import_styled_components17.default)(Header3)``;
+var Downloadbody = (0, import_styled_components17.default)(Body3)`
   margin: 24px 0;
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
 `;
-var DownloadApp = import_styled_components13.default.div`
+var DownloadApp = import_styled_components17.default.div`
   height: 721px;
   max-width: 361px;
   width: 100%;
   margin: 0 auto;
 `;
-var AppImage = import_styled_components13.default.img`
+var AppImage = import_styled_components17.default.img`
   width: 100%;
   height: 100%;
 `;
-var SecondRow = import_styled_components13.default.div`
+var SecondRow = import_styled_components17.default.div`
   max-height: 600px;
   height: 100%;
   min-height: 580px;
@@ -1821,21 +2197,21 @@ var SecondRow = import_styled_components13.default.div`
     min-height: 400px;
   }
 `;
-var SecondMask = import_styled_components13.default.img`
+var SecondMask = import_styled_components17.default.img`
   height: 250px;
   width: 213px;
   right: 4px;
   top: -12px;
   position: absolute;
 `;
-var ThirdMask = import_styled_components13.default.img`
+var ThirdMask = import_styled_components17.default.img`
   left: -40px;
   height: 277px;
   width: 448px;
   top: -32px;
   position: absolute;
 `;
-var BottomCover = import_styled_components13.default.div`
+var BottomCover = import_styled_components17.default.div`
   max-width: 481px;
   width: 100%;
   position: relative;
@@ -1845,7 +2221,7 @@ var BottomCover = import_styled_components13.default.div`
     margin: 32px auto 0 auto;
   }
 `;
-var SecondContent = import_styled_components13.default.div`
+var SecondContent = import_styled_components17.default.div`
   display: grid;
   grid-template-columns: 80px auto;
   grid-gap: 32px;
@@ -1855,7 +2231,7 @@ var SecondContent = import_styled_components13.default.div`
     grid-template-columns: 48px auto;
   }
 `;
-var SecondNumber = import_styled_components13.default.div`
+var SecondNumber = import_styled_components17.default.div`
   height: 80px;
   width: 80px;
   border: 1px solid ${WikkiTheme.black};
@@ -1869,27 +2245,27 @@ var SecondNumber = import_styled_components13.default.div`
     width: 48px;
   }
 `;
-var SecondText = import_styled_components13.default.div`
+var SecondText = import_styled_components17.default.div`
   display: flex;
   flex-direction: column;
 `;
-var SecondTitle = (0, import_styled_components13.default)(Header3)`
+var SecondTitle = (0, import_styled_components17.default)(Header3)`
   color: ${WikkiTheme.black};
   span {
     color: ${WikkiTheme.white};
   }
 `;
-var SecondPara = (0, import_styled_components13.default)(Body3)`
+var SecondPara = (0, import_styled_components17.default)(Body3)`
   margin: 24px 0;
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
 `;
-var SecondDownload = import_styled_components13.default.div`
+var SecondDownload = import_styled_components17.default.div`
   display: flex;
   flex-direction: column;
 `;
-var SecondImage = import_styled_components13.default.div`
+var SecondImage = import_styled_components17.default.div`
   height: 100%;
   width: 100%;
   min-height: 250px;
@@ -1902,14 +2278,14 @@ var SecondImage = import_styled_components13.default.div`
     max-height: 400px;
   }
 `;
-var SecondLustration = import_styled_components13.default.img`
+var SecondLustration = import_styled_components17.default.img`
   height: 100%;
   width: 100%;
   min-height: 250px;
   max-height: 441px;
   max-width: 441px;
 `;
-var ThirdRow = import_styled_components13.default.div`
+var ThirdRow = import_styled_components17.default.div`
   max-height: 600px;
   height: 100%;
   padding: 20px;
@@ -1924,7 +2300,7 @@ var ThirdRow = import_styled_components13.default.div`
     min-height: 400px;
   }
 `;
-var ThirdBottomCover = import_styled_components13.default.div`
+var ThirdBottomCover = import_styled_components17.default.div`
   max-width: 481px;
   width: 100%;
   position: relative;
@@ -1934,7 +2310,7 @@ var ThirdBottomCover = import_styled_components13.default.div`
     margin: 32px auto 0 auto;
   }
 `;
-var ThirdContent = import_styled_components13.default.div`
+var ThirdContent = import_styled_components17.default.div`
   display: grid;
   grid-template-columns: 80px auto;
   grid-gap: 32px;
@@ -1944,7 +2320,7 @@ var ThirdContent = import_styled_components13.default.div`
     grid-template-columns: 48px auto;
   }
 `;
-var ThirdNumber = import_styled_components13.default.div`
+var ThirdNumber = import_styled_components17.default.div`
   height: 80px;
   width: 80px;
   border: 1px solid ${WikkiTheme.white};
@@ -1958,23 +2334,23 @@ var ThirdNumber = import_styled_components13.default.div`
     width: 48px;
   }
 `;
-var ThirdText = import_styled_components13.default.div`
+var ThirdText = import_styled_components17.default.div`
   display: flex;
   flex-direction: column;
   color: ${WikkiTheme.white};
 `;
-var ThirdPara = (0, import_styled_components13.default)(Body3)`
+var ThirdPara = (0, import_styled_components17.default)(Body3)`
   margin: 24px 0;
   color: ${WikkiTheme.white};
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
 `;
-var ThirdDownload = import_styled_components13.default.div``;
-var ThirdTitle = (0, import_styled_components13.default)(Header3)`
+var ThirdDownload = import_styled_components17.default.div``;
+var ThirdTitle = (0, import_styled_components17.default)(Header3)`
   color: ${WikkiTheme.white};
 `;
-var ThirdImage = import_styled_components13.default.div`
+var ThirdImage = import_styled_components17.default.div`
   height: 100%;
   width: 100%;
   min-height: 250px;
@@ -1988,7 +2364,7 @@ var ThirdImage = import_styled_components13.default.div`
     max-height: 400px;
   }
 `;
-var ThirdLustration = import_styled_components13.default.img`
+var ThirdLustration = import_styled_components17.default.img`
   height: 100%;
   width: 100%;
 `;
@@ -2001,14 +2377,14 @@ __export(how_it_works_exports, {
   meta: () => meta4
 });
 init_react();
-var import_react13 = __toESM(require("react"));
-var import_styled_components14 = __toESM(require("styled-components"));
+var import_react16 = __toESM(require("react"));
+var import_styled_components18 = __toESM(require("styled-components"));
 
 // app/images/mask.svg
 var mask_default = "/build/_assets/mask-OMEBINKE.svg";
 
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\how-it-works\index.tsx
-var import_remix6 = __toESM(require_remix());
+var import_remix7 = __toESM(require_remix());
 var meta4 = () => {
   return {
     title: "How it works users - Use Wikki",
@@ -2016,28 +2392,28 @@ var meta4 = () => {
   };
 };
 var index = () => {
-  return /* @__PURE__ */ import_react13.default.createElement(Body14, null, /* @__PURE__ */ import_react13.default.createElement(Cover9, null, /* @__PURE__ */ import_react13.default.createElement(WorksSelector2, null, /* @__PURE__ */ import_react13.default.createElement(Selector2, null, /* @__PURE__ */ import_react13.default.createElement(User2, {
+  return /* @__PURE__ */ import_react16.default.createElement(Body17, null, /* @__PURE__ */ import_react16.default.createElement(Cover12, null, /* @__PURE__ */ import_react16.default.createElement(WorksSelector2, null, /* @__PURE__ */ import_react16.default.createElement(Selector2, null, /* @__PURE__ */ import_react16.default.createElement(User2, {
     to: "/how-it-works"
-  }, /* @__PURE__ */ import_react13.default.createElement(SelectorText2, null, "Rider")), /* @__PURE__ */ import_react13.default.createElement(Driver2, {
+  }, /* @__PURE__ */ import_react16.default.createElement(SelectorText2, null, "Rider")), /* @__PURE__ */ import_react16.default.createElement(Driver2, {
     to: "/how-it-works/driver"
-  }, /* @__PURE__ */ import_react13.default.createElement(SelectorText2, null, "Driver")))), /* @__PURE__ */ import_react13.default.createElement(WorksRow2, null, /* @__PURE__ */ import_react13.default.createElement(TopRow2, null, /* @__PURE__ */ import_react13.default.createElement(DownloadSection2, null, /* @__PURE__ */ import_react13.default.createElement(DownloadCover2, null, /* @__PURE__ */ import_react13.default.createElement(DownloadContent2, null, /* @__PURE__ */ import_react13.default.createElement(DownloadNumber2, null, /* @__PURE__ */ import_react13.default.createElement(NumberText3, null, "1")), /* @__PURE__ */ import_react13.default.createElement(DownloadText2, null, /* @__PURE__ */ import_react13.default.createElement(DownloadTitle2, null, "Download the app and sign up"), /* @__PURE__ */ import_react13.default.createElement(Downloadbody2, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react13.default.createElement(DownloadApp2, null, /* @__PURE__ */ import_react13.default.createElement(AppImage2, {
+  }, /* @__PURE__ */ import_react16.default.createElement(SelectorText2, null, "Driver")))), /* @__PURE__ */ import_react16.default.createElement(WorksRow2, null, /* @__PURE__ */ import_react16.default.createElement(TopRow2, null, /* @__PURE__ */ import_react16.default.createElement(DownloadSection2, null, /* @__PURE__ */ import_react16.default.createElement(DownloadCover2, null, /* @__PURE__ */ import_react16.default.createElement(DownloadContent2, null, /* @__PURE__ */ import_react16.default.createElement(DownloadNumber2, null, /* @__PURE__ */ import_react16.default.createElement(NumberText3, null, "1")), /* @__PURE__ */ import_react16.default.createElement(DownloadText2, null, /* @__PURE__ */ import_react16.default.createElement(DownloadTitle2, null, "Download the app and sign up"), /* @__PURE__ */ import_react16.default.createElement(Downloadbody2, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react16.default.createElement(DownloadApp2, null, /* @__PURE__ */ import_react16.default.createElement(AppImage2, {
     src: app_default2,
     alt: "use wikki my wikki"
-  }))))), /* @__PURE__ */ import_react13.default.createElement(BottomRow2, null, /* @__PURE__ */ import_react13.default.createElement(SecondRow2, null, /* @__PURE__ */ import_react13.default.createElement(SecondMask2, {
+  }))))), /* @__PURE__ */ import_react16.default.createElement(BottomRow2, null, /* @__PURE__ */ import_react16.default.createElement(SecondRow2, null, /* @__PURE__ */ import_react16.default.createElement(SecondMask2, {
     src: mask_default,
     alt: "use wikki my wikki"
-  }), /* @__PURE__ */ import_react13.default.createElement(BottomCover2, null, /* @__PURE__ */ import_react13.default.createElement(SecondContent2, null, /* @__PURE__ */ import_react13.default.createElement(SecondNumber2, null, /* @__PURE__ */ import_react13.default.createElement(SecondText2, null, "2")), /* @__PURE__ */ import_react13.default.createElement(SecondDownload2, null, /* @__PURE__ */ import_react13.default.createElement(SecondTitle2, null, "Request a pick", /* @__PURE__ */ import_react13.default.createElement("span", null, "up an"), "d choose destina", /* @__PURE__ */ import_react13.default.createElement("span", null, "tio"), "n"), /* @__PURE__ */ import_react13.default.createElement(SecondPara2, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react13.default.createElement(SecondImage2, null, /* @__PURE__ */ import_react13.default.createElement(SecondLustration2, {
+  }), /* @__PURE__ */ import_react16.default.createElement(BottomCover2, null, /* @__PURE__ */ import_react16.default.createElement(SecondContent2, null, /* @__PURE__ */ import_react16.default.createElement(SecondNumber2, null, /* @__PURE__ */ import_react16.default.createElement(SecondText2, null, "2")), /* @__PURE__ */ import_react16.default.createElement(SecondDownload2, null, /* @__PURE__ */ import_react16.default.createElement(SecondTitle2, null, "Request a pick", /* @__PURE__ */ import_react16.default.createElement("span", null, "up an"), "d choose destina", /* @__PURE__ */ import_react16.default.createElement("span", null, "tio"), "n"), /* @__PURE__ */ import_react16.default.createElement(SecondPara2, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react16.default.createElement(SecondImage2, null, /* @__PURE__ */ import_react16.default.createElement(SecondLustration2, {
     src: route_default,
     alt: "mywikki use wikki"
-  })))), " ", /* @__PURE__ */ import_react13.default.createElement(ThirdRow2, null, /* @__PURE__ */ import_react13.default.createElement(ThirdMask2, {
+  })))), " ", /* @__PURE__ */ import_react16.default.createElement(ThirdRow2, null, /* @__PURE__ */ import_react16.default.createElement(ThirdMask2, {
     src: bave_default,
     alt: "use wikki my wikki"
-  }), /* @__PURE__ */ import_react13.default.createElement(ThirdBottomCover2, null, /* @__PURE__ */ import_react13.default.createElement(ThirdContent2, null, /* @__PURE__ */ import_react13.default.createElement(ThirdNumber2, null, /* @__PURE__ */ import_react13.default.createElement(ThirdText2, null, "3")), /* @__PURE__ */ import_react13.default.createElement(ThirdDownload2, null, /* @__PURE__ */ import_react13.default.createElement(ThirdTitle2, null, "Get item delivered and make payment"), /* @__PURE__ */ import_react13.default.createElement(ThirdPara2, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react13.default.createElement(ThirdImage2, null, /* @__PURE__ */ import_react13.default.createElement(ThirdLustration2, {
+  }), /* @__PURE__ */ import_react16.default.createElement(ThirdBottomCover2, null, /* @__PURE__ */ import_react16.default.createElement(ThirdContent2, null, /* @__PURE__ */ import_react16.default.createElement(ThirdNumber2, null, /* @__PURE__ */ import_react16.default.createElement(ThirdText2, null, "3")), /* @__PURE__ */ import_react16.default.createElement(ThirdDownload2, null, /* @__PURE__ */ import_react16.default.createElement(ThirdTitle2, null, "Get item delivered and make payment"), /* @__PURE__ */ import_react16.default.createElement(ThirdPara2, null, "You can drive and make as much as you want. And, the more you drive, the more you could make. Plus, your fares get automatically deposited weekly."))), /* @__PURE__ */ import_react16.default.createElement(ThirdImage2, null, /* @__PURE__ */ import_react16.default.createElement(ThirdLustration2, {
     src: pay_default,
     alt: "mywikki use wikki"
   }))))))));
 };
-var Body14 = import_styled_components14.default.section`
+var Body17 = import_styled_components18.default.section`
   position: relative;
   z-index: 1;
   display: flex;
@@ -2053,7 +2429,7 @@ var Body14 = import_styled_components14.default.section`
     min-height: 450px;
   }
 `;
-var Cover9 = import_styled_components14.default.div`
+var Cover12 = import_styled_components18.default.div`
   color: ${WikkiTheme.black};
   max-width: 1100px;
   width: 100%;
@@ -2063,14 +2439,14 @@ var Cover9 = import_styled_components14.default.div`
   justify-content: center;
   align-items: center;
 `;
-var WorksSelector2 = import_styled_components14.default.div`
+var WorksSelector2 = import_styled_components18.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 `;
-var Selector2 = import_styled_components14.default.div`
+var Selector2 = import_styled_components18.default.div`
   height: 64px;
   max-width: 340px;
   margin: 40px auto;
@@ -2082,7 +2458,7 @@ var Selector2 = import_styled_components14.default.div`
   flex-direction: row;
   align-items: center;
 `;
-var User2 = (0, import_styled_components14.default)(import_remix6.Link)`
+var User2 = (0, import_styled_components18.default)(import_remix7.Link)`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -2095,7 +2471,7 @@ var User2 = (0, import_styled_components14.default)(import_remix6.Link)`
   justify-content: center;
   align-items: center;
 `;
-var Driver2 = (0, import_styled_components14.default)(import_remix6.Link)`
+var Driver2 = (0, import_styled_components18.default)(import_remix7.Link)`
   height: 44px;
   max-width: 154px;
   width: 100%;
@@ -2108,13 +2484,13 @@ var Driver2 = (0, import_styled_components14.default)(import_remix6.Link)`
   justify-content: center;
   align-items: center;
 `;
-var SelectorText2 = (0, import_styled_components14.default)(SubTitle)``;
-var WorksRow2 = import_styled_components14.default.div`
+var SelectorText2 = (0, import_styled_components18.default)(SubTitle)``;
+var WorksRow2 = import_styled_components18.default.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
-var TopRow2 = import_styled_components14.default.div`
+var TopRow2 = import_styled_components18.default.div`
   width: 100%;
   margin: 40px auto;
   display: flex;
@@ -2122,7 +2498,7 @@ var TopRow2 = import_styled_components14.default.div`
   justify-content: center;
   align-items: center;
 `;
-var BottomRow2 = import_styled_components14.default.div`
+var BottomRow2 = import_styled_components18.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -2135,7 +2511,7 @@ var BottomRow2 = import_styled_components14.default.div`
     gap: 24px;
   }
 `;
-var DownloadSection2 = import_styled_components14.default.div`
+var DownloadSection2 = import_styled_components18.default.div`
   max-height: 550px;
   height: 100%;
   min-height: 540px;
@@ -2146,7 +2522,7 @@ var DownloadSection2 = import_styled_components14.default.div`
   border-radius: 40px;
   background: ${WikkiTheme.white};
 `;
-var DownloadCover2 = import_styled_components14.default.div`
+var DownloadCover2 = import_styled_components18.default.div`
   max-width: 972px;
   width: 100%;
   margin: 64px auto 0 auto;
@@ -2163,7 +2539,7 @@ var DownloadCover2 = import_styled_components14.default.div`
     gap: 36px;
   }
 `;
-var DownloadContent2 = import_styled_components14.default.div`
+var DownloadContent2 = import_styled_components18.default.div`
   display: grid;
   grid-template-columns: 80px auto;
   grid-gap: 32px;
@@ -2173,7 +2549,7 @@ var DownloadContent2 = import_styled_components14.default.div`
     grid-template-columns: 48px auto;
   }
 `;
-var DownloadNumber2 = import_styled_components14.default.span`
+var DownloadNumber2 = import_styled_components18.default.span`
   height: 80px;
   width: 80px;
   border: 1px solid ${WikkiTheme.black};
@@ -2187,29 +2563,29 @@ var DownloadNumber2 = import_styled_components14.default.span`
     width: 48px;
   }
 `;
-var NumberText3 = (0, import_styled_components14.default)(Header5)``;
-var DownloadText2 = import_styled_components14.default.div`
+var NumberText3 = (0, import_styled_components18.default)(Header5)``;
+var DownloadText2 = import_styled_components18.default.div`
   display: flex;
   flex-direction: column;
 `;
-var DownloadTitle2 = (0, import_styled_components14.default)(Header3)``;
-var Downloadbody2 = (0, import_styled_components14.default)(Body3)`
+var DownloadTitle2 = (0, import_styled_components18.default)(Header3)``;
+var Downloadbody2 = (0, import_styled_components18.default)(Body3)`
   margin: 24px 0;
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
 `;
-var DownloadApp2 = import_styled_components14.default.div`
+var DownloadApp2 = import_styled_components18.default.div`
   height: 721px;
   max-width: 361px;
   width: 100%;
   margin: 0 auto;
 `;
-var AppImage2 = import_styled_components14.default.img`
+var AppImage2 = import_styled_components18.default.img`
   width: 100%;
   height: 100%;
 `;
-var SecondRow2 = import_styled_components14.default.div`
+var SecondRow2 = import_styled_components18.default.div`
   max-height: 600px;
   height: 100%;
   min-height: 580px;
@@ -2224,21 +2600,21 @@ var SecondRow2 = import_styled_components14.default.div`
     min-height: 400px;
   }
 `;
-var SecondMask2 = import_styled_components14.default.img`
+var SecondMask2 = import_styled_components18.default.img`
   height: 250px;
   width: 213px;
   right: 4px;
   top: -48px;
   position: absolute;
 `;
-var ThirdMask2 = import_styled_components14.default.img`
+var ThirdMask2 = import_styled_components18.default.img`
   left: -40px;
   height: 277px;
   width: 448px;
   top: -32px;
   position: absolute;
 `;
-var BottomCover2 = import_styled_components14.default.div`
+var BottomCover2 = import_styled_components18.default.div`
   max-width: 481px;
   width: 100%;
   position: relative;
@@ -2248,7 +2624,7 @@ var BottomCover2 = import_styled_components14.default.div`
     margin: 32px auto 0 auto;
   }
 `;
-var SecondContent2 = import_styled_components14.default.div`
+var SecondContent2 = import_styled_components18.default.div`
   display: grid;
   grid-template-columns: 80px auto;
   grid-gap: 32px;
@@ -2258,7 +2634,7 @@ var SecondContent2 = import_styled_components14.default.div`
     grid-template-columns: 48px auto;
   }
 `;
-var SecondNumber2 = import_styled_components14.default.div`
+var SecondNumber2 = import_styled_components18.default.div`
   height: 80px;
   width: 80px;
   border: 1px solid ${WikkiTheme.black};
@@ -2272,27 +2648,27 @@ var SecondNumber2 = import_styled_components14.default.div`
     width: 48px;
   }
 `;
-var SecondText2 = import_styled_components14.default.div`
+var SecondText2 = import_styled_components18.default.div`
   display: flex;
   flex-direction: column;
 `;
-var SecondTitle2 = (0, import_styled_components14.default)(Header3)`
+var SecondTitle2 = (0, import_styled_components18.default)(Header3)`
   color: ${WikkiTheme.black};
   span {
     color: ${WikkiTheme.white};
   }
 `;
-var SecondPara2 = (0, import_styled_components14.default)(Body3)`
+var SecondPara2 = (0, import_styled_components18.default)(Body3)`
   margin: 24px 0;
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
 `;
-var SecondDownload2 = import_styled_components14.default.div`
+var SecondDownload2 = import_styled_components18.default.div`
   display: flex;
   flex-direction: column;
 `;
-var SecondImage2 = import_styled_components14.default.div`
+var SecondImage2 = import_styled_components18.default.div`
   height: 100%;
   width: 100%;
   min-height: 250px;
@@ -2305,14 +2681,14 @@ var SecondImage2 = import_styled_components14.default.div`
     max-height: 400px;
   }
 `;
-var SecondLustration2 = import_styled_components14.default.img`
+var SecondLustration2 = import_styled_components18.default.img`
   height: 100%;
   width: 100%;
   min-height: 250px;
   max-height: 441px;
   max-width: 441px;
 `;
-var ThirdRow2 = import_styled_components14.default.div`
+var ThirdRow2 = import_styled_components18.default.div`
   max-height: 600px;
   height: 100%;
   padding: 20px;
@@ -2327,7 +2703,7 @@ var ThirdRow2 = import_styled_components14.default.div`
     min-height: 400px;
   }
 `;
-var ThirdBottomCover2 = import_styled_components14.default.div`
+var ThirdBottomCover2 = import_styled_components18.default.div`
   max-width: 481px;
   width: 100%;
   position: relative;
@@ -2337,7 +2713,7 @@ var ThirdBottomCover2 = import_styled_components14.default.div`
     margin: 32px auto 0 auto;
   }
 `;
-var ThirdContent2 = import_styled_components14.default.div`
+var ThirdContent2 = import_styled_components18.default.div`
   display: grid;
   grid-template-columns: 80px auto;
   grid-gap: 32px;
@@ -2347,7 +2723,7 @@ var ThirdContent2 = import_styled_components14.default.div`
     grid-template-columns: 48px auto;
   }
 `;
-var ThirdNumber2 = import_styled_components14.default.div`
+var ThirdNumber2 = import_styled_components18.default.div`
   height: 80px;
   width: 80px;
   border: 1px solid ${WikkiTheme.white};
@@ -2361,23 +2737,23 @@ var ThirdNumber2 = import_styled_components14.default.div`
     width: 48px;
   }
 `;
-var ThirdText2 = import_styled_components14.default.div`
+var ThirdText2 = import_styled_components18.default.div`
   display: flex;
   flex-direction: column;
   color: ${WikkiTheme.white};
 `;
-var ThirdPara2 = (0, import_styled_components14.default)(Body3)`
+var ThirdPara2 = (0, import_styled_components18.default)(Body3)`
   margin: 24px 0;
   color: ${WikkiTheme.white};
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
 `;
-var ThirdDownload2 = import_styled_components14.default.div``;
-var ThirdTitle2 = (0, import_styled_components14.default)(Header3)`
+var ThirdDownload2 = import_styled_components18.default.div``;
+var ThirdTitle2 = (0, import_styled_components18.default)(Header3)`
   color: ${WikkiTheme.white};
 `;
-var ThirdImage2 = import_styled_components14.default.div`
+var ThirdImage2 = import_styled_components18.default.div`
   height: 100%;
   width: 100%;
   min-height: 250px;
@@ -2391,7 +2767,7 @@ var ThirdImage2 = import_styled_components14.default.div`
     max-height: 400px;
   }
 `;
-var ThirdLustration2 = import_styled_components14.default.img`
+var ThirdLustration2 = import_styled_components18.default.img`
   height: 100%;
   width: 100%;
 `;
@@ -2404,7 +2780,7 @@ __export(business_exports, {
   meta: () => meta5
 });
 init_react();
-var import_react14 = __toESM(require("react"));
+var import_react17 = __toESM(require("react"));
 var meta5 = () => {
   return {
     title: "Business Using wikki - Use Wikki",
@@ -2412,7 +2788,7 @@ var meta5 = () => {
   };
 };
 var business = () => {
-  return /* @__PURE__ */ import_react14.default.createElement("div", null, "business");
+  return /* @__PURE__ */ import_react17.default.createElement("div", null, "business");
 };
 var business_default = business;
 
@@ -2423,21 +2799,21 @@ __export(contact_exports, {
   meta: () => meta6
 });
 init_react();
-var import_react17 = __toESM(require("react"));
-var import_styled_components18 = __toESM(require("styled-components"));
+var import_react20 = __toESM(require("react"));
+var import_styled_components22 = __toESM(require("styled-components"));
 
 // app/components/contact/ContactForm.tsx
 init_react();
-var import_react15 = __toESM(require("react"));
-var import_styled_components16 = __toESM(require("styled-components"));
+var import_react18 = __toESM(require("react"));
+var import_styled_components20 = __toESM(require("styled-components"));
 var import_formik2 = require("formik");
 var Yup = __toESM(require("yup"));
 
 // app/styles/InputStyles.tsx
 init_react();
 var import_formik = require("formik");
-var import_styled_components15 = __toESM(require("styled-components"));
-var TextInput = (0, import_styled_components15.default)(import_formik.Field)`
+var import_styled_components19 = __toESM(require("styled-components"));
+var TextInput = (0, import_styled_components19.default)(import_formik.Field)`
   height: 56px;
   max-width: 450px;
   width: 100%;
@@ -2465,7 +2841,7 @@ var TextInput = (0, import_styled_components15.default)(import_formik.Field)`
     }
   }
 `;
-var TextArea = (0, import_styled_components15.default)(import_formik.Field)`
+var TextArea = (0, import_styled_components19.default)(import_formik.Field)`
   height: 250px;
   max-width: 450px;
   width: 100%;
@@ -2502,11 +2878,11 @@ var ContactForm = () => {
     email: Yup.string().email().required("Required"),
     message: Yup.string().required("Required")
   });
-  const [sent, setSent] = (0, import_react15.useState)(false);
+  const [sent, setSent] = (0, import_react18.useState)(false);
   const submitForm = (values, onSubmitProps) => {
     onSubmitProps.setSubmitting(true);
   };
-  return /* @__PURE__ */ import_react15.default.createElement(Body15, null, /* @__PURE__ */ import_react15.default.createElement(Cover10, null, /* @__PURE__ */ import_react15.default.createElement(FormTitle, null, "Send us a message"), /* @__PURE__ */ import_react15.default.createElement(import_formik2.Formik, {
+  return /* @__PURE__ */ import_react18.default.createElement(Body18, null, /* @__PURE__ */ import_react18.default.createElement(Cover13, null, /* @__PURE__ */ import_react18.default.createElement(FormTitle, null, "Send us a message"), /* @__PURE__ */ import_react18.default.createElement(import_formik2.Formik, {
     initialValues: { email: "", name: "", message: "" },
     validationSchema: ContactSchema,
     onSubmit: submitForm
@@ -2517,36 +2893,36 @@ var ContactForm = () => {
     handleChange,
     handleBlur,
     touched
-  }) => /* @__PURE__ */ import_react15.default.createElement(FormForm, null, /* @__PURE__ */ import_react15.default.createElement(FormColumn, null, /* @__PURE__ */ import_react15.default.createElement(FormLabel, {
+  }) => /* @__PURE__ */ import_react18.default.createElement(FormForm, null, /* @__PURE__ */ import_react18.default.createElement(FormColumn, null, /* @__PURE__ */ import_react18.default.createElement(FormLabel, {
     htmlFor: "name"
-  }, " ", /* @__PURE__ */ import_react15.default.createElement(LabelText, null, "Name")), /* @__PURE__ */ import_react15.default.createElement(FormInput, {
+  }, " ", /* @__PURE__ */ import_react18.default.createElement(LabelText, null, "Name")), /* @__PURE__ */ import_react18.default.createElement(FormInput, {
     id: "name",
     value: values.name,
     onChange: handleChange,
     onBlur: handleBlur,
     as: "input",
     type: "text"
-  }), errors.name && touched.name && /* @__PURE__ */ import_react15.default.createElement(FormError, null, /* @__PURE__ */ import_react15.default.createElement(FormErrorText, null, "Your name is required"))), /* @__PURE__ */ import_react15.default.createElement(FormColumn, null, /* @__PURE__ */ import_react15.default.createElement(FormLabel, {
+  }), errors.name && touched.name && /* @__PURE__ */ import_react18.default.createElement(FormError, null, /* @__PURE__ */ import_react18.default.createElement(FormErrorText, null, "Your name is required"))), /* @__PURE__ */ import_react18.default.createElement(FormColumn, null, /* @__PURE__ */ import_react18.default.createElement(FormLabel, {
     htmlFor: "email"
-  }, " ", /* @__PURE__ */ import_react15.default.createElement(LabelText, null, "Email")), /* @__PURE__ */ import_react15.default.createElement(FormInput, {
+  }, " ", /* @__PURE__ */ import_react18.default.createElement(LabelText, null, "Email")), /* @__PURE__ */ import_react18.default.createElement(FormInput, {
     id: "email",
     value: values.email,
     onChange: handleChange,
     onBlur: handleBlur,
     as: "input",
     type: "email"
-  }), errors.email && touched.email && /* @__PURE__ */ import_react15.default.createElement(FormError, null, /* @__PURE__ */ import_react15.default.createElement(FormErrorText, null, "Your email is required"))), /* @__PURE__ */ import_react15.default.createElement(FormColumn, null, /* @__PURE__ */ import_react15.default.createElement(FormLabel, {
+  }), errors.email && touched.email && /* @__PURE__ */ import_react18.default.createElement(FormError, null, /* @__PURE__ */ import_react18.default.createElement(FormErrorText, null, "Your email is required"))), /* @__PURE__ */ import_react18.default.createElement(FormColumn, null, /* @__PURE__ */ import_react18.default.createElement(FormLabel, {
     htmlFor: "message"
-  }, " ", /* @__PURE__ */ import_react15.default.createElement(LabelText, null, "Message")), /* @__PURE__ */ import_react15.default.createElement(FormArea, {
+  }, " ", /* @__PURE__ */ import_react18.default.createElement(LabelText, null, "Message")), /* @__PURE__ */ import_react18.default.createElement(FormArea, {
     id: "message",
     value: values.message,
     onChange: handleChange,
     onBlur: handleBlur,
     as: "textarea",
     placeholder: "Type your message"
-  }), errors.message && touched.message && /* @__PURE__ */ import_react15.default.createElement(FormError, null, /* @__PURE__ */ import_react15.default.createElement(FormErrorText, null, "Your message is required"))), /* @__PURE__ */ import_react15.default.createElement(FormButtonWrap, null, /* @__PURE__ */ import_react15.default.createElement(FormButtonMain, null, "Send"))))));
+  }), errors.message && touched.message && /* @__PURE__ */ import_react18.default.createElement(FormError, null, /* @__PURE__ */ import_react18.default.createElement(FormErrorText, null, "Your message is required"))), /* @__PURE__ */ import_react18.default.createElement(FormButtonWrap, null, /* @__PURE__ */ import_react18.default.createElement(FormButtonMain, null, "Send"))))));
 };
-var Body15 = import_styled_components16.default.div`
+var Body18 = import_styled_components20.default.div`
   width: 100%;
   min-height: 900px;
   background: ${WikkiTheme.snowWhite};
@@ -2556,7 +2932,7 @@ var Body15 = import_styled_components16.default.div`
   margin: 64px 0;
   padding: 80px 0;
 `;
-var Cover10 = import_styled_components16.default.div`
+var Cover13 = import_styled_components20.default.div`
   min-height: 500px;
   max-width: 550px;
 
@@ -2570,21 +2946,21 @@ var Cover10 = import_styled_components16.default.div`
   background: ${WikkiTheme.white};
   padding: 16px;
 `;
-var FormTitle = (0, import_styled_components16.default)(Header3)`
+var FormTitle = (0, import_styled_components20.default)(Header3)`
   margin: 40px 0 56px 0;
   text-align: center;
   @media only screen and (max-width: 650px) {
     margin: 32px 0 40px 0;
   }
 `;
-var FormForm = (0, import_styled_components16.default)(import_formik2.Form)`
+var FormForm = (0, import_styled_components20.default)(import_formik2.Form)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
 `;
-var FormColumn = import_styled_components16.default.div`
+var FormColumn = import_styled_components20.default.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2593,46 +2969,46 @@ var FormColumn = import_styled_components16.default.div`
   margin: 16px auto;
   max-width: 450px;
 `;
-var LabelText = (0, import_styled_components16.default)(SubTitle)`
+var LabelText = (0, import_styled_components20.default)(SubTitle)`
   color: ${WikkiTheme.dark};
   margin: 10px 0;
 `;
-var FormLabel = import_styled_components16.default.label`
+var FormLabel = import_styled_components20.default.label`
   display: flex;
   width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
 `;
-var FormInput = (0, import_styled_components16.default)(TextInput)``;
-var FormArea = (0, import_styled_components16.default)(TextArea)``;
-var FormError = import_styled_components16.default.div`
+var FormInput = (0, import_styled_components20.default)(TextInput)``;
+var FormArea = (0, import_styled_components20.default)(TextArea)``;
+var FormError = import_styled_components20.default.div`
   margin: 10px 0;
   display: flex;
   width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
 `;
-var FormErrorText = (0, import_styled_components16.default)(SubTitleSmall)`
+var FormErrorText = (0, import_styled_components20.default)(SubTitleSmall)`
   color: ${WikkiTheme.red};
 `;
-var FormButtonWrap = import_styled_components16.default.div`
+var FormButtonWrap = import_styled_components20.default.div`
   margin: 40px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-var FormButtonMain = (0, import_styled_components16.default)(FormButton)``;
+var FormButtonMain = (0, import_styled_components20.default)(FormButton)``;
 var ContactForm_default = ContactForm;
 
 // app/components/contact/ContactHero.tsx
 init_react();
-var import_react16 = __toESM(require("react"));
-var import_styled_components17 = __toESM(require("styled-components"));
+var import_react19 = __toESM(require("react"));
+var import_styled_components21 = __toESM(require("styled-components"));
 var ContactHero = () => {
-  return /* @__PURE__ */ import_react16.default.createElement(Body16, null, /* @__PURE__ */ import_react16.default.createElement(Cover11, null, /* @__PURE__ */ import_react16.default.createElement(ContactHeader, null, /* @__PURE__ */ import_react16.default.createElement(ContactTitle, null, "How can we help?"), /* @__PURE__ */ import_react16.default.createElement(ContactText, null, "Looking for the solution to your logistics needs or answers? Fill out the contact form and we will be in touch."))));
+  return /* @__PURE__ */ import_react19.default.createElement(Body19, null, /* @__PURE__ */ import_react19.default.createElement(Cover14, null, /* @__PURE__ */ import_react19.default.createElement(ContactHeader, null, /* @__PURE__ */ import_react19.default.createElement(ContactTitle, null, "How can we help?"), /* @__PURE__ */ import_react19.default.createElement(ContactText, null, "Looking for the solution to your logistics needs or answers? Fill out the contact form and we will be in touch."))));
 };
-var Body16 = import_styled_components17.default.section`
+var Body19 = import_styled_components21.default.section`
   width: 100%;
   min-height: 400px;
   display: flex;
@@ -2641,25 +3017,25 @@ var Body16 = import_styled_components17.default.section`
   align-items: center;
   position: relative;
 `;
-var Cover11 = import_styled_components17.default.div`
+var Cover14 = import_styled_components21.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 72px 0 0 0;
 `;
-var ContactHeader = import_styled_components17.default.div`
+var ContactHeader = import_styled_components21.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 16px;
 `;
-var ContactTitle = (0, import_styled_components17.default)(Header1)`
+var ContactTitle = (0, import_styled_components21.default)(Header1)`
   margin: 8px 0;
   text-align: center;
 `;
-var ContactText = (0, import_styled_components17.default)(Body1)`
+var ContactText = (0, import_styled_components21.default)(Body1)`
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -2674,9 +3050,9 @@ var meta6 = () => {
   };
 };
 var contact = () => {
-  return /* @__PURE__ */ import_react17.default.createElement(Body17, null, /* @__PURE__ */ import_react17.default.createElement(ContactHero_default, null), /* @__PURE__ */ import_react17.default.createElement(ContactForm_default, null));
+  return /* @__PURE__ */ import_react20.default.createElement(Body20, null, /* @__PURE__ */ import_react20.default.createElement(ContactHero_default, null), /* @__PURE__ */ import_react20.default.createElement(ContactForm_default, null));
 };
-var Body17 = import_styled_components18.default.section`
+var Body20 = import_styled_components22.default.section`
   width: 100%;
   height: 100%;
   display: flex;
@@ -2691,13 +3067,13 @@ __export(about_exports, {
   meta: () => meta7
 });
 init_react();
-var import_react23 = __toESM(require("react"));
-var import_styled_components24 = __toESM(require("styled-components"));
+var import_react26 = __toESM(require("react"));
+var import_styled_components28 = __toESM(require("styled-components"));
 
 // app/components/about/AboutBusiness.tsx
 init_react();
-var import_react18 = __toESM(require("react"));
-var import_styled_components19 = __toESM(require("styled-components"));
+var import_react21 = __toESM(require("react"));
+var import_styled_components23 = __toESM(require("styled-components"));
 
 // app/images/delivery02.png
 var delivery02_default = "/build/_assets/delivery02-XGBTQ7GE.png";
@@ -2707,9 +3083,9 @@ var delivery01_default = "/build/_assets/delivery01-BBMAVTUQ.png";
 
 // app/components/about/AboutBusiness.tsx
 var AboutBusiness = () => {
-  return /* @__PURE__ */ import_react18.default.createElement(Body18, null, /* @__PURE__ */ import_react18.default.createElement(Cover12, null, /* @__PURE__ */ import_react18.default.createElement(BusinesInfo, null, /* @__PURE__ */ import_react18.default.createElement(BusinessText, null, "What more Do we offer you")), /* @__PURE__ */ import_react18.default.createElement(DetailsGrid, null, /* @__PURE__ */ import_react18.default.createElement(GridRight, null, " ", /* @__PURE__ */ import_react18.default.createElement(GridCover, null, /* @__PURE__ */ import_react18.default.createElement(RideTitle, null, "Track your order"), /* @__PURE__ */ import_react18.default.createElement(RideText2, null, "Real time order & package tracking"))), /* @__PURE__ */ import_react18.default.createElement(GridLeft, null, /* @__PURE__ */ import_react18.default.createElement(GridCover, null, /* @__PURE__ */ import_react18.default.createElement(RideTitle, null, "Quick delivery"), /* @__PURE__ */ import_react18.default.createElement(RideText2, null, "Deliver items to your customers without hassle"))))));
+  return /* @__PURE__ */ import_react21.default.createElement(Body21, null, /* @__PURE__ */ import_react21.default.createElement(Cover15, null, /* @__PURE__ */ import_react21.default.createElement(BusinesInfo, null, /* @__PURE__ */ import_react21.default.createElement(BusinessText, null, "What more Do we offer you")), /* @__PURE__ */ import_react21.default.createElement(DetailsGrid, null, /* @__PURE__ */ import_react21.default.createElement(GridRight, null, " ", /* @__PURE__ */ import_react21.default.createElement(GridCover, null, /* @__PURE__ */ import_react21.default.createElement(RideTitle, null, "Track your order"), /* @__PURE__ */ import_react21.default.createElement(RideText2, null, "Real time order & package tracking"))), /* @__PURE__ */ import_react21.default.createElement(GridLeft, null, /* @__PURE__ */ import_react21.default.createElement(GridCover, null, /* @__PURE__ */ import_react21.default.createElement(RideTitle, null, "Quick delivery"), /* @__PURE__ */ import_react21.default.createElement(RideText2, null, "Deliver items to your customers without hassle"))))));
 };
-var Body18 = import_styled_components19.default.div`
+var Body21 = import_styled_components23.default.div`
   min-height: 300px;
   width: 100%;
   overflow: hidden;
@@ -2723,7 +3099,7 @@ var Body18 = import_styled_components19.default.div`
     margin: 24px 0;
   }
 `;
-var Cover12 = import_styled_components19.default.div`
+var Cover15 = import_styled_components23.default.div`
   max-width: 1232px;
   width: 100%;
   margin: 0 auto;
@@ -2732,15 +3108,15 @@ var Cover12 = import_styled_components19.default.div`
   justify-content: center;
   align-items: flex-start;
 `;
-var BusinesInfo = import_styled_components19.default.div`
+var BusinesInfo = import_styled_components23.default.div`
   max-width: 400px;
   width: 100%;
   margin: 32px 0;
 `;
-var BusinessText = (0, import_styled_components19.default)(Header2)`
+var BusinessText = (0, import_styled_components23.default)(Header2)`
   text-transform: capitalize;
 `;
-var DetailsGrid = import_styled_components19.default.div`
+var DetailsGrid = import_styled_components23.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
@@ -2753,7 +3129,7 @@ var DetailsGrid = import_styled_components19.default.div`
     width: 100%;
   }
 `;
-var GridLeft = import_styled_components19.default.div`
+var GridLeft = import_styled_components23.default.div`
   min-height: 500px;
   max-height: 630px;
   padding: 0 40px;
@@ -2776,7 +3152,7 @@ var GridLeft = import_styled_components19.default.div`
     background: rgba(0, 0, 0, 0.3);
   }
 `;
-var GridCover = import_styled_components19.default.div`
+var GridCover = import_styled_components23.default.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -2785,11 +3161,11 @@ var GridCover = import_styled_components19.default.div`
   margin: 64px 0;
   z-index: 3;
 `;
-var RideTitle = (0, import_styled_components19.default)(Header3)`
+var RideTitle = (0, import_styled_components23.default)(Header3)`
   color: ${WikkiTheme.white};
   margin: 0;
 `;
-var GridRight = import_styled_components19.default.div`
+var GridRight = import_styled_components23.default.div`
   min-height: 500px;
   max-height: 630px;
   padding: 0 40px;
@@ -2812,7 +3188,7 @@ var GridRight = import_styled_components19.default.div`
     background: rgba(0, 0, 0, 0.3);
   }
 `;
-var RideText2 = (0, import_styled_components19.default)(Body3)`
+var RideText2 = (0, import_styled_components23.default)(Body3)`
   margin: 16px 0;
   color: ${WikkiTheme.white};
 `;
@@ -2820,12 +3196,12 @@ var AboutBusiness_default = AboutBusiness;
 
 // app/components/about/AboutDelivery.tsx
 init_react();
-var import_react19 = __toESM(require("react"));
-var import_styled_components20 = __toESM(require("styled-components"));
+var import_react22 = __toESM(require("react"));
+var import_styled_components24 = __toESM(require("styled-components"));
 var AboutDelivery = () => {
-  return /* @__PURE__ */ import_react19.default.createElement(Body19, null, /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(RideText3, null, "Delivery made easy")));
+  return /* @__PURE__ */ import_react22.default.createElement(Body22, null, /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")));
 };
-var Body19 = import_styled_components20.default.div`
+var Body22 = import_styled_components24.default.div`
   height: 276px;
   width: 100%;
   overflow: hidden;
@@ -2837,7 +3213,7 @@ var Body19 = import_styled_components20.default.div`
     height: 200px;
   }
 `;
-var animation2 = import_styled_components20.keyframes`
+var animation2 = import_styled_components24.keyframes`
 
  0% {
     transform: translateZ(0);
@@ -2847,14 +3223,14 @@ var animation2 = import_styled_components20.keyframes`
   }
 
 `;
-var Cover13 = import_styled_components20.default.div`
+var Cover16 = import_styled_components24.default.div`
   animation: ${animation2} 15s linear infinite;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 `;
-var RideText3 = (0, import_styled_components20.default)(LargeHeader)`
+var RideText3 = (0, import_styled_components24.default)(LargeHeader)`
   white-space: nowrap;
   margin: 40px;
 `;
@@ -2862,8 +3238,8 @@ var AboutDelivery_default = AboutDelivery;
 
 // app/components/about/AboutDetails.tsx
 init_react();
-var import_react20 = __toESM(require("react"));
-var import_styled_components21 = __toESM(require("styled-components"));
+var import_react23 = __toESM(require("react"));
+var import_styled_components25 = __toESM(require("styled-components"));
 
 // app/images/purpose01.png
 var purpose01_default = "/build/_assets/purpose01-7HL33MBO.png";
@@ -2873,15 +3249,15 @@ var purpose02_default = "/build/_assets/purpose02-RLNMTGP4.png";
 
 // app/components/about/AboutDetails.tsx
 var AboutDetails = () => {
-  return /* @__PURE__ */ import_react20.default.createElement(Body20, null, /* @__PURE__ */ import_react20.default.createElement(Cover14, null, /* @__PURE__ */ import_react20.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react20.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react20.default.createElement(RideTitle2, null, "Waiting is boring"), /* @__PURE__ */ import_react20.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")), /* @__PURE__ */ import_react20.default.createElement(GridRight2, null, /* @__PURE__ */ import_react20.default.createElement(GridImage, {
+  return /* @__PURE__ */ import_react23.default.createElement(Body23, null, /* @__PURE__ */ import_react23.default.createElement(Cover17, null, /* @__PURE__ */ import_react23.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react23.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react23.default.createElement(RideTitle2, null, "Waiting is boring"), /* @__PURE__ */ import_react23.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")), /* @__PURE__ */ import_react23.default.createElement(GridRight2, null, /* @__PURE__ */ import_react23.default.createElement(GridImage, {
     src: purpose02_default,
     alt: "use wikki"
-  })), " "), " ", /* @__PURE__ */ import_react20.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react20.default.createElement(GridRight2, null, /* @__PURE__ */ import_react20.default.createElement(GridImage, {
+  })), " "), " ", /* @__PURE__ */ import_react23.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react23.default.createElement(GridRight2, null, /* @__PURE__ */ import_react23.default.createElement(GridImage, {
     src: purpose01_default,
     alt: "use wikki"
-  })), /* @__PURE__ */ import_react20.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react20.default.createElement(RideTitle2, null, "Our Mission"), /* @__PURE__ */ import_react20.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")))));
+  })), /* @__PURE__ */ import_react23.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react23.default.createElement(RideTitle2, null, "Our Mission"), /* @__PURE__ */ import_react23.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")))));
 };
-var Body20 = import_styled_components21.default.div`
+var Body23 = import_styled_components25.default.div`
   min-height: 300px;
   width: 100%;
   overflow: hidden;
@@ -2895,7 +3271,7 @@ var Body20 = import_styled_components21.default.div`
     margin: 24px 0;
   }
 `;
-var Cover14 = import_styled_components21.default.div`
+var Cover17 = import_styled_components25.default.div`
   max-width: 1056px;
   width: 100%;
   margin: 0 auto;
@@ -2904,7 +3280,7 @@ var Cover14 = import_styled_components21.default.div`
   justify-content: center;
   align-items: center;
 `;
-var DetailsGrid2 = import_styled_components21.default.div`
+var DetailsGrid2 = import_styled_components25.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -2920,7 +3296,7 @@ var DetailsGrid2 = import_styled_components21.default.div`
     margin: 24px 0;
   }
 `;
-var GridLeft2 = import_styled_components21.default.div`
+var GridLeft2 = import_styled_components25.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2928,8 +3304,8 @@ var GridLeft2 = import_styled_components21.default.div`
 
   width: 100%;
 `;
-var RideTitle2 = (0, import_styled_components21.default)(Header2)``;
-var GridRight2 = import_styled_components21.default.div`
+var RideTitle2 = (0, import_styled_components25.default)(Header2)``;
+var GridRight2 = import_styled_components25.default.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -2937,7 +3313,7 @@ var GridRight2 = import_styled_components21.default.div`
   justify-content: center;
   align-items: center;
 `;
-var GridImage = import_styled_components21.default.img`
+var GridImage = import_styled_components25.default.img`
   max-width: 550px;
   border-radius: 20px;
   max-height: 630px;
@@ -2946,22 +3322,22 @@ var GridImage = import_styled_components21.default.img`
   outline: none;
   width: 100%;
 `;
-var RideText4 = (0, import_styled_components21.default)(Body3)`
+var RideText4 = (0, import_styled_components25.default)(Body3)`
   margin: 16px 0;
 `;
 var AboutDetails_default = AboutDetails;
 
 // app/components/about/AboutHero.tsx
 init_react();
-var import_react21 = __toESM(require("react"));
-var import_styled_components22 = __toESM(require("styled-components"));
+var import_react24 = __toESM(require("react"));
+var import_styled_components26 = __toESM(require("styled-components"));
 var AboutHero = () => {
-  return /* @__PURE__ */ import_react21.default.createElement(Body21, null, /* @__PURE__ */ import_react21.default.createElement(MoreOverlay, null), /* @__PURE__ */ import_react21.default.createElement(Cover15, null, /* @__PURE__ */ import_react21.default.createElement(MoreTitle, null, "ABOUT WIKKI"), /* @__PURE__ */ import_react21.default.createElement(CoverImage, null, /* @__PURE__ */ import_react21.default.createElement(AboutImage, {
+  return /* @__PURE__ */ import_react24.default.createElement(Body24, null, /* @__PURE__ */ import_react24.default.createElement(MoreOverlay, null), /* @__PURE__ */ import_react24.default.createElement(Cover18, null, /* @__PURE__ */ import_react24.default.createElement(MoreTitle, null, "ABOUT WIKKI"), /* @__PURE__ */ import_react24.default.createElement(CoverImage, null, /* @__PURE__ */ import_react24.default.createElement(AboutImage, {
     src: main_default,
     alt: "the wikki my wikki"
-  })), /* @__PURE__ */ import_react21.default.createElement(CoverDets, null, /* @__PURE__ */ import_react21.default.createElement(CoverTitle, null, "Robust delivery and pickup for Nigeria"), /* @__PURE__ */ import_react21.default.createElement(CoverText, null, "Wikki is a technology company on a mission to power the digital economy in Africa, using open banking as a layer for financial data, identity data, and bank transfer payments for businesses."))));
+  })), /* @__PURE__ */ import_react24.default.createElement(CoverDets, null, /* @__PURE__ */ import_react24.default.createElement(CoverTitle, null, "Robust delivery and pickup for Nigeria"), /* @__PURE__ */ import_react24.default.createElement(CoverText, null, "Wikki is a technology company on a mission to power the digital economy in Africa, using open banking as a layer for financial data, identity data, and bank transfer payments for businesses."))));
 };
-var Body21 = import_styled_components22.default.div`
+var Body24 = import_styled_components26.default.div`
   position: relative;
 
   display: flex;
@@ -2978,7 +3354,7 @@ var Body21 = import_styled_components22.default.div`
     min-height: 450px;
   }
 `;
-var MoreOverlay = import_styled_components22.default.div`
+var MoreOverlay = import_styled_components26.default.div`
   position: absolute;
   content: "";
   top: 0;
@@ -2992,7 +3368,7 @@ var MoreOverlay = import_styled_components22.default.div`
     height: 300px;
   }
 `;
-var Cover15 = import_styled_components22.default.div`
+var Cover18 = import_styled_components26.default.div`
   position: relative;
   z-index: 2;
   color: ${WikkiTheme.white};
@@ -3008,14 +3384,14 @@ var Cover15 = import_styled_components22.default.div`
     margin: 92px auto 56 auto;
   }
 `;
-var MoreTitle = (0, import_styled_components22.default)(Header1)`
+var MoreTitle = (0, import_styled_components26.default)(Header1)`
   margin: 16px 0;
   text-align: left;
   @media only screen and (max-width: 650px) {
     margin: 8px 0;
   }
 `;
-var CoverImage = import_styled_components22.default.div`
+var CoverImage = import_styled_components26.default.div`
   min-height: 350px;
   max-width: 1232px;
   width: 100%;
@@ -3025,7 +3401,7 @@ var CoverImage = import_styled_components22.default.div`
     margin: 24px auto;
   }
 `;
-var AboutImage = import_styled_components22.default.img`
+var AboutImage = import_styled_components26.default.img`
   width: 100%;
   min-height: 350px;
   object-fit: cover;
@@ -3033,7 +3409,7 @@ var AboutImage = import_styled_components22.default.img`
     min-height: 250px;
   }
 `;
-var CoverDets = import_styled_components22.default.div`
+var CoverDets = import_styled_components26.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3045,11 +3421,11 @@ var CoverDets = import_styled_components22.default.div`
     max-width: 500px;
   }
 `;
-var CoverTitle = (0, import_styled_components22.default)(Header1)`
+var CoverTitle = (0, import_styled_components26.default)(Header1)`
   text-align: center;
   color: ${WikkiTheme.black};
 `;
-var CoverText = (0, import_styled_components22.default)(Body2)`
+var CoverText = (0, import_styled_components26.default)(Body2)`
   text-align: center;
   color: ${WikkiTheme.black};
 `;
@@ -3057,8 +3433,8 @@ var AboutHero_default = AboutHero;
 
 // app/components/about/AboutPurpose.tsx
 init_react();
-var import_react22 = __toESM(require("react"));
-var import_styled_components23 = __toESM(require("styled-components"));
+var import_react25 = __toESM(require("react"));
+var import_styled_components27 = __toESM(require("styled-components"));
 
 // app/images/pointcard.gif
 var pointcard_default = "/build/_assets/pointcard-J2HSU7TO.gif";
@@ -3193,11 +3569,11 @@ var purposeData = [
 
 // app/components/about/AboutPurpose.tsx
 var AboutPurpose = () => {
-  return /* @__PURE__ */ import_react22.default.createElement(Body22, null, /* @__PURE__ */ import_react22.default.createElement(MoreOverlay2, null), /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(MoreTitle2, null, "Our Purpose"), /* @__PURE__ */ import_react22.default.createElement(DetailsGrid3, null, purposeData.map((data, index3) => /* @__PURE__ */ import_react22.default.createElement(PurposeRow, {
+  return /* @__PURE__ */ import_react25.default.createElement(Body25, null, /* @__PURE__ */ import_react25.default.createElement(MoreOverlay2, null), /* @__PURE__ */ import_react25.default.createElement(Cover19, null, /* @__PURE__ */ import_react25.default.createElement(MoreTitle2, null, "Our Purpose"), /* @__PURE__ */ import_react25.default.createElement(DetailsGrid3, null, purposeData.map((data, index3) => /* @__PURE__ */ import_react25.default.createElement(PurposeRow, {
     key: index3
-  }, " ", /* @__PURE__ */ import_react22.default.createElement(PurposeIcon, null, data.icon), /* @__PURE__ */ import_react22.default.createElement(MoreSub, null, data.title), /* @__PURE__ */ import_react22.default.createElement(MoreText, null, data.text))))));
+  }, " ", /* @__PURE__ */ import_react25.default.createElement(PurposeIcon, null, data.icon), /* @__PURE__ */ import_react25.default.createElement(MoreSub, null, data.title), /* @__PURE__ */ import_react25.default.createElement(MoreText, null, data.text))))));
 };
-var Body22 = import_styled_components23.default.div`
+var Body25 = import_styled_components27.default.div`
   position: relative;
   z-index: 1;
   display: flex;
@@ -3213,7 +3589,7 @@ var Body22 = import_styled_components23.default.div`
     min-height: 450px;
   }
 `;
-var MoreOverlay2 = import_styled_components23.default.div`
+var MoreOverlay2 = import_styled_components27.default.div`
   position: absolute;
   content: "";
   top: 0;
@@ -3223,7 +3599,7 @@ var MoreOverlay2 = import_styled_components23.default.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
 `;
-var Cover16 = import_styled_components23.default.div`
+var Cover19 = import_styled_components27.default.div`
   position: relative;
   z-index: 2;
   color: ${WikkiTheme.white};
@@ -3235,18 +3611,18 @@ var Cover16 = import_styled_components23.default.div`
   justify-content: center;
   align-items: center;
 `;
-var MoreSub = (0, import_styled_components23.default)(Header5)`
+var MoreSub = (0, import_styled_components27.default)(Header5)`
   text-align: left;
 `;
-var MoreTitle2 = (0, import_styled_components23.default)(Header1)`
+var MoreTitle2 = (0, import_styled_components27.default)(Header1)`
   margin: 16px 0;
   text-align: center;
 `;
-var MoreText = (0, import_styled_components23.default)(Body3)`
+var MoreText = (0, import_styled_components27.default)(Body3)`
   text-align: left;
   margin: 16px 0;
 `;
-var DetailsGrid3 = import_styled_components23.default.div`
+var DetailsGrid3 = import_styled_components27.default.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
@@ -3270,13 +3646,13 @@ var DetailsGrid3 = import_styled_components23.default.div`
     margin: 24px 0;
   }
 `;
-var PurposeRow = import_styled_components23.default.div`
+var PurposeRow = import_styled_components27.default.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 `;
-var PurposeIcon = import_styled_components23.default.span`
+var PurposeIcon = import_styled_components27.default.span`
   width: 40px;
   height: 40px;
   margin: 32px 0;
@@ -3291,9 +3667,9 @@ var meta7 = () => {
   };
 };
 var about = () => {
-  return /* @__PURE__ */ import_react23.default.createElement(Body23, null, /* @__PURE__ */ import_react23.default.createElement(AboutHero_default, null), /* @__PURE__ */ import_react23.default.createElement(AboutPurpose_default, null), /* @__PURE__ */ import_react23.default.createElement(AboutDelivery_default, null), /* @__PURE__ */ import_react23.default.createElement(AboutDetails_default, null), /* @__PURE__ */ import_react23.default.createElement(AboutBusiness_default, null));
+  return /* @__PURE__ */ import_react26.default.createElement(Body26, null, /* @__PURE__ */ import_react26.default.createElement(AboutHero_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutPurpose_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutDelivery_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutDetails_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutBusiness_default, null));
 };
-var Body23 = import_styled_components24.default.div``;
+var Body26 = import_styled_components28.default.div``;
 var about_default = about;
 
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\index.tsx
@@ -3303,17 +3679,17 @@ __export(routes_exports, {
   meta: () => meta8
 });
 init_react();
-var import_react27 = __toESM(require("react"));
-var import_styled_components28 = __toESM(require("styled-components"));
+var import_react30 = __toESM(require("react"));
+var import_styled_components32 = __toESM(require("styled-components"));
 
 // app/components/home/DoMore.tsx
 init_react();
-var import_react24 = __toESM(require("react"));
-var import_styled_components25 = __toESM(require("styled-components"));
+var import_react27 = __toESM(require("react"));
+var import_styled_components29 = __toESM(require("styled-components"));
 var DoMore = () => {
-  return /* @__PURE__ */ import_react24.default.createElement(Body24, null, /* @__PURE__ */ import_react24.default.createElement(MoreOverlay3, null), /* @__PURE__ */ import_react24.default.createElement(Cover17, null, /* @__PURE__ */ import_react24.default.createElement(MoreSub2, null, "Do more with wikki"), /* @__PURE__ */ import_react24.default.createElement(MoreTitle3, null, "Designed for the next billion users and riders"), /* @__PURE__ */ import_react24.default.createElement(MoreText2, null, "Beautifully easy to use software to accept card payments on your phone, and grow your business anywhere on the planet")));
+  return /* @__PURE__ */ import_react27.default.createElement(Body27, null, /* @__PURE__ */ import_react27.default.createElement(MoreOverlay3, null), /* @__PURE__ */ import_react27.default.createElement(Cover20, null, /* @__PURE__ */ import_react27.default.createElement(MoreSub2, null, "Do more with wikki"), /* @__PURE__ */ import_react27.default.createElement(MoreTitle3, null, "Designed for the next billion users and riders"), /* @__PURE__ */ import_react27.default.createElement(MoreText2, null, "Beautifully easy to use software to accept card payments on your phone, and grow your business anywhere on the planet")));
 };
-var Body24 = import_styled_components25.default.section`
+var Body27 = import_styled_components29.default.section`
   position: relative;
   z-index: -1;
   display: flex;
@@ -3329,7 +3705,7 @@ var Body24 = import_styled_components25.default.section`
     min-height: 450px;
   }
 `;
-var MoreOverlay3 = import_styled_components25.default.div`
+var MoreOverlay3 = import_styled_components29.default.div`
   position: absolute;
   content: "";
   top: 0;
@@ -3339,7 +3715,7 @@ var MoreOverlay3 = import_styled_components25.default.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
 `;
-var Cover17 = import_styled_components25.default.div`
+var Cover20 = import_styled_components29.default.div`
   position: relative;
   z-index: 2;
   color: ${WikkiTheme.white};
@@ -3351,41 +3727,41 @@ var Cover17 = import_styled_components25.default.div`
   justify-content: center;
   align-items: center;
 `;
-var MoreSub2 = (0, import_styled_components25.default)(Header5)`
+var MoreSub2 = (0, import_styled_components29.default)(Header5)`
   text-align: center;
 `;
-var MoreTitle3 = (0, import_styled_components25.default)(Header1)`
+var MoreTitle3 = (0, import_styled_components29.default)(Header1)`
   margin: 16px 0 24px 0;
   text-align: center;
 `;
-var MoreText2 = (0, import_styled_components25.default)(Body3)`
+var MoreText2 = (0, import_styled_components29.default)(Body3)`
   text-align: center;
 `;
 var DoMore_default = DoMore;
 
 // app/components/home/HomeHero.tsx
 init_react();
-var import_react25 = __toESM(require("react"));
-var import_styled_components26 = __toESM(require("styled-components"));
+var import_react28 = __toESM(require("react"));
+var import_styled_components30 = __toESM(require("styled-components"));
 var HomeHero = () => {
-  return /* @__PURE__ */ import_react25.default.createElement(Body25, null);
+  return /* @__PURE__ */ import_react28.default.createElement(Body28, null);
 };
-var Body25 = import_styled_components26.default.section`
+var Body28 = import_styled_components30.default.section`
   position: relative;
 `;
 var HomeHero_default = HomeHero;
 
 // app/components/home/HomeWaiting.tsx
 init_react();
-var import_react26 = __toESM(require("react"));
+var import_react29 = __toESM(require("react"));
 var HomeWaiting = () => {
-  return /* @__PURE__ */ import_react26.default.createElement("div", null, "HomeWaiting");
+  return /* @__PURE__ */ import_react29.default.createElement("div", null, "HomeWaiting");
 };
 var HomeWaiting_default = HomeWaiting;
 
 // app/components/home/UseCases.tsx
 init_react();
-var import_styled_components27 = __toESM(require("styled-components"));
+var import_styled_components31 = __toESM(require("styled-components"));
 
 // app/images/user.png
 var user_default = "/build/_assets/user-URS5GCDW.png";
@@ -3395,13 +3771,13 @@ var driver_default2 = "/build/_assets/driver-5QCCW63S.png";
 
 // app/components/home/UseCases.tsx
 var UseCases = () => {
-  return /* @__PURE__ */ React.createElement(Body26, null, /* @__PURE__ */ React.createElement(Cover18, null, /* @__PURE__ */ React.createElement(MoreTitle4, null, "Discover The Wikki Usecases"), /* @__PURE__ */ React.createElement(CaseGrid, null, /* @__PURE__ */ React.createElement(CaseRowUsers, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay4, null), /* @__PURE__ */ React.createElement(RowContent, null, /* @__PURE__ */ React.createElement(CaseTitle, null, "For users "), " ", /* @__PURE__ */ React.createElement(CaseTitle, null, "and companies"), /* @__PURE__ */ React.createElement(CaseButtonLink, {
+  return /* @__PURE__ */ React.createElement(Body29, null, /* @__PURE__ */ React.createElement(Cover21, null, /* @__PURE__ */ React.createElement(MoreTitle4, null, "Discover The Wikki Usecases"), /* @__PURE__ */ React.createElement(CaseGrid, null, /* @__PURE__ */ React.createElement(CaseRowUsers, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay4, null), /* @__PURE__ */ React.createElement(RowContent, null, /* @__PURE__ */ React.createElement(CaseTitle, null, "For users "), " ", /* @__PURE__ */ React.createElement(CaseTitle, null, "and companies"), /* @__PURE__ */ React.createElement(CaseButtonLink, {
     to: "/how-it-works"
   }, "Learn more"))), /* @__PURE__ */ React.createElement(CaseRowDrivers, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay4, null), /* @__PURE__ */ React.createElement(RowContent, null, /* @__PURE__ */ React.createElement(CaseTitle, null, "For drivers"), /* @__PURE__ */ React.createElement(CaseButtonLink, {
     to: "/how-it-works/driver"
   }, "Learn more"))))));
 };
-var Body26 = import_styled_components27.default.section`
+var Body29 = import_styled_components31.default.section`
   position: relative;
   z-index: 1;
   display: flex;
@@ -3418,7 +3794,7 @@ var Body26 = import_styled_components27.default.section`
     margin: 64px 0;
   }
 `;
-var MoreOverlay4 = import_styled_components27.default.div`
+var MoreOverlay4 = import_styled_components31.default.div`
   position: absolute;
   content: "";
   top: 0;
@@ -3429,7 +3805,7 @@ var MoreOverlay4 = import_styled_components27.default.div`
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
 `;
-var Cover18 = import_styled_components27.default.div`
+var Cover21 = import_styled_components31.default.div`
   color: ${WikkiTheme.black};
   max-width: 1232px;
   width: 100%;
@@ -3439,7 +3815,7 @@ var Cover18 = import_styled_components27.default.div`
 
   align-items: flex-start;
 `;
-var MoreTitle4 = (0, import_styled_components27.default)(Header1)`
+var MoreTitle4 = (0, import_styled_components31.default)(Header1)`
   margin: 16px 0 80px 0;
   text-align: left;
   max-width: 550px;
@@ -3448,7 +3824,7 @@ var MoreTitle4 = (0, import_styled_components27.default)(Header1)`
     margin: 16px 0 48px 0;
   }
 `;
-var CaseGrid = import_styled_components27.default.div`
+var CaseGrid = import_styled_components31.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -3461,8 +3837,11 @@ var CaseGrid = import_styled_components27.default.div`
     gap: 24px;
   }
 `;
-var CaseRowUsers = import_styled_components27.default.div`
+var CaseRowUsers = import_styled_components31.default.div`
   max-height: 700px;
+  display: flex;
+  align-items: flex-end;
+
   min-height: 680px;
   height: 100%;
   max-width: 630px;
@@ -3477,7 +3856,7 @@ var CaseRowUsers = import_styled_components27.default.div`
     min-height: 550px;
   }
 `;
-var RowContent = import_styled_components27.default.div`
+var RowContent = import_styled_components31.default.div`
   position: relative;
   z-index: 2;
 
@@ -3485,7 +3864,7 @@ var RowContent = import_styled_components27.default.div`
   display: flex;
   color: ${WikkiTheme.white};
   flex-direction: column;
-  margin: 96px 40px;
+  margin: 0 40px 32px 40px;
   @media only screen and (max-width: 650px) {
     margin: 56px 24px;
   }
@@ -3496,9 +3875,11 @@ var RowContent = import_styled_components27.default.div`
     }
   }
 `;
-var CaseTitle = (0, import_styled_components27.default)(Header2)``;
-var CaseButtonLink = (0, import_styled_components27.default)(CaseButton)``;
-var CaseRowDrivers = import_styled_components27.default.div`
+var CaseTitle = (0, import_styled_components31.default)(Header2)``;
+var CaseButtonLink = (0, import_styled_components31.default)(CaseButton)``;
+var CaseRowDrivers = import_styled_components31.default.div`
+  display: flex;
+  align-items: flex-end;
   position: relative;
   z-index: 2;
   padding: 16px;
@@ -3525,14 +3906,14 @@ var meta8 = () => {
   };
 };
 var index2 = () => {
-  return /* @__PURE__ */ import_react27.default.createElement(Body27, null, /* @__PURE__ */ import_react27.default.createElement(HomeHero_default, null), /* @__PURE__ */ import_react27.default.createElement(HomeWaiting_default, null), /* @__PURE__ */ import_react27.default.createElement(UseCases_default, null), /* @__PURE__ */ import_react27.default.createElement(DoMore_default, null));
+  return /* @__PURE__ */ import_react30.default.createElement(Body30, null, /* @__PURE__ */ import_react30.default.createElement(HomeHero_default, null), /* @__PURE__ */ import_react30.default.createElement(HomeWaiting_default, null), /* @__PURE__ */ import_react30.default.createElement(UseCases_default, null), /* @__PURE__ */ import_react30.default.createElement(DoMore_default, null));
 };
-var Body27 = import_styled_components28.default.div``;
+var Body30 = import_styled_components32.default.div``;
 var routes_default = index2;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
 init_react();
-var assets_manifest_default = { "version": "ee7e055e", "entry": { "module": "/build/entry.client-53N2RJWB.js", "imports": ["/build/_shared/chunk-PZ2Z7HGX.js", "/build/_shared/chunk-6K6B2XQG.js", "/build/_shared/chunk-2ADOHOB6.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-UVYNSKH5.js", "imports": ["/build/_shared/chunk-D7HEMV6S.js", "/build/_shared/chunk-JYQS64WU.js", "/build/_shared/chunk-ERECZCGM.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-PT5NXCDW.js", "imports": ["/build/_shared/chunk-2LU3WT75.js", "/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/business": { "id": "routes/business", "parentId": "root", "path": "business", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/business-HY6AHSQV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contact": { "id": "routes/contact", "parentId": "root", "path": "contact", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contact-JFGXR2BM.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/driver-requirements": { "id": "routes/driver-requirements", "parentId": "root", "path": "driver-requirements", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/driver-requirements-JV3XHLLY.js", "imports": ["/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/driver": { "id": "routes/how-it-works/driver", "parentId": "root", "path": "how-it-works/driver", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/how-it-works/driver-PBMHYIL4.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/index": { "id": "routes/how-it-works/index", "parentId": "root", "path": "how-it-works", "index": true, "caseSensitive": void 0, "module": "/build/routes/how-it-works/index-UBACWV3I.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-ZBY6OQD6.js", "imports": ["/build/_shared/chunk-2LU3WT75.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-EE7E055E.js" };
+var assets_manifest_default = { "version": "f46d0558", "entry": { "module": "/build/entry.client-53N2RJWB.js", "imports": ["/build/_shared/chunk-PZ2Z7HGX.js", "/build/_shared/chunk-6K6B2XQG.js", "/build/_shared/chunk-2ADOHOB6.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-W3GL7TI2.js", "imports": ["/build/_shared/chunk-76GTS56A.js", "/build/_shared/chunk-HDJVQNOO.js", "/build/_shared/chunk-SP7TTQZX.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-2PSL2ZEP.js", "imports": ["/build/_shared/chunk-2LU3WT75.js", "/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/business": { "id": "routes/business", "parentId": "root", "path": "business", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/business-HY6AHSQV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contact": { "id": "routes/contact", "parentId": "root", "path": "contact", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contact-YOPMNQLP.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/driver-requirements": { "id": "routes/driver-requirements", "parentId": "root", "path": "driver-requirements", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/driver-requirements-J2PE6U6T.js", "imports": ["/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/driver": { "id": "routes/how-it-works/driver", "parentId": "root", "path": "how-it-works/driver", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/how-it-works/driver-QLCVZKW3.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/index": { "id": "routes/how-it-works/index", "parentId": "root", "path": "how-it-works", "index": true, "caseSensitive": void 0, "module": "/build/routes/how-it-works/index-ZYRT25NW.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-RKW4JMZD.js", "imports": ["/build/_shared/chunk-2LU3WT75.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-F46D0558.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

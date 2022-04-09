@@ -5,10 +5,12 @@ export const WikkiTheme = {
   black: "#000000",
   dark: "#0a0b1a",
   snowWhite: "#FAFAFF",
+  smokeWhite: "#FAFAFA",
   red: "#ff0000",
   gray: "#818181",
   yellow: "#FFCE32",
   blue: "#1D63FF",
   lightYelllow: "#FEFAF0",
   darkRed: "#F34646",
+  switchBG: "rgba(118, 118, 128, 0.5)",
 }

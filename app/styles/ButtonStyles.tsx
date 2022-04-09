@@ -180,3 +180,26 @@ export const NavbarButton = styled.button`
     }
   }
 `
+
+export const DownloadButton = styled.a`
+  height: 64px;
+  max-width: 200px;
+  width: 100%;
+  background: ${WikkiTheme.dark};
+  cursor: pointer;
+  color: ${WikkiTheme.white};
+  border-radius: 32px;
+  margin: 8px;
+  border: none;
+  outline: none;
+  font-family: "Clash Display Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`

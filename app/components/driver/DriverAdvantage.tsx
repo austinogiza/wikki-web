@@ -82,6 +82,10 @@ const DriverLeft = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  @media only screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 400px;
+  }
 `
 const DiverCover = styled.div`
   max-width: 500px;
@@ -112,6 +116,7 @@ const DriverRight = styled.div`
   background: ${WikkiTheme.white};
   @media only screen and (max-width: 550px) {
     grid-template-columns: repeat(1, 1fr);
+    min-height: 300px;
   }
 `
 const DriverImage = styled.img`

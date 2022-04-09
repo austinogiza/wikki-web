@@ -20,6 +20,7 @@ import Footer from "~/components/Footer"
 import { useEffect } from "react"
 import NavCover from "./components/navbar/NavCover"
 import BackToTop from "./components/BackToTop"
+import DriverMessage from "./components/DriverMessage"
 export const meta: MetaFunction = () => {
   return {
     title: "Wikki",
@@ -33,8 +34,7 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: nProgressStyles },
     {
       rel: "icon",
-      href: "/favicon.png",
-      type: "image/png",
+      href: "/favicon.ico",
     },
   ]
 }
@@ -72,6 +72,7 @@ export default function App() {
         <NavCover />
         <BackToTop />
         <Outlet />
+        <DriverMessage />
         <Footer />
         <ScrollRestoration />
         <Scripts />

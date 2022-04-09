@@ -7,32 +7,25 @@ import { Header2, Header1 } from "~/styles/TextStyles"
 
 import { CaseButton } from "~/styles/ButtonStyles"
 
-const UseCases = () => {
+const HomeBusiness = () => {
   return (
     <Body>
       <Cover>
-        <MoreTitle>Discover The Wikki Usecases</MoreTitle>
         <CaseGrid>
           <CaseRowUsers>
             {" "}
             <MoreOverlay />
             <RowContent>
-              <CaseTitle>For users </CaseTitle>{" "}
-              <CaseTitle>and companies</CaseTitle>
+              <CaseTitle>Wikki ❤ businesses & companies. </CaseTitle>{" "}
+              <CaseText>
+                Wikki feels just like the Apple devices employees know and love
+                — and they all work together seamlessly. Copy and paste across
+                devices. Use Handoff to start an email on one device and finish
+                on another. And pick up calls anywhere.
+              </CaseText>
               <CaseButtonLink to="/how-it-works">Learn more</CaseButtonLink>
             </RowContent>
           </CaseRowUsers>
-          <CaseRowDrivers>
-            {" "}
-            <MoreOverlay />
-            <RowContent>
-              <CaseTitle>For drivers</CaseTitle>
-
-              <CaseButtonLink to="/how-it-works/driver">
-                Learn more
-              </CaseButtonLink>
-            </RowContent>
-          </CaseRowDrivers>
         </CaseGrid>
       </Cover>
     </Body>
@@ -43,10 +36,10 @@ const Body = styled.section`
   z-index: 1;
   display: flex;
   flex-direction: column;
+
   margin: 144px 0;
-  align-items: flex-start;
   min-height: 600px;
-  color: ${WikkiTheme.black};
+  color: ${WikkiTheme.smokeWhite};
   width: 100%;
   padding: 16px;
   background: ${WikkiTheme.white};
@@ -140,6 +133,7 @@ const RowContent = styled.div`
   }
 `
 const CaseTitle = styled(Header2)``
+const CaseText = styled(Header2)``
 const CaseButtonLink = styled(CaseButton)``
 const CaseRowDrivers = styled.div`
   display: flex;
@@ -160,4 +154,4 @@ const CaseRowDrivers = styled.div`
     min-height: 550px;
   }
 `
-export default UseCases
+export default HomeBusiness

@@ -6,6 +6,6 @@ export const MenuData = [
   { name: "Contact", link: "contact" },
 ]
 export const ProductsData = [
-  { name: "Delivery", link: "about" },
-  { name: "Wikki pickup", link: "about" },
+  { name: "Dispatch", link: "about" },
+  { name: "Pickup", link: "about" },
 ]

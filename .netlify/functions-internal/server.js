@@ -398,8 +398,8 @@ var MenuData = [
   { name: "Contact", link: "contact" }
 ];
 var ProductsData = [
-  { name: "Delivery", link: "about" },
-  { name: "Wikki pickup", link: "about" }
+  { name: "Dispatch", link: "about" },
+  { name: "Pickup", link: "about" }
 ];
 
 // app/images/logo.svg
@@ -685,6 +685,12 @@ var CaseButton = (0, import_styled_components3.default)(import_remix2.Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in;
+
+  :hover {
+    background: ${WikkiTheme.secondary};
+    color: ${WikkiTheme.black};
+  }
   @media only screen and (max-width: 550px) {
     font-size: 14px;
     height: 48px;
@@ -757,6 +763,42 @@ var DownloadButton = import_styled_components3.default.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in;
+
+  :hover {
+    background: ${WikkiTheme.secondary};
+    color: ${WikkiTheme.black};
+  }
+`;
+var BusinessButton = (0, import_styled_components3.default)(import_remix2.Link)`
+  height: 64px;
+  max-width: 441px;
+  width: 100%;
+  background: transparent;
+  color: ${WikkiTheme.white};
+  border: 2px solid ${WikkiTheme.white};
+  border-radius: 40px;
+  outline: none;
+  font-family: "Clash Display Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.1;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+
+  :hover {
+    background: ${WikkiTheme.dark};
+    color: ${WikkiTheme.white};
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 14px;
+    height: 48px;
+  }
 `;
 
 // app/components/Footer.tsx
@@ -1216,7 +1258,7 @@ var Body8 = (0, import_styled_components8.default)(import_framer_motion.motion.d
   width: 100%;
   text-align: center;
   margin: 24px auto;
-  display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -2792,6 +2834,18 @@ var business = () => {
 };
 var business_default = business;
 
+// route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\dispatch.tsx
+var dispatch_exports = {};
+__export(dispatch_exports, {
+  default: () => dispatch_default
+});
+init_react();
+var import_react18 = __toESM(require("react"));
+var Dispatch = () => {
+  return /* @__PURE__ */ import_react18.default.createElement("div", null, "dispatch");
+};
+var dispatch_default = Dispatch;
+
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\contact.tsx
 var contact_exports = {};
 __export(contact_exports, {
@@ -2799,12 +2853,12 @@ __export(contact_exports, {
   meta: () => meta6
 });
 init_react();
-var import_react20 = __toESM(require("react"));
+var import_react21 = __toESM(require("react"));
 var import_styled_components22 = __toESM(require("styled-components"));
 
 // app/components/contact/ContactForm.tsx
 init_react();
-var import_react18 = __toESM(require("react"));
+var import_react19 = __toESM(require("react"));
 var import_styled_components20 = __toESM(require("styled-components"));
 var import_formik2 = require("formik");
 var Yup = __toESM(require("yup"));
@@ -2878,11 +2932,11 @@ var ContactForm = () => {
     email: Yup.string().email().required("Required"),
     message: Yup.string().required("Required")
   });
-  const [sent, setSent] = (0, import_react18.useState)(false);
+  const [sent, setSent] = (0, import_react19.useState)(false);
   const submitForm = (values, onSubmitProps) => {
     onSubmitProps.setSubmitting(true);
   };
-  return /* @__PURE__ */ import_react18.default.createElement(Body18, null, /* @__PURE__ */ import_react18.default.createElement(Cover13, null, /* @__PURE__ */ import_react18.default.createElement(FormTitle, null, "Send us a message"), /* @__PURE__ */ import_react18.default.createElement(import_formik2.Formik, {
+  return /* @__PURE__ */ import_react19.default.createElement(Body18, null, /* @__PURE__ */ import_react19.default.createElement(Cover13, null, /* @__PURE__ */ import_react19.default.createElement(FormTitle, null, "Send us a message"), /* @__PURE__ */ import_react19.default.createElement(import_formik2.Formik, {
     initialValues: { email: "", name: "", message: "" },
     validationSchema: ContactSchema,
     onSubmit: submitForm
@@ -2893,34 +2947,34 @@ var ContactForm = () => {
     handleChange,
     handleBlur,
     touched
-  }) => /* @__PURE__ */ import_react18.default.createElement(FormForm, null, /* @__PURE__ */ import_react18.default.createElement(FormColumn, null, /* @__PURE__ */ import_react18.default.createElement(FormLabel, {
+  }) => /* @__PURE__ */ import_react19.default.createElement(FormForm, null, /* @__PURE__ */ import_react19.default.createElement(FormColumn, null, /* @__PURE__ */ import_react19.default.createElement(FormLabel, {
     htmlFor: "name"
-  }, " ", /* @__PURE__ */ import_react18.default.createElement(LabelText, null, "Name")), /* @__PURE__ */ import_react18.default.createElement(FormInput, {
+  }, " ", /* @__PURE__ */ import_react19.default.createElement(LabelText, null, "Name")), /* @__PURE__ */ import_react19.default.createElement(FormInput, {
     id: "name",
     value: values.name,
     onChange: handleChange,
     onBlur: handleBlur,
     as: "input",
     type: "text"
-  }), errors.name && touched.name && /* @__PURE__ */ import_react18.default.createElement(FormError, null, /* @__PURE__ */ import_react18.default.createElement(FormErrorText, null, "Your name is required"))), /* @__PURE__ */ import_react18.default.createElement(FormColumn, null, /* @__PURE__ */ import_react18.default.createElement(FormLabel, {
+  }), errors.name && touched.name && /* @__PURE__ */ import_react19.default.createElement(FormError, null, /* @__PURE__ */ import_react19.default.createElement(FormErrorText, null, "Your name is required"))), /* @__PURE__ */ import_react19.default.createElement(FormColumn, null, /* @__PURE__ */ import_react19.default.createElement(FormLabel, {
     htmlFor: "email"
-  }, " ", /* @__PURE__ */ import_react18.default.createElement(LabelText, null, "Email")), /* @__PURE__ */ import_react18.default.createElement(FormInput, {
+  }, " ", /* @__PURE__ */ import_react19.default.createElement(LabelText, null, "Email")), /* @__PURE__ */ import_react19.default.createElement(FormInput, {
     id: "email",
     value: values.email,
     onChange: handleChange,
     onBlur: handleBlur,
     as: "input",
     type: "email"
-  }), errors.email && touched.email && /* @__PURE__ */ import_react18.default.createElement(FormError, null, /* @__PURE__ */ import_react18.default.createElement(FormErrorText, null, "Your email is required"))), /* @__PURE__ */ import_react18.default.createElement(FormColumn, null, /* @__PURE__ */ import_react18.default.createElement(FormLabel, {
+  }), errors.email && touched.email && /* @__PURE__ */ import_react19.default.createElement(FormError, null, /* @__PURE__ */ import_react19.default.createElement(FormErrorText, null, "Your email is required"))), /* @__PURE__ */ import_react19.default.createElement(FormColumn, null, /* @__PURE__ */ import_react19.default.createElement(FormLabel, {
     htmlFor: "message"
-  }, " ", /* @__PURE__ */ import_react18.default.createElement(LabelText, null, "Message")), /* @__PURE__ */ import_react18.default.createElement(FormArea, {
+  }, " ", /* @__PURE__ */ import_react19.default.createElement(LabelText, null, "Message")), /* @__PURE__ */ import_react19.default.createElement(FormArea, {
     id: "message",
     value: values.message,
     onChange: handleChange,
     onBlur: handleBlur,
     as: "textarea",
     placeholder: "Type your message"
-  }), errors.message && touched.message && /* @__PURE__ */ import_react18.default.createElement(FormError, null, /* @__PURE__ */ import_react18.default.createElement(FormErrorText, null, "Your message is required"))), /* @__PURE__ */ import_react18.default.createElement(FormButtonWrap, null, /* @__PURE__ */ import_react18.default.createElement(FormButtonMain, null, "Send"))))));
+  }), errors.message && touched.message && /* @__PURE__ */ import_react19.default.createElement(FormError, null, /* @__PURE__ */ import_react19.default.createElement(FormErrorText, null, "Your message is required"))), /* @__PURE__ */ import_react19.default.createElement(FormButtonWrap, null, /* @__PURE__ */ import_react19.default.createElement(FormButtonMain, null, "Send"))))));
 };
 var Body18 = import_styled_components20.default.div`
   width: 100%;
@@ -3003,10 +3057,10 @@ var ContactForm_default = ContactForm;
 
 // app/components/contact/ContactHero.tsx
 init_react();
-var import_react19 = __toESM(require("react"));
+var import_react20 = __toESM(require("react"));
 var import_styled_components21 = __toESM(require("styled-components"));
 var ContactHero = () => {
-  return /* @__PURE__ */ import_react19.default.createElement(Body19, null, /* @__PURE__ */ import_react19.default.createElement(Cover14, null, /* @__PURE__ */ import_react19.default.createElement(ContactHeader, null, /* @__PURE__ */ import_react19.default.createElement(ContactTitle, null, "How can we help?"), /* @__PURE__ */ import_react19.default.createElement(ContactText, null, "Looking for the solution to your logistics needs or answers? Fill out the contact form and we will be in touch."))));
+  return /* @__PURE__ */ import_react20.default.createElement(Body19, null, /* @__PURE__ */ import_react20.default.createElement(Cover14, null, /* @__PURE__ */ import_react20.default.createElement(ContactHeader, null, /* @__PURE__ */ import_react20.default.createElement(ContactTitle, null, "How can we help?"), /* @__PURE__ */ import_react20.default.createElement(ContactText, null, "Looking for the solution to your logistics needs or answers? Fill out the contact form and we will be in touch."))));
 };
 var Body19 = import_styled_components21.default.section`
   width: 100%;
@@ -3050,7 +3104,7 @@ var meta6 = () => {
   };
 };
 var contact = () => {
-  return /* @__PURE__ */ import_react20.default.createElement(Body20, null, /* @__PURE__ */ import_react20.default.createElement(ContactHero_default, null), /* @__PURE__ */ import_react20.default.createElement(ContactForm_default, null));
+  return /* @__PURE__ */ import_react21.default.createElement(Body20, null, /* @__PURE__ */ import_react21.default.createElement(ContactHero_default, null), /* @__PURE__ */ import_react21.default.createElement(ContactForm_default, null));
 };
 var Body20 = import_styled_components22.default.section`
   width: 100%;
@@ -3060,6 +3114,18 @@ var Body20 = import_styled_components22.default.section`
 `;
 var contact_default = contact;
 
+// route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\pick-up.tsx
+var pick_up_exports = {};
+__export(pick_up_exports, {
+  default: () => pick_up_default
+});
+init_react();
+var import_react22 = __toESM(require("react"));
+var Pickup = () => {
+  return /* @__PURE__ */ import_react22.default.createElement("div", null, "Pickup");
+};
+var pick_up_default = Pickup;
+
 // route:C:\Users\Augustine Ogiza\Documents\Development\react\wikki\app\routes\about.tsx
 var about_exports = {};
 __export(about_exports, {
@@ -3067,12 +3133,12 @@ __export(about_exports, {
   meta: () => meta7
 });
 init_react();
-var import_react26 = __toESM(require("react"));
+var import_react28 = __toESM(require("react"));
 var import_styled_components28 = __toESM(require("styled-components"));
 
 // app/components/about/AboutBusiness.tsx
 init_react();
-var import_react21 = __toESM(require("react"));
+var import_react23 = __toESM(require("react"));
 var import_styled_components23 = __toESM(require("styled-components"));
 
 // app/images/delivery02.png
@@ -3083,7 +3149,7 @@ var delivery01_default = "/build/_assets/delivery01-BBMAVTUQ.png";
 
 // app/components/about/AboutBusiness.tsx
 var AboutBusiness = () => {
-  return /* @__PURE__ */ import_react21.default.createElement(Body21, null, /* @__PURE__ */ import_react21.default.createElement(Cover15, null, /* @__PURE__ */ import_react21.default.createElement(BusinesInfo, null, /* @__PURE__ */ import_react21.default.createElement(BusinessText, null, "What more Do we offer you")), /* @__PURE__ */ import_react21.default.createElement(DetailsGrid, null, /* @__PURE__ */ import_react21.default.createElement(GridRight, null, " ", /* @__PURE__ */ import_react21.default.createElement(GridCover, null, /* @__PURE__ */ import_react21.default.createElement(RideTitle, null, "Track your order"), /* @__PURE__ */ import_react21.default.createElement(RideText2, null, "Real time order & package tracking"))), /* @__PURE__ */ import_react21.default.createElement(GridLeft, null, /* @__PURE__ */ import_react21.default.createElement(GridCover, null, /* @__PURE__ */ import_react21.default.createElement(RideTitle, null, "Quick delivery"), /* @__PURE__ */ import_react21.default.createElement(RideText2, null, "Deliver items to your customers without hassle"))))));
+  return /* @__PURE__ */ import_react23.default.createElement(Body21, null, /* @__PURE__ */ import_react23.default.createElement(Cover15, null, /* @__PURE__ */ import_react23.default.createElement(BusinesInfo, null, /* @__PURE__ */ import_react23.default.createElement(BusinessText, null, "What more Do we offer you")), /* @__PURE__ */ import_react23.default.createElement(DetailsGrid, null, /* @__PURE__ */ import_react23.default.createElement(GridRight, null, " ", /* @__PURE__ */ import_react23.default.createElement(GridCover, null, /* @__PURE__ */ import_react23.default.createElement(RideTitle, null, "Track your order"), /* @__PURE__ */ import_react23.default.createElement(RideText2, null, "Real time order & package tracking"))), /* @__PURE__ */ import_react23.default.createElement(GridLeft, null, /* @__PURE__ */ import_react23.default.createElement(GridCover, null, /* @__PURE__ */ import_react23.default.createElement(RideTitle, null, "Quick delivery"), /* @__PURE__ */ import_react23.default.createElement(RideText2, null, "Deliver items to your customers without hassle"))))));
 };
 var Body21 = import_styled_components23.default.div`
   min-height: 300px;
@@ -3196,10 +3262,10 @@ var AboutBusiness_default = AboutBusiness;
 
 // app/components/about/AboutDelivery.tsx
 init_react();
-var import_react22 = __toESM(require("react"));
+var import_react24 = __toESM(require("react"));
 var import_styled_components24 = __toESM(require("styled-components"));
 var AboutDelivery = () => {
-  return /* @__PURE__ */ import_react22.default.createElement(Body22, null, /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react22.default.createElement(Cover16, null, /* @__PURE__ */ import_react22.default.createElement(RideText3, null, "Delivery made easy")));
+  return /* @__PURE__ */ import_react24.default.createElement(Body22, null, /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")), " ", /* @__PURE__ */ import_react24.default.createElement(Cover16, null, /* @__PURE__ */ import_react24.default.createElement(RideText3, null, "Delivery made easy")));
 };
 var Body22 = import_styled_components24.default.div`
   height: 276px;
@@ -3238,7 +3304,7 @@ var AboutDelivery_default = AboutDelivery;
 
 // app/components/about/AboutDetails.tsx
 init_react();
-var import_react23 = __toESM(require("react"));
+var import_react25 = __toESM(require("react"));
 var import_styled_components25 = __toESM(require("styled-components"));
 
 // app/images/purpose01.png
@@ -3249,13 +3315,13 @@ var purpose02_default = "/build/_assets/purpose02-RLNMTGP4.png";
 
 // app/components/about/AboutDetails.tsx
 var AboutDetails = () => {
-  return /* @__PURE__ */ import_react23.default.createElement(Body23, null, /* @__PURE__ */ import_react23.default.createElement(Cover17, null, /* @__PURE__ */ import_react23.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react23.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react23.default.createElement(RideTitle2, null, "Waiting is boring"), /* @__PURE__ */ import_react23.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")), /* @__PURE__ */ import_react23.default.createElement(GridRight2, null, /* @__PURE__ */ import_react23.default.createElement(GridImage, {
+  return /* @__PURE__ */ import_react25.default.createElement(Body23, null, /* @__PURE__ */ import_react25.default.createElement(Cover17, null, /* @__PURE__ */ import_react25.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react25.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react25.default.createElement(RideTitle2, null, "Waiting is boring"), /* @__PURE__ */ import_react25.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")), /* @__PURE__ */ import_react25.default.createElement(GridRight2, null, /* @__PURE__ */ import_react25.default.createElement(GridImage, {
     src: purpose02_default,
     alt: "use wikki"
-  })), " "), " ", /* @__PURE__ */ import_react23.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react23.default.createElement(GridRight2, null, /* @__PURE__ */ import_react23.default.createElement(GridImage, {
+  })), " "), " ", /* @__PURE__ */ import_react25.default.createElement(DetailsGrid2, null, /* @__PURE__ */ import_react25.default.createElement(GridRight2, null, /* @__PURE__ */ import_react25.default.createElement(GridImage, {
     src: purpose01_default,
     alt: "use wikki"
-  })), /* @__PURE__ */ import_react23.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react23.default.createElement(RideTitle2, null, "Our Mission"), /* @__PURE__ */ import_react23.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")))));
+  })), /* @__PURE__ */ import_react25.default.createElement(GridLeft2, null, /* @__PURE__ */ import_react25.default.createElement(RideTitle2, null, "Our Mission"), /* @__PURE__ */ import_react25.default.createElement(RideText4, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")))));
 };
 var Body23 = import_styled_components25.default.div`
   min-height: 300px;
@@ -3329,13 +3395,13 @@ var AboutDetails_default = AboutDetails;
 
 // app/components/about/AboutHero.tsx
 init_react();
-var import_react24 = __toESM(require("react"));
+var import_react26 = __toESM(require("react"));
 var import_styled_components26 = __toESM(require("styled-components"));
 var AboutHero = () => {
-  return /* @__PURE__ */ import_react24.default.createElement(Body24, null, /* @__PURE__ */ import_react24.default.createElement(MoreOverlay, null), /* @__PURE__ */ import_react24.default.createElement(Cover18, null, /* @__PURE__ */ import_react24.default.createElement(MoreTitle, null, "ABOUT WIKKI"), /* @__PURE__ */ import_react24.default.createElement(CoverImage, null, /* @__PURE__ */ import_react24.default.createElement(AboutImage, {
+  return /* @__PURE__ */ import_react26.default.createElement(Body24, null, /* @__PURE__ */ import_react26.default.createElement(MoreOverlay, null), /* @__PURE__ */ import_react26.default.createElement(Cover18, null, /* @__PURE__ */ import_react26.default.createElement(MoreTitle, null, "ABOUT WIKKI"), /* @__PURE__ */ import_react26.default.createElement(CoverImage, null, /* @__PURE__ */ import_react26.default.createElement(AboutImage, {
     src: main_default,
     alt: "the wikki my wikki"
-  })), /* @__PURE__ */ import_react24.default.createElement(CoverDets, null, /* @__PURE__ */ import_react24.default.createElement(CoverTitle, null, "Robust delivery and pickup for Nigeria"), /* @__PURE__ */ import_react24.default.createElement(CoverText, null, "Wikki is a technology company on a mission to power the digital economy in Africa, using open banking as a layer for financial data, identity data, and bank transfer payments for businesses."))));
+  })), /* @__PURE__ */ import_react26.default.createElement(CoverDets, null, /* @__PURE__ */ import_react26.default.createElement(CoverTitle, null, "Robust delivery and pickup for Nigeria"), /* @__PURE__ */ import_react26.default.createElement(CoverText, null, "Wikki is a technology company on a mission to power the digital economy in Africa, using open banking as a layer for financial data, identity data, and bank transfer payments for businesses."))));
 };
 var Body24 = import_styled_components26.default.div`
   position: relative;
@@ -3433,7 +3499,7 @@ var AboutHero_default = AboutHero;
 
 // app/components/about/AboutPurpose.tsx
 init_react();
-var import_react25 = __toESM(require("react"));
+var import_react27 = __toESM(require("react"));
 var import_styled_components27 = __toESM(require("styled-components"));
 
 // app/images/pointcard.gif
@@ -3569,9 +3635,9 @@ var purposeData = [
 
 // app/components/about/AboutPurpose.tsx
 var AboutPurpose = () => {
-  return /* @__PURE__ */ import_react25.default.createElement(Body25, null, /* @__PURE__ */ import_react25.default.createElement(MoreOverlay2, null), /* @__PURE__ */ import_react25.default.createElement(Cover19, null, /* @__PURE__ */ import_react25.default.createElement(MoreTitle2, null, "Our Purpose"), /* @__PURE__ */ import_react25.default.createElement(DetailsGrid3, null, purposeData.map((data, index3) => /* @__PURE__ */ import_react25.default.createElement(PurposeRow, {
+  return /* @__PURE__ */ import_react27.default.createElement(Body25, null, /* @__PURE__ */ import_react27.default.createElement(MoreOverlay2, null), /* @__PURE__ */ import_react27.default.createElement(Cover19, null, /* @__PURE__ */ import_react27.default.createElement(MoreTitle2, null, "Our Purpose"), /* @__PURE__ */ import_react27.default.createElement(DetailsGrid3, null, purposeData.map((data, index3) => /* @__PURE__ */ import_react27.default.createElement(PurposeRow, {
     key: index3
-  }, " ", /* @__PURE__ */ import_react25.default.createElement(PurposeIcon, null, data.icon), /* @__PURE__ */ import_react25.default.createElement(MoreSub, null, data.title), /* @__PURE__ */ import_react25.default.createElement(MoreText, null, data.text))))));
+  }, " ", /* @__PURE__ */ import_react27.default.createElement(PurposeIcon, null, data.icon), /* @__PURE__ */ import_react27.default.createElement(MoreSub, null, data.title), /* @__PURE__ */ import_react27.default.createElement(MoreText, null, data.text))))));
 };
 var Body25 = import_styled_components27.default.div`
   position: relative;
@@ -3667,7 +3733,7 @@ var meta7 = () => {
   };
 };
 var about = () => {
-  return /* @__PURE__ */ import_react26.default.createElement(Body26, null, /* @__PURE__ */ import_react26.default.createElement(AboutHero_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutPurpose_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutDelivery_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutDetails_default, null), /* @__PURE__ */ import_react26.default.createElement(AboutBusiness_default, null));
+  return /* @__PURE__ */ import_react28.default.createElement(Body26, null, /* @__PURE__ */ import_react28.default.createElement(AboutHero_default, null), /* @__PURE__ */ import_react28.default.createElement(AboutPurpose_default, null), /* @__PURE__ */ import_react28.default.createElement(AboutDelivery_default, null), /* @__PURE__ */ import_react28.default.createElement(AboutDetails_default, null), /* @__PURE__ */ import_react28.default.createElement(AboutBusiness_default, null));
 };
 var Body26 = import_styled_components28.default.div``;
 var about_default = about;
@@ -3679,15 +3745,15 @@ __export(routes_exports, {
   meta: () => meta8
 });
 init_react();
-var import_react30 = __toESM(require("react"));
-var import_styled_components32 = __toESM(require("styled-components"));
+var import_react32 = __toESM(require("react"));
+var import_styled_components34 = __toESM(require("styled-components"));
 
 // app/components/home/DoMore.tsx
 init_react();
-var import_react27 = __toESM(require("react"));
+var import_react29 = __toESM(require("react"));
 var import_styled_components29 = __toESM(require("styled-components"));
 var DoMore = () => {
-  return /* @__PURE__ */ import_react27.default.createElement(Body27, null, /* @__PURE__ */ import_react27.default.createElement(MoreOverlay3, null), /* @__PURE__ */ import_react27.default.createElement(Cover20, null, /* @__PURE__ */ import_react27.default.createElement(MoreSub2, null, "Do more with wikki"), /* @__PURE__ */ import_react27.default.createElement(MoreTitle3, null, "Designed for the next billion users and riders"), /* @__PURE__ */ import_react27.default.createElement(MoreText2, null, "Beautifully easy to use software to accept card payments on your phone, and grow your business anywhere on the planet")));
+  return /* @__PURE__ */ import_react29.default.createElement(Body27, null, /* @__PURE__ */ import_react29.default.createElement(MoreOverlay3, null), /* @__PURE__ */ import_react29.default.createElement(Cover20, null, /* @__PURE__ */ import_react29.default.createElement(MoreSub2, null, "Do more with wikki"), /* @__PURE__ */ import_react29.default.createElement(MoreTitle3, null, "Designed for the next billion users and riders"), /* @__PURE__ */ import_react29.default.createElement(MoreText2, null, "Beautifully easy to use software to accept card payments on your phone, and grow your business anywhere on the planet")));
 };
 var Body27 = import_styled_components29.default.section`
   position: relative;
@@ -3739,45 +3805,340 @@ var MoreText2 = (0, import_styled_components29.default)(Body3)`
 `;
 var DoMore_default = DoMore;
 
-// app/components/home/HomeHero.tsx
+// app/components/home/HomeBusiness.tsx
 init_react();
-var import_react28 = __toESM(require("react"));
 var import_styled_components30 = __toESM(require("styled-components"));
-var HomeHero = () => {
-  return /* @__PURE__ */ import_react28.default.createElement(Body28, null);
+
+// app/images/business.png
+var business_default2 = "/build/_assets/business-YXBNYLKH.png";
+
+// app/images/heart.png
+var heart_default = "/build/_assets/heart-VROQXYGP.png";
+
+// app/components/home/HomeBusiness.tsx
+var import_ai = require("react-icons/ai");
+var HomeBusiness = () => {
+  return /* @__PURE__ */ React.createElement(Body28, null, /* @__PURE__ */ React.createElement(Cover21, null, /* @__PURE__ */ React.createElement(CaseGrid, null, /* @__PURE__ */ React.createElement(CaseRowUsers, null, /* @__PURE__ */ React.createElement(MoreOverlay4, null), /* @__PURE__ */ React.createElement(RowContent, null, /* @__PURE__ */ React.createElement(CaseTitle, null, "Wikki ", /* @__PURE__ */ React.createElement(Lovesvg, {
+    src: heart_default,
+    alt: "wikki heart"
+  }), " businesses & companies.", " "), " ", /* @__PURE__ */ React.createElement(CaseText, null, "Wikki feels just like the Apple devices employees know and love \u2014 and they all work together seamlessly. Copy and paste across devices. Use Handoff to start an email on one device and finish on another. And pick up calls anywhere."), /* @__PURE__ */ React.createElement(CaseButtonLink, {
+    to: "/business"
+  }, "Learn what we have ready for businessess ", /* @__PURE__ */ React.createElement(BusinessIcon, null)))))));
 };
 var Body28 = import_styled_components30.default.section`
   position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 600px;
+  background: ${WikkiTheme.smokeWhite};
+  width: 100%;
+  padding: 144px 16px;
+  @media only screen and (max-width: 650px) {
+    min-height: 450px;
+    padding: 64px 16px;
+  }
+`;
+var MoreOverlay4 = import_styled_components30.default.div`
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+`;
+var Cover21 = import_styled_components30.default.div`
+  color: ${WikkiTheme.black};
+  max-width: 1232px;
+  width: 100%;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+`;
+var CaseGrid = import_styled_components30.default.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+var CaseRowUsers = import_styled_components30.default.div`
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1232px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  padding: 16px;
+  background: url(${business_default2}) no-repeat center center/cover;
+  @media only screen and (max-width: 650px) {
+    height: 500px;
+  }
+`;
+var RowContent = import_styled_components30.default.div`
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: ${WikkiTheme.white};
+  flex-direction: column;
+  margin: 40px auto;
+  max-width: 700px;
+`;
+var CaseTitle = (0, import_styled_components30.default)(Header2)`
+  text-align: center;
+`;
+var CaseText = (0, import_styled_components30.default)(Body2)`
+  text-align: center;
+`;
+var CaseButtonLink = (0, import_styled_components30.default)(BusinessButton)`
+  margin: 40px 0;
+`;
+var Lovesvg = import_styled_components30.default.img`
+  height: 40px;
+  width: 40px;
+`;
+var BusinessIcon = (0, import_styled_components30.default)(import_ai.AiOutlinePlusCircle)`
+  height: 32px;
+  width: 32px;
+  margin: 0 0 0 8px;
+  stroke: ${WikkiTheme.white};
+  color: ${WikkiTheme.white};
+`;
+var HomeBusiness_default = HomeBusiness;
+
+// app/components/home/HomeHero.tsx
+init_react();
+var import_react30 = __toESM(require("react"));
+var import_styled_components31 = __toESM(require("styled-components"));
+
+// app/images/herobg.png
+var herobg_default = "/build/_assets/herobg-AUMVWSZB.png";
+
+// app/components/home/HomeHero.tsx
+var HomeHero = () => {
+  return /* @__PURE__ */ import_react30.default.createElement(Body29, null, /* @__PURE__ */ import_react30.default.createElement(Cover22, null, /* @__PURE__ */ import_react30.default.createElement(InfoLeft2, null, /* @__PURE__ */ import_react30.default.createElement(GingerTitle3, null, "Move items and goods instantly with low fees."), /* @__PURE__ */ import_react30.default.createElement(TeaseText2, null, "Get items delivered and picked up in minutes!"), /* @__PURE__ */ import_react30.default.createElement(GingerRow3, null, /* @__PURE__ */ import_react30.default.createElement(CommunityMainButton3, {
+    href: "",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /* @__PURE__ */ import_react30.default.createElement(StoreIcon3, {
+    src: appstore_default,
+    alt: "wikki download"
+  }), " App Store"), /* @__PURE__ */ import_react30.default.createElement(CommunityOutlineButton3, {
+    href: "",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /* @__PURE__ */ import_react30.default.createElement(StoreIcon3, {
+    src: playstore_default,
+    alt: "wikki download"
+  }), " Google Play")))));
+};
+var Body29 = import_styled_components31.default.div`
+  min-height: 800px;
+
+  width: 100%;
+  text-align: center;
+  background: url(${herobg_default}) no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+`;
+var Cover22 = import_styled_components31.default.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+`;
+var InfoLeft2 = import_styled_components31.default.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+var GingerTitle3 = (0, import_styled_components31.default)(Header1)`
+  color: ${WikkiTheme.white};
+  margin: 8px 0;
+  text-align: center;
+`;
+var TeaseText2 = (0, import_styled_components31.default)(Body2)`
+  color: ${WikkiTheme.white};
+  margin: 0;
+  text-align: center;
+`;
+var GingerRow3 = import_styled_components31.default.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  width: 100%;
+
+  @media only screen and (max-width: 450px) {
+    flex-direction: column;
+  }
+`;
+var CommunityMainButton3 = (0, import_styled_components31.default)(DownloadButton)``;
+var CommunityOutlineButton3 = (0, import_styled_components31.default)(DownloadButton)``;
+var StoreIcon3 = import_styled_components31.default.img`
+  width: 32px;
+  height: 32px;
+  margin: 8px;
 `;
 var HomeHero_default = HomeHero;
 
 // app/components/home/HomeWaiting.tsx
 init_react();
-var import_react29 = __toESM(require("react"));
+var import_react31 = __toESM(require("react"));
+var import_styled_components32 = __toESM(require("styled-components"));
 var HomeWaiting = () => {
-  return /* @__PURE__ */ import_react29.default.createElement("div", null, "HomeWaiting");
+  return /* @__PURE__ */ import_react31.default.createElement(Body30, null, /* @__PURE__ */ import_react31.default.createElement(Cover23, null, /* @__PURE__ */ import_react31.default.createElement(WaitingRow, null, /* @__PURE__ */ import_react31.default.createElement(WaitSub, null, "Why Wikki? Because"), /* @__PURE__ */ import_react31.default.createElement(WaitTitle, null, "Waiting is boring"), /* @__PURE__ */ import_react31.default.createElement(WaitText, null, "We know how annoying it can be waiting for your meal, order, package or pickup to be delivered same day.")), /* @__PURE__ */ import_react31.default.createElement(DetailsGrid4, null, /* @__PURE__ */ import_react31.default.createElement(GridRight3, null, /* @__PURE__ */ import_react31.default.createElement(GridImage2, {
+    src: purpose02_default,
+    alt: "use wikki"
+  })), " ", /* @__PURE__ */ import_react31.default.createElement(GridLeft3, null, /* @__PURE__ */ import_react31.default.createElement(RideTitle3, null, "Robust delivery and pickup"), /* @__PURE__ */ import_react31.default.createElement(RideText5, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")), /* @__PURE__ */ import_react31.default.createElement(GridRight3, null, /* @__PURE__ */ import_react31.default.createElement(GridImage2, {
+    src: purpose02_default,
+    alt: "use wikki"
+  })), " ", /* @__PURE__ */ import_react31.default.createElement(GridLeft3, null, /* @__PURE__ */ import_react31.default.createElement(RideTitle3, null, "Robust delivery and pickup"), /* @__PURE__ */ import_react31.default.createElement(RideText5, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates."))), " ", /* @__PURE__ */ import_react31.default.createElement(DetailsGrid4, null, /* @__PURE__ */ import_react31.default.createElement(GridRight3, null, /* @__PURE__ */ import_react31.default.createElement(GridImage2, {
+    src: purpose01_default,
+    alt: "use wikki"
+  })), /* @__PURE__ */ import_react31.default.createElement(GridLeft3, null, /* @__PURE__ */ import_react31.default.createElement(RideTitle3, null, "Our Mission"), /* @__PURE__ */ import_react31.default.createElement(RideText5, null, "We know how hard it can be to start building your client base, especially as a student. We built Clutch to be a safe space for students to build out their side-hustles and get support from their classmates.")))));
 };
+var Body30 = import_styled_components32.default.div`
+  min-height: 300px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  background: ${WikkiTheme.black};
+  color: ${WikkiTheme.white};
+`;
+var Cover23 = import_styled_components32.default.div`
+  max-width: 1056px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 64px 0;
+  color: ${WikkiTheme.white};
+`;
+var DetailsGrid4 = import_styled_components32.default.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  gap: 40px;
+  width: 100%;
+  /* margin: 64px 0; */
+  color: ${WikkiTheme.white};
+  @media only screen and (max-width: 950px) {
+    grid-gap: 24px;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin: 24px 0;
+  }
+`;
+var GridLeft3 = import_styled_components32.default.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: ${WikkiTheme.white};
+  width: 100%;
+`;
+var RideTitle3 = (0, import_styled_components32.default)(Header2)`
+  color: ${WikkiTheme.white};
+`;
+var GridRight3 = import_styled_components32.default.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 64px 0;
+`;
+var GridImage2 = import_styled_components32.default.img`
+  max-width: 550px;
+  border-radius: 20px;
+  max-height: 630px;
+  min-height: 300px;
+  height: 100%;
+  outline: none;
+  width: 100%;
+`;
+var RideText5 = (0, import_styled_components32.default)(Body3)`
+  margin: 16px 0;
+`;
+var WaitingRow = import_styled_components32.default.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 32px auto;
+`;
+var WaitSub = (0, import_styled_components32.default)(SubTitle)`
+  color: ${WikkiTheme.white};
+  text-align: center;
+`;
+var WaitTitle = (0, import_styled_components32.default)(Header1)`
+  margin: 16px 0;
+  color: ${WikkiTheme.white};
+  text-align: center;
+`;
+var WaitText = (0, import_styled_components32.default)(Body1)`
+  color: ${WikkiTheme.white};
+  text-align: center;
+`;
 var HomeWaiting_default = HomeWaiting;
 
 // app/components/home/UseCases.tsx
 init_react();
-var import_styled_components31 = __toESM(require("styled-components"));
+var import_styled_components33 = __toESM(require("styled-components"));
 
 // app/images/user.png
-var user_default = "/build/_assets/user-URS5GCDW.png";
+var user_default = "/build/_assets/user-EQZPLLFN.png";
 
 // app/images/driver.png
-var driver_default2 = "/build/_assets/driver-5QCCW63S.png";
+var driver_default2 = "/build/_assets/driver-SVOSRCIB.png";
 
 // app/components/home/UseCases.tsx
 var UseCases = () => {
-  return /* @__PURE__ */ React.createElement(Body29, null, /* @__PURE__ */ React.createElement(Cover21, null, /* @__PURE__ */ React.createElement(MoreTitle4, null, "Discover The Wikki Usecases"), /* @__PURE__ */ React.createElement(CaseGrid, null, /* @__PURE__ */ React.createElement(CaseRowUsers, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay4, null), /* @__PURE__ */ React.createElement(RowContent, null, /* @__PURE__ */ React.createElement(CaseTitle, null, "For users "), " ", /* @__PURE__ */ React.createElement(CaseTitle, null, "and companies"), /* @__PURE__ */ React.createElement(CaseButtonLink, {
-    to: "/how-it-works"
-  }, "Learn more"))), /* @__PURE__ */ React.createElement(CaseRowDrivers, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay4, null), /* @__PURE__ */ React.createElement(RowContent, null, /* @__PURE__ */ React.createElement(CaseTitle, null, "For drivers"), /* @__PURE__ */ React.createElement(CaseButtonLink, {
-    to: "/how-it-works/driver"
+  return /* @__PURE__ */ React.createElement(Body31, null, /* @__PURE__ */ React.createElement(Cover24, null, /* @__PURE__ */ React.createElement(MoreTitle4, null, "Discover The Wikki Usecases"), /* @__PURE__ */ React.createElement(CaseGrid2, null, /* @__PURE__ */ React.createElement(CaseRowUsers2, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay5, null), /* @__PURE__ */ React.createElement(RowContent2, null, /* @__PURE__ */ React.createElement(CaseTitle2, null, "For Dispatch"), " ", /* @__PURE__ */ React.createElement(CaseButtonLink2, {
+    to: "/dispatch"
+  }, "Learn more"))), /* @__PURE__ */ React.createElement(CaseRowDrivers, null, " ", /* @__PURE__ */ React.createElement(MoreOverlay5, null), /* @__PURE__ */ React.createElement(RowContent2, null, /* @__PURE__ */ React.createElement(CaseTitle2, null, "For pickups"), /* @__PURE__ */ React.createElement(CaseButtonLink2, {
+    to: "/pick-up"
   }, "Learn more"))))));
 };
-var Body29 = import_styled_components31.default.section`
+var Body31 = import_styled_components33.default.section`
   position: relative;
   z-index: 1;
   display: flex;
@@ -3794,18 +4155,18 @@ var Body29 = import_styled_components31.default.section`
     margin: 64px 0;
   }
 `;
-var MoreOverlay4 = import_styled_components31.default.div`
+var MoreOverlay5 = import_styled_components33.default.div`
   position: absolute;
   content: "";
   top: 0;
   left: 0;
-  border-radius: 32px;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   z-index: 1;
   background: rgba(0, 0, 0, 0.5);
 `;
-var Cover21 = import_styled_components31.default.div`
+var Cover24 = import_styled_components33.default.div`
   color: ${WikkiTheme.black};
   max-width: 1232px;
   width: 100%;
@@ -3815,7 +4176,7 @@ var Cover21 = import_styled_components31.default.div`
 
   align-items: flex-start;
 `;
-var MoreTitle4 = (0, import_styled_components31.default)(Header1)`
+var MoreTitle4 = (0, import_styled_components33.default)(Header1)`
   margin: 16px 0 80px 0;
   text-align: left;
   max-width: 550px;
@@ -3824,7 +4185,7 @@ var MoreTitle4 = (0, import_styled_components31.default)(Header1)`
     margin: 16px 0 48px 0;
   }
 `;
-var CaseGrid = import_styled_components31.default.div`
+var CaseGrid2 = import_styled_components33.default.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -3837,7 +4198,7 @@ var CaseGrid = import_styled_components31.default.div`
     gap: 24px;
   }
 `;
-var CaseRowUsers = import_styled_components31.default.div`
+var CaseRowUsers2 = import_styled_components33.default.div`
   max-height: 700px;
   display: flex;
   align-items: flex-end;
@@ -3848,7 +4209,7 @@ var CaseRowUsers = import_styled_components31.default.div`
   width: 100%;
   position: relative;
   z-index: 2;
-  border-radius: 32px;
+  border-radius: 20px;
   padding: 16px;
   background: url(${user_default}) no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
@@ -3856,7 +4217,7 @@ var CaseRowUsers = import_styled_components31.default.div`
     min-height: 550px;
   }
 `;
-var RowContent = import_styled_components31.default.div`
+var RowContent2 = import_styled_components33.default.div`
   position: relative;
   z-index: 2;
 
@@ -3875,9 +4236,9 @@ var RowContent = import_styled_components31.default.div`
     }
   }
 `;
-var CaseTitle = (0, import_styled_components31.default)(Header2)``;
-var CaseButtonLink = (0, import_styled_components31.default)(CaseButton)``;
-var CaseRowDrivers = import_styled_components31.default.div`
+var CaseTitle2 = (0, import_styled_components33.default)(Header2)``;
+var CaseButtonLink2 = (0, import_styled_components33.default)(CaseButton)``;
+var CaseRowDrivers = import_styled_components33.default.div`
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -3889,7 +4250,7 @@ var CaseRowDrivers = import_styled_components31.default.div`
   max-width: 630px;
   width: 100%;
 
-  border-radius: 32px;
+  border-radius: 20px;
   background: url(${driver_default2}) no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
     max-height: 600px;
@@ -3906,14 +4267,14 @@ var meta8 = () => {
   };
 };
 var index2 = () => {
-  return /* @__PURE__ */ import_react30.default.createElement(Body30, null, /* @__PURE__ */ import_react30.default.createElement(HomeHero_default, null), /* @__PURE__ */ import_react30.default.createElement(HomeWaiting_default, null), /* @__PURE__ */ import_react30.default.createElement(UseCases_default, null), /* @__PURE__ */ import_react30.default.createElement(DoMore_default, null));
+  return /* @__PURE__ */ import_react32.default.createElement(Body32, null, /* @__PURE__ */ import_react32.default.createElement(HomeHero_default, null), /* @__PURE__ */ import_react32.default.createElement(HomeWaiting_default, null), /* @__PURE__ */ import_react32.default.createElement(UseCases_default, null), /* @__PURE__ */ import_react32.default.createElement(HomeBusiness_default, null), /* @__PURE__ */ import_react32.default.createElement(DoMore_default, null));
 };
-var Body30 = import_styled_components32.default.div``;
+var Body32 = import_styled_components34.default.div``;
 var routes_default = index2;
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
 init_react();
-var assets_manifest_default = { "version": "f46d0558", "entry": { "module": "/build/entry.client-53N2RJWB.js", "imports": ["/build/_shared/chunk-PZ2Z7HGX.js", "/build/_shared/chunk-6K6B2XQG.js", "/build/_shared/chunk-2ADOHOB6.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-W3GL7TI2.js", "imports": ["/build/_shared/chunk-76GTS56A.js", "/build/_shared/chunk-HDJVQNOO.js", "/build/_shared/chunk-SP7TTQZX.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-2PSL2ZEP.js", "imports": ["/build/_shared/chunk-2LU3WT75.js", "/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/business": { "id": "routes/business", "parentId": "root", "path": "business", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/business-HY6AHSQV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contact": { "id": "routes/contact", "parentId": "root", "path": "contact", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contact-YOPMNQLP.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/driver-requirements": { "id": "routes/driver-requirements", "parentId": "root", "path": "driver-requirements", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/driver-requirements-J2PE6U6T.js", "imports": ["/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/driver": { "id": "routes/how-it-works/driver", "parentId": "root", "path": "how-it-works/driver", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/how-it-works/driver-QLCVZKW3.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/index": { "id": "routes/how-it-works/index", "parentId": "root", "path": "how-it-works", "index": true, "caseSensitive": void 0, "module": "/build/routes/how-it-works/index-ZYRT25NW.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-RKW4JMZD.js", "imports": ["/build/_shared/chunk-2LU3WT75.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-F46D0558.js" };
+var assets_manifest_default = { "version": "bd5b6a0e", "entry": { "module": "/build/entry.client-53N2RJWB.js", "imports": ["/build/_shared/chunk-PZ2Z7HGX.js", "/build/_shared/chunk-6K6B2XQG.js", "/build/_shared/chunk-2ADOHOB6.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-VF3OL56K.js", "imports": ["/build/_shared/chunk-O6COTU67.js", "/build/_shared/chunk-3324DN4F.js", "/build/_shared/chunk-D7HEMV6S.js", "/build/_shared/chunk-RZPCVSBJ.js", "/build/_shared/chunk-SP7TTQZX.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-IHF6TQL4.js", "imports": ["/build/_shared/chunk-4SA2YQFA.js", "/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/business": { "id": "routes/business", "parentId": "root", "path": "business", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/business-HY6AHSQV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contact": { "id": "routes/contact", "parentId": "root", "path": "contact", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contact-77A72IW7.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/dispatch": { "id": "routes/dispatch", "parentId": "root", "path": "dispatch", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/dispatch-QDAP4GEQ.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/driver-requirements": { "id": "routes/driver-requirements", "parentId": "root", "path": "driver-requirements", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/driver-requirements-HDNHXQFM.js", "imports": ["/build/_shared/chunk-MZGYASWF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/driver": { "id": "routes/how-it-works/driver", "parentId": "root", "path": "how-it-works/driver", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/how-it-works/driver-XNE5BHBT.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/how-it-works/index": { "id": "routes/how-it-works/index", "parentId": "root", "path": "how-it-works", "index": true, "caseSensitive": void 0, "module": "/build/routes/how-it-works/index-K5PPMMR5.js", "imports": ["/build/_shared/chunk-C7EPAFOV.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-FGY3SLBP.js", "imports": ["/build/_shared/chunk-4SA2YQFA.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/pick-up": { "id": "routes/pick-up", "parentId": "root", "path": "pick-up", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/pick-up-GD4P62O3.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-BD5B6A0E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
@@ -3958,6 +4319,14 @@ var routes = {
     caseSensitive: void 0,
     module: business_exports
   },
+  "routes/dispatch": {
+    id: "routes/dispatch",
+    parentId: "root",
+    path: "dispatch",
+    index: void 0,
+    caseSensitive: void 0,
+    module: dispatch_exports
+  },
   "routes/contact": {
     id: "routes/contact",
     parentId: "root",
@@ -3965,6 +4334,14 @@ var routes = {
     index: void 0,
     caseSensitive: void 0,
     module: contact_exports
+  },
+  "routes/pick-up": {
+    id: "routes/pick-up",
+    parentId: "root",
+    path: "pick-up",
+    index: void 0,
+    caseSensitive: void 0,
+    module: pick_up_exports
   },
   "routes/about": {
     id: "routes/about",

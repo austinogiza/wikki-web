@@ -129,6 +129,12 @@ export const CaseButton = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in;
+
+  :hover {
+    background: ${WikkiTheme.secondary};
+    color: ${WikkiTheme.black};
+  }
   @media only screen and (max-width: 550px) {
     font-size: 14px;
     height: 48px;
@@ -202,4 +208,41 @@ export const DownloadButton = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.3s ease-in;
+
+  :hover {
+    background: ${WikkiTheme.secondary};
+    color: ${WikkiTheme.black};
+  }
+`
+
+export const BusinessButton = styled(Link)`
+  height: 64px;
+  max-width: 441px;
+  width: 100%;
+  background: transparent;
+  color: ${WikkiTheme.white};
+  border: 2px solid ${WikkiTheme.white};
+  border-radius: 40px;
+  outline: none;
+  font-family: "Clash Display Medium";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.1;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in;
+
+  :hover {
+    background: ${WikkiTheme.dark};
+    color: ${WikkiTheme.white};
+  }
+  @media only screen and (max-width: 550px) {
+    font-size: 14px;
+    height: 48px;
+  }
 `

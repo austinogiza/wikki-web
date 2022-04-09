@@ -1,4 +1,3 @@
-import react from "react"
 import styled from "styled-components"
 import user from "~/images/user.png"
 import driver from "~/images/driver.png"
@@ -17,20 +16,17 @@ const UseCases = () => {
             {" "}
             <MoreOverlay />
             <RowContent>
-              <CaseTitle>For users </CaseTitle>{" "}
-              <CaseTitle>and companies</CaseTitle>
-              <CaseButtonLink to="/how-it-works">Learn more</CaseButtonLink>
+              <CaseTitle>For Dispatch</CaseTitle>{" "}
+              <CaseButtonLink to="/dispatch">Learn more</CaseButtonLink>
             </RowContent>
           </CaseRowUsers>
           <CaseRowDrivers>
             {" "}
             <MoreOverlay />
             <RowContent>
-              <CaseTitle>For drivers</CaseTitle>
+              <CaseTitle>For pickups</CaseTitle>
 
-              <CaseButtonLink to="/how-it-works/driver">
-                Learn more
-              </CaseButtonLink>
+              <CaseButtonLink to="/pick-up">Learn more</CaseButtonLink>
             </RowContent>
           </CaseRowDrivers>
         </CaseGrid>
@@ -60,7 +56,7 @@ const MoreOverlay = styled.div`
   content: "";
   top: 0;
   left: 0;
-  border-radius: 32px;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -111,7 +107,7 @@ const CaseRowUsers = styled.div`
   width: 100%;
   position: relative;
   z-index: 2;
-  border-radius: 32px;
+  border-radius: 20px;
   padding: 16px;
   background: url(${user}) no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
@@ -153,7 +149,7 @@ const CaseRowDrivers = styled.div`
   max-width: 630px;
   width: 100%;
 
-  border-radius: 32px;
+  border-radius: 20px;
   background: url(${driver}) no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
     max-height: 600px;

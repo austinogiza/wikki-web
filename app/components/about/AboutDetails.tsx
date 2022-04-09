@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { Header2, Body3 } from "~/styles/TextStyles"
 import purpose from "~/images/purpose01.png"
 import purpose02 from "~/images/purpose02.png"

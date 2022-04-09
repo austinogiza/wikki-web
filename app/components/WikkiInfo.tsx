@@ -55,7 +55,7 @@ const Body = styled(motion.div)<TrueProps>`
   width: 100%;
   text-align: center;
   margin: 24px auto;
-  display: flex;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;

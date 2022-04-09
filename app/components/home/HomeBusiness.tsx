@@ -1,11 +1,10 @@
-import react from "react"
 import styled from "styled-components"
-import user from "~/images/user.png"
-import driver from "~/images/driver.png"
+import business from "~/images/business.png"
+import heart from "~/images/heart.png"
 import { WikkiTheme } from "~/styles/ColorStyles"
-import { Header2, Header1 } from "~/styles/TextStyles"
-
-import { CaseButton } from "~/styles/ButtonStyles"
+import { Header2, Body2 } from "~/styles/TextStyles"
+import { AiOutlinePlusCircle } from "react-icons/ai"
+import { BusinessButton } from "~/styles/ButtonStyles"
 
 const HomeBusiness = () => {
   return (
@@ -13,17 +12,21 @@ const HomeBusiness = () => {
       <Cover>
         <CaseGrid>
           <CaseRowUsers>
-            {" "}
             <MoreOverlay />
             <RowContent>
-              <CaseTitle>Wikki ❤ businesses & companies. </CaseTitle>{" "}
+              <CaseTitle>
+                Wikki <Lovesvg src={heart} alt="wikki heart" /> businesses &
+                companies.{" "}
+              </CaseTitle>{" "}
               <CaseText>
                 Wikki feels just like the Apple devices employees know and love
                 — and they all work together seamlessly. Copy and paste across
                 devices. Use Handoff to start an email on one device and finish
                 on another. And pick up calls anywhere.
               </CaseText>
-              <CaseButtonLink to="/how-it-works">Learn more</CaseButtonLink>
+              <CaseButtonLink to="/business">
+                Learn what we have ready for businessess <BusinessIcon />
+              </CaseButtonLink>
             </RowContent>
           </CaseRowUsers>
         </CaseGrid>
@@ -37,15 +40,13 @@ const Body = styled.section`
   display: flex;
   flex-direction: column;
 
-  margin: 144px 0;
   min-height: 600px;
-  color: ${WikkiTheme.smokeWhite};
+  background: ${WikkiTheme.smokeWhite};
   width: 100%;
-  padding: 16px;
-  background: ${WikkiTheme.white};
+  padding: 144px 16px;
   @media only screen and (max-width: 650px) {
     min-height: 450px;
-    margin: 64px 0;
+    padding: 64px 16px;
   }
 `
 const MoreOverlay = styled.div`
@@ -53,7 +54,7 @@ const MoreOverlay = styled.div`
   content: "";
   top: 0;
   left: 0;
-  border-radius: 32px;
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -71,45 +72,28 @@ const Cover = styled.div`
   align-items: flex-start;
 `
 
-const MoreTitle = styled(Header1)`
-  margin: 16px 0 80px 0;
-  text-align: left;
-  max-width: 550px;
-  width: 100%;
-  @media only screen and (max-width: 650px) {
-    margin: 16px 0 48px 0;
-  }
-`
 const CaseGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
-  gap: 40px;
   width: 100%;
-  @media only screen and (max-width: 950px) {
-    grid-gap: 24px;
-    place-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 24px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 const CaseRowUsers = styled.div`
-  max-height: 700px;
+  height: 800px;
   display: flex;
-  align-items: flex-end;
-
-  min-height: 680px;
-  height: 100%;
-  max-width: 630px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1232px;
   width: 100%;
   position: relative;
   z-index: 2;
-  border-radius: 32px;
+  border-radius: 20px;
   padding: 16px;
-  background: url(${user}) no-repeat center center/cover;
+  background: url(${business}) no-repeat center center/cover;
   @media only screen and (max-width: 650px) {
-    max-height: 600px;
-    min-height: 550px;
+    height: 500px;
   }
 `
 
@@ -118,40 +102,33 @@ const RowContent = styled.div`
   z-index: 2;
 
   width: 100%;
+  justify-content: center;
+  align-items: center;
   display: flex;
   color: ${WikkiTheme.white};
   flex-direction: column;
-  margin: 0 40px 32px 40px;
-  @media only screen and (max-width: 650px) {
-    margin: 56px 24px;
-  }
-  a {
-    margin: 32px 0;
-    @media only screen and (max-width: 650px) {
-      margin: 24px 0;
-    }
-  }
+  margin: 40px auto;
+  max-width: 700px;
 `
-const CaseTitle = styled(Header2)``
-const CaseText = styled(Header2)``
-const CaseButtonLink = styled(CaseButton)``
-const CaseRowDrivers = styled.div`
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  z-index: 2;
-  padding: 16px;
-  max-height: 700px;
-  min-height: 680px;
-  height: 100%;
-  max-width: 630px;
-  width: 100%;
+const CaseTitle = styled(Header2)`
+  text-align: center;
+`
+const CaseText = styled(Body2)`
+  text-align: center;
+`
+const CaseButtonLink = styled(BusinessButton)`
+  margin: 40px 0;
+`
 
-  border-radius: 32px;
-  background: url(${driver}) no-repeat center center/cover;
-  @media only screen and (max-width: 650px) {
-    max-height: 600px;
-    min-height: 550px;
-  }
+const Lovesvg = styled.img`
+  height: 40px;
+  width: 40px;
+`
+const BusinessIcon = styled(AiOutlinePlusCircle)`
+  height: 32px;
+  width: 32px;
+  margin: 0 0 0 8px;
+  stroke: ${WikkiTheme.white};
+  color: ${WikkiTheme.white};
 `
 export default HomeBusiness

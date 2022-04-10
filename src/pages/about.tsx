@@ -19,5 +19,5 @@ const about = () => {
     </Body>
   )
 }
-const Body = styled.div``
+const Body = styled.section``
 export default about

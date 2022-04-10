@@ -1,14 +1,16 @@
 import React from "react"
 import styled from "styled-components"
-import { Header2, Body2, Header1, Header3 } from "styles/TextStyles"
+import { Body2, Header2, Header3 } from "styles/TextStyles"
 
 import { WikkiTheme } from "styles/ColorStyles"
-const BusinessPurpose = () => {
+const DispatchPurpose = () => {
   return (
     <Body>
       <Cover>
         <WaitingRow>
-          <WaitTitle>And even better,</WaitTitle>
+          <WaitTitle>
+            What's better than having items sent out successfully
+          </WaitTitle>
         </WaitingRow>
         <DetailsGrid>
           <BusinessRow>
@@ -60,8 +62,8 @@ const Body = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 64px 0 0 0;
-  background: ${WikkiTheme.smokeWhite};
+  margin: 40px 0;
+  background: ${WikkiTheme.white};
   color: ${WikkiTheme.black};
 `
 
@@ -72,7 +74,7 @@ const Cover = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 64px 0;
+  margin: 24px 0;
   color: ${WikkiTheme.black};
 `
 const DetailsGrid = styled.div`
@@ -87,7 +89,7 @@ const DetailsGrid = styled.div`
 `
 const BusinessRow = styled.div`
   max-width: 1232px;
-  min-height: 550px;
+  min-height: 450px;
   display: grid;
   width: 100%;
 
@@ -95,7 +97,7 @@ const BusinessRow = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
   gap: 40px;
-  margin: 24px auto;
+  margin: 8px auto;
   color: ${WikkiTheme.white};
   @media only screen and (max-width: 950px) {
     grid-gap: 24px;
@@ -127,7 +129,7 @@ const GridRight = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 64px 0;
+  margin: 24px 0;
 `
 
 const GridImage = styled.img`
@@ -148,14 +150,14 @@ const WaitingRow = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   margin: 32px auto;
 `
 
-const WaitTitle = styled(Header1)`
+const WaitTitle = styled(Header2)`
   margin: 16px 0;
   color: ${WikkiTheme.black};
   text-align: center;
 `
 
-export default BusinessPurpose
+export default DispatchPurpose

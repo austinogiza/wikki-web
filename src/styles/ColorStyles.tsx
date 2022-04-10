@@ -15,4 +15,5 @@ export const WikkiTheme = {
   switchBG: "rgba(118, 118, 128, 0.5)",
   userDownload: "#D3EFE6",
   driverDownload: "#F9EFCF",
+  businessDownload: "#D7F8D7",
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 import { WikkiTheme } from "styles/ColorStyles"
-import { Header2, Header1 } from "styles/TextStyles"
+import { Header2, Header3 } from "styles/TextStyles"
 
 import { CaseButton } from "styles/ButtonStyles"
 import Link from "next/link"
@@ -10,7 +10,7 @@ const UseCases = () => {
   return (
     <Body>
       <Cover>
-        <MoreTitle>Discover The Wikki Usecases</MoreTitle>
+        <MoreTitle>Discover Wikki Usecases</MoreTitle>
         <CaseGrid>
           <CaseRowUsers>
             {" "}
@@ -77,10 +77,10 @@ const Cover = styled.div`
   align-items: flex-start;
 `
 
-const MoreTitle = styled(Header1)`
-  margin: 16px 0 80px 0;
+const MoreTitle = styled(Header2)`
+  margin: 16px 0 64px 0;
   text-align: left;
-  max-width: 550px;
+
   width: 100%;
   @media only screen and (max-width: 650px) {
     margin: 16px 0 48px 0;
@@ -138,7 +138,7 @@ const RowContent = styled.div`
     }
   }
 `
-const CaseTitle = styled(Header2)``
+const CaseTitle = styled(Header3)``
 const CaseButtonLink = styled(CaseButton)``
 const CaseRowDrivers = styled.div`
   display: flex;

@@ -27,7 +27,7 @@ export const Header1 = styled.h1`
 export const Header2 = styled.h2`
   font-family: "Clash Display Medium";
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
 
   @media only screen and (max-width: 650px) {

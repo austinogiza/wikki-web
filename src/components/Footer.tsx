@@ -5,72 +5,83 @@ import { MenuData, ProductsData } from "data/FooterData"
 
 import { WikkiTheme } from "styles/ColorStyles"
 import { Header3, Header5, SubTitle } from "styles/TextStyles"
+import { useRouter } from "next/router"
 
 import { DownloadButton } from "styles/ButtonStyles"
 const Footer = () => {
+  const router = useRouter()
   return (
-    <Body>
-      <Cover>
-        <FooterTop>
-          {" "}
-          <FooterRow>
-            <Link href="/" passHref>
-              <FooterLogo src="/logo.svg" alt="Wikki logo" />
-            </Link>
-          </FooterRow>
-          <FooterRow>
-            <FooterColumn>
-              <ColTitle>Menu</ColTitle>
-              <FooterList>
-                {MenuData.map((data: any, index: number) => (
-                  <FooterLinks key={index}>
-                    <Link href={`/${data.link}`} passHref>
-                      <FooterText>{data.name}</FooterText>
-                    </Link>
-                  </FooterLinks>
-                ))}{" "}
-              </FooterList>
-            </FooterColumn>
-          </FooterRow>{" "}
-          <FooterRow>
-            <FooterColumn>
-              <ColTitle>Products</ColTitle>
-              <FooterList>
-                {ProductsData.map((data, index) => (
-                  <FooterLinks key={index}>
-                    <Link href={`/${data.link}`} passHref>
-                      <FooterText>{data.name}</FooterText>
-                    </Link>
-                  </FooterLinks>
-                ))}{" "}
-              </FooterList>
-            </FooterColumn>
-          </FooterRow>{" "}
-          <FooterRow>
-            <FooterColumn>
-              <GingerTitle>Get the app</GingerTitle>{" "}
-              <GingerRow>
-                <CommunityMainButton target="_blank" rel="noopener noreferrer">
-                  <StoreIcon src="/appstore.svg" alt="wikki download" /> App
-                  Store
-                </CommunityMainButton>
+    <>
+      {router.pathname === "/404" ? null : (
+        <>
+          <Body>
+            <Cover>
+              <FooterTop>
+                {" "}
+                <FooterRow>
+                  <Link href="/" passHref>
+                    <FooterLogo src="/logo.svg" alt="Wikki logo" />
+                  </Link>
+                </FooterRow>
+                <FooterRow>
+                  <FooterColumn>
+                    <ColTitle>Menu</ColTitle>
+                    <FooterList>
+                      {MenuData.map((data: any, index: number) => (
+                        <FooterLinks key={index}>
+                          <Link href={`/${data.link}`} passHref>
+                            <FooterText>{data.name}</FooterText>
+                          </Link>
+                        </FooterLinks>
+                      ))}{" "}
+                    </FooterList>
+                  </FooterColumn>
+                </FooterRow>{" "}
+                <FooterRow>
+                  <FooterColumn>
+                    <ColTitle>Products</ColTitle>
+                    <FooterList>
+                      {ProductsData.map((data, index) => (
+                        <FooterLinks key={index}>
+                          <Link href={`/${data.link}`} passHref>
+                            <FooterText>{data.name}</FooterText>
+                          </Link>
+                        </FooterLinks>
+                      ))}{" "}
+                    </FooterList>
+                  </FooterColumn>
+                </FooterRow>{" "}
+                <FooterRow>
+                  <FooterColumn>
+                    <GingerTitle>Get the app</GingerTitle>{" "}
+                    <GingerRow>
+                      <CommunityMainButton
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <StoreIcon src="/appstore.svg" alt="wikki download" />{" "}
+                        App Store
+                      </CommunityMainButton>
 
-                <CommunityOutlineButton
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <StoreIcon src="/playstore.svg" alt="wikki download" /> Google
-                  Play
-                </CommunityOutlineButton>
-              </GingerRow>
-            </FooterColumn>
-          </FooterRow>
-        </FooterTop>
-        <FooterBottom>
-          <FooterText>Copyright {new Date().getFullYear()}</FooterText>
-        </FooterBottom>
-      </Cover>
-    </Body>
+                      <CommunityOutlineButton
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <StoreIcon src="/playstore.svg" alt="wikki download" />{" "}
+                        Google Play
+                      </CommunityOutlineButton>
+                    </GingerRow>
+                  </FooterColumn>
+                </FooterRow>
+              </FooterTop>
+              <FooterBottom>
+                <FooterText>Copyright {new Date().getFullYear()}</FooterText>
+              </FooterBottom>
+            </Cover>
+          </Body>
+        </>
+      )}
+    </>
   )
 }
 

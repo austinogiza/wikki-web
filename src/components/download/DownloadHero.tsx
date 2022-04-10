@@ -1,20 +1,15 @@
 import React from "react"
 import styled from "styled-components"
-import { Body1, Header1 } from "styles/TextStyles"
+import { Body1, LargeHeader } from "styles/TextStyles"
 
-const BusinessHero = () => {
+const DownloadHero = () => {
   return (
     <Body>
       <Cover>
         <ContactHeader>
-          <ContactTitle>
-            Wikki loves your business. Wikki means business.
-          </ContactTitle>
+          <ContactTitle>Wikki downloads</ContactTitle>
           <ContactText>
-            Everyone has their own way of learning and expressing creativity.
-            Apple technology and resources empower every kind of educator — and
-            every kind of student — to learn, create, and define their own
-            success. Let’s move the world forward.
+            Wikki has made it easy for you to get started
           </ContactText>
         </ContactHeader>
       </Cover>
@@ -23,7 +18,7 @@ const BusinessHero = () => {
 }
 const Body = styled.section`
   width: 100%;
-  min-height: 600px;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +41,7 @@ const ContactHeader = styled.div`
   max-width: 950px;
   width: 100%;
 `
-const ContactTitle = styled(Header1)`
+const ContactTitle = styled(LargeHeader)`
   margin: 8px 0;
   text-align: center;
 `
@@ -55,4 +50,4 @@ const ContactText = styled(Body1)`
   margin: 0 auto;
   text-align: center;
 `
-export default BusinessHero
+export default DownloadHero

@@ -5,42 +5,50 @@ import { downloadData } from "data/downloadData"
 import { WikkiTheme } from "styles/ColorStyles"
 import WikkiInfo from "./WikkiInfo"
 import WikkiTabNav from "./WikkiTabNav"
+import { useRouter } from "next/router"
 
 const DriverMessage = () => {
   const [selectedTab, setSelectedTab] = useState<string>("Rider")
   const clickTab = (tab: string) => {
     setSelectedTab(tab)
   }
+  const router = useRouter()
 
   const tabNames = [{ name: "Rider" }, { name: "Driver" }]
   return (
-    <Body>
-      <Cover>
-        <TabBody>
-          <TabCover>
-            {tabNames.map((data, index) => (
-              <WikkiTabNav
-                click={() => clickTab(data.name)}
-                key={index}
-                tab={data.name}
-                active={selectedTab === data.name}
-              />
-            ))}
-          </TabCover>
-        </TabBody>
-        {downloadData.map((data, index) => (
-          <WikkiInfo
-            key={index}
-            active={selectedTab === data.name}
-            link={data.name}
-            text={data.text}
-            title={data.title}
-            ios={data.ios}
-            android={data.android}
-          />
-        ))}
-      </Cover>
-    </Body>
+    <>
+      {router.pathname === "/404" ? null : (
+        <>
+          <Body>
+            <Cover>
+              <TabBody>
+                <TabCover>
+                  {tabNames.map((data, index) => (
+                    <WikkiTabNav
+                      click={() => clickTab(data.name)}
+                      key={index}
+                      tab={data.name}
+                      active={selectedTab === data.name}
+                    />
+                  ))}
+                </TabCover>
+              </TabBody>
+              {downloadData.map((data, index) => (
+                <WikkiInfo
+                  key={index}
+                  active={selectedTab === data.name}
+                  link={data.name}
+                  text={data.text}
+                  title={data.title}
+                  ios={data.ios}
+                  android={data.android}
+                />
+              ))}
+            </Cover>
+          </Body>
+        </>
+      )}
+    </>
   )
 }
 

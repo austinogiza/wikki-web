@@ -11,18 +11,14 @@ interface LinkProps {
   linkTrue?: boolean
 }
 
-interface NavbarProps {
-  onClick?: () => void
-}
-
 interface MobileProps {
   open?: boolean
   routerOpened?: boolean
 }
-const Navbar: FC<NavbarProps> = (props) => {
+const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [currentRoute, setCurrentRoute] = useState<boolean>(false)
-  const { onClick } = props
+
   const router = useRouter()
 
   const toggle = () => {
@@ -112,9 +108,11 @@ const Navbar: FC<NavbarProps> = (props) => {
             </Link>
           </WikkiLinks>
         </WikkiLinksCover>
-        <NavBut onClick={onClick}>
-          <NavButton>Get App</NavButton>
-        </NavBut>
+        <Link href="/download" passHref>
+          <NavBut>
+            <NavButton>Get App</NavButton>
+          </NavBut>
+        </Link>
       </Cover>
     </Body>
   )

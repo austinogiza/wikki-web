@@ -1,12 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import Navbar from "./Navbar"
-
+import { useRouter } from "next/router"
 const NavCover = () => {
+  const router = useRouter()
   return (
-    <Body>
-      <Navbar />
-    </Body>
+    <>
+      {router.pathname === "/404" ? null : (
+        <>
+          <Body>
+            <Navbar />
+          </Body>
+        </>
+      )}
+    </>
   )
 }
 const Body = styled.nav`

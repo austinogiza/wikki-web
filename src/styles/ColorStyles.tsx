@@ -13,4 +13,6 @@ export const WikkiTheme = {
   lightYelllow: "#FEFAF0",
   darkRed: "#F34646",
   switchBG: "rgba(118, 118, 128, 0.5)",
+  userDownload: "#D3EFE6",
+  driverDownload: "#F9EFCF",
 }

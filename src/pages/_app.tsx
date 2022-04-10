@@ -1,4 +1,4 @@
-import "../../public/index.css"
+import "styles/index.css"
 import type { AppProps } from "next/app"
 import Layout from "container/Layout"
 import NProgress from "nprogress"

@@ -54,7 +54,7 @@ const Body = styled.section`
 const Cover = styled.div`
   max-width: 1800px;
   width: 100%;
-  height: 100%;
+
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ const Cover = styled.div`
 `
 const DriverGrid = styled.div`
   display: grid;
-  height: 100%;
+  /* height: 100%; */
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   @media only screen and (max-width: 850px) {
@@ -75,7 +75,7 @@ const DriverLeft = styled.div`
   width: 100%;
   margin: 0 auto;
   padding: 16px;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +136,6 @@ const RightSection = styled.div`
   align-items: center;
   @media only screen and (max-width: 550px) {
     max-width: 550px;
-    min-height: 150px;
   }
 `
 const SectionIcon = styled.div``
@@ -155,9 +154,6 @@ const SectionCover = styled.div`
   align-items: flex-start;
   width: 100%;
   padding: 16px;
-  @media only screen and (max-width: 550px) {
-    height: 250px;
-  }
 `
 
 export default DriverAdvantage

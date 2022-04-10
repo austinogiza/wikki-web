@@ -2,8 +2,9 @@ import React, { FC } from "react"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 import styled from "styled-components"
 import { WikkiTheme } from "styles/ColorStyles"
+import { motion, AnimatePresence, AnimatePresenceProps } from "framer-motion"
 import { Body4, Header5 } from "styles/TextStyles"
-import { motion, AnimatePresence } from "framer-motion"
+
 interface OpenProps {
   active?: boolean
 }
@@ -18,7 +19,7 @@ const DriverAccordion: FC<DriverProps & OpenProps> = (props) => {
   const { number, active, text, content, click } = props
   return (
     <AnimatePresence>
-      <Body layout="position" onClick={() => click(number)}>
+      <Body layout onClick={() => click(number)}>
         <Cover layout="position">
           <DriverNumber layout="position">
             <NumberText layout="position">{number}</NumberText>

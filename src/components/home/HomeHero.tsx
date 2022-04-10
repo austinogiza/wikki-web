@@ -33,14 +33,15 @@ const HomeHero = () => {
               Play
             </CommunityOutlineButton>
           </GingerRow>
+          <HeroImage src="/device.png" alt="wikki device" />
         </InfoLeft>
       </Cover>
     </Body>
   )
 }
 const Body = styled.div`
-  min-height: 800px;
-
+  height: 900px;
+  overflow: hidden;
   width: 100%;
   text-align: center;
   background: url("/herobg.png") no-repeat center center/cover;
@@ -100,5 +101,10 @@ const StoreIcon = styled.img`
   height: 32px;
   margin: 8px;
 `
-
+const HeroImage = styled.img`
+  height: 998px;
+  max-width: 500px;
+  width: 100%;
+  margin: 24px auto -800px auto;
+`
 export default HomeHero

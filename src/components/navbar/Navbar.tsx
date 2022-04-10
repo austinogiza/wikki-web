@@ -12,7 +12,7 @@ interface LinkProps {
 }
 
 interface NavbarProps {
-  onClick: () => void
+  onClick?: () => void
 }
 
 interface MobileProps {

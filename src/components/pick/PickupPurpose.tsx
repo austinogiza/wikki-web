@@ -9,14 +9,14 @@ const PickupPurpose = () => {
       <Cover>
         <WaitingRow>
           <WaitTitle>
-            What's better than having items sent out successfully
+            Sit back while we get your stuffs picked for you.
           </WaitTitle>
         </WaitingRow>
         <DetailsGrid>
           <BusinessRow>
             <GridRight>
               <GridImage
-                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756114/Customer-review_sok8a2.png"
+                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756110/Groceries-delivery_zq6i3l.png"
                 alt="use wikki"
               />
             </GridRight>{" "}
@@ -33,7 +33,7 @@ const PickupPurpose = () => {
           <BusinessRow>
             <GridRight>
               <GridImage
-                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756110/Groceries-truck-delivery_r8wkyo.png"
+                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756110/Order-delivered_dqb2dq.png"
                 alt="use wikki"
               />
             </GridRight>{" "}

@@ -16,7 +16,7 @@ const DispatchPurpose = () => {
           <BusinessRow>
             <GridRight>
               <GridImage
-                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756114/Customer-review_sok8a2.png"
+                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756114/Product-selection_lnodvx.png"
                 alt="use wikki"
               />
             </GridRight>{" "}
@@ -33,7 +33,7 @@ const DispatchPurpose = () => {
           <BusinessRow>
             <GridRight>
               <GridImage
-                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756110/Groceries-truck-delivery_r8wkyo.png"
+                src="https://res.cloudinary.com/dvoezroy8/image/upload/v1648756116/Delivery-robot_pek0pc.png"
                 alt="use wikki"
               />
             </GridRight>{" "}

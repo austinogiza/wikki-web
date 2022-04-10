@@ -1,11 +1,11 @@
 export const MenuData = [
   { name: "About us", link: "about" },
-  { name: "Use cases", link: "about" },
-  { name: "How it works", link: "about" },
-  { name: "How to get started as a driver", link: "about" },
+  { name: "For Businesses", link: "business" },
+  { name: "How it works", link: "how-it-works" },
+  { name: "How to get started as a driver", link: "driver-requirements" },
   { name: "Contact", link: "contact" },
 ]
 export const ProductsData = [
-  { name: "Dispatch", link: "about" },
-  { name: "Pickup", link: "about" },
+  { name: "Dispatch", link: "dispatch" },
+  { name: "Pickup", link: "pick-up" },
 ]

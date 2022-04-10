@@ -136,17 +136,16 @@ const FooterList = styled.ul`
 const FooterLinks = styled.li`
   margin: 10px 0;
   color: ${WikkiTheme.white};
+`
+const FooterText = styled(SubTitle)`
+  cursor: pointer;
+  color: ${WikkiTheme.white};
+  transition: 0.4s ease-in;
 
-  a {
-    color: ${WikkiTheme.white};
-    transition: 0.4s ease-in;
-
-    :hover {
-      color: ${WikkiTheme.secondary};
-    }
+  :hover {
+    color: ${WikkiTheme.secondary};
   }
 `
-const FooterText = styled(SubTitle)``
 const FooterBottom = styled.div`
   display: flex;
   flex-direction: column;

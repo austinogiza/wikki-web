@@ -6,6 +6,10 @@ import * as Yup from "yup"
 import { TextInput, TextArea } from "styles/InputStyles"
 import { SubTitleSmall, Header3, SubTitle } from "styles/TextStyles"
 import { FormButton } from "styles/ButtonStyles"
+import axios from "axios"
+import { ContactURL } from "constants/Constant"
+import { toast } from "react-toastify"
+import SuccessLoading from "components/SuccessLoading"
 
 interface Values {
   email: string
@@ -20,13 +24,18 @@ const ContactForm = () => {
     message: Yup.string().required("Required"),
   })
 
-  const [sent, setSent] = useState<boolean>(false)
-
   const submitForm = (values: Values, onSubmitProps: FormikHelpers<Values>) => {
     onSubmitProps.setSubmitting(true)
-
-    //    onSubmitProps.setSubmitting(false)
-    // onSubmitProps.resetForm()
+    axios
+      .post(ContactURL, { values })
+      .then((res) => {
+        toast.success("Message sent successfully")
+        onSubmitProps.setSubmitting(false)
+        onSubmitProps.resetForm()
+      })
+      .catch((err) => {
+        onSubmitProps.setSubmitting(false)
+      })
   }
   return (
     <Body>
@@ -104,7 +113,15 @@ const ContactForm = () => {
                 )}
               </FormColumn>
               <FormButtonWrap>
-                <FormButtonMain>Send</FormButtonMain>
+                <FormButtonMain type="submit">
+                  {isSubmitting ? (
+                    <>
+                      <SuccessLoading />
+                    </>
+                  ) : (
+                    <>Send</>
+                  )}
+                </FormButtonMain>
               </FormButtonWrap>
             </FormForm>
           )}

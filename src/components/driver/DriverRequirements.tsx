@@ -117,7 +117,7 @@ const DriverImage = styled.div`
   justify-content: center;
 `
 const DriverPhoto = styled.img`
-  min-height: 690px;
+  min-height: 500px;
   max-height: 700px;
   height: 100%;
   max-width: 627px;

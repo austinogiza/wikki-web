@@ -48,9 +48,7 @@ const Body = styled.section`
   justify-content: center;
   align-items: center;
   min-height: 700px;
-
   width: 100%;
-
   background: ${WikkiTheme.secondary};
 `
 const Cover = styled.div`
@@ -65,6 +63,7 @@ const Cover = styled.div`
 `
 const DriverGrid = styled.div`
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   @media only screen and (max-width: 850px) {
@@ -82,8 +81,9 @@ const DriverLeft = styled.div`
   justify-content: center;
   align-items: flex-start;
   @media only screen and (max-width: 550px) {
-    grid-template-columns: repeat(1, 1fr);
-    min-height: 400px;
+    min-height: 500px;
+
+    margin: 32px auto;
   }
 `
 const DiverCover = styled.div`
@@ -115,7 +115,7 @@ const DriverRight = styled.div`
   background: ${WikkiTheme.white};
   @media only screen and (max-width: 550px) {
     grid-template-columns: repeat(1, 1fr);
-    min-height: 300px;
+    min-height: 500px;
   }
 `
 const DriverImage = styled.img`

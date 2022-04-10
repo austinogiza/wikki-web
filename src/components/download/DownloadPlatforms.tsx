@@ -147,8 +147,7 @@ const GridRight = styled.div`
 const GridImage = styled.img`
   max-width: 350px;
   border-radius: 0px;
-  max-height: 300px;
-  min-height: 250px;
+  min-height: 300px;
   height: 100%;
 
   width: 100%;

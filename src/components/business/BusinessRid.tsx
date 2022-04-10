@@ -8,7 +8,7 @@ const BusinessRid = () => {
     <Body>
       <Cover>
         <WaitingRow>
-          <WaitTitle>Get ride of canceled orders and late deliveries</WaitTitle>
+          <WaitTitle>Get rid of canceled orders and late deliveries</WaitTitle>
           <WaitText>
             Everyone has their own way of learning and expressing creativity.
             Apple technology and resources empower every kind of educator — and
@@ -109,6 +109,7 @@ const GridImage = styled.img`
   min-height: 150px;
   height: 100%;
   outline: none;
+  object-fit: contain;
   width: 100%;
 `
 const RideText = styled(Body3)`
@@ -120,15 +121,13 @@ const WaitingRow = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   margin: 32px auto;
 `
-const WaitSub = styled(SubTitle)`
-  color: ${WikkiTheme.white};
-  text-align: center;
-`
+
 const WaitTitle = styled(Header2)`
-  margin: 16px 0;
+  margin: 16px auto;
+  max-width: 600px;
   color: ${WikkiTheme.white};
   text-align: center;
 `

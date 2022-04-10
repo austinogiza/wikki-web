@@ -132,7 +132,7 @@ const GridRight = styled.div`
 
 const GridImage = styled.img`
   max-width: 650px;
-
+  object-fit: contain;
   max-height: 550px;
   min-height: 250px;
   height: 100%;
